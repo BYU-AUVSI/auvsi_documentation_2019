@@ -16,6 +16,7 @@
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{vmargin}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{float}
 \setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
@@ -119,8 +120,9 @@
 \newcommand{\ArtifactTableArgs}[6]{
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|c|c|c|c|c|c|}
+		\begin{tabular}{|p{1.5cm}|p{1.7cm}|p{1.6cm}|p{2.75cm}|p{2.75cm}|p{2.75cm}|}
 		\hline
+		\rowcolor[HTML]{C0C0C0}
 		\textbf{ID} & \textbf{Revision} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
   #1 &  #2 & #3 & #4 & #5 & #6      \\ \hline
 		\end{tabular}
@@ -128,14 +130,6 @@
 }
 
 \newcommand{\ArtifactTable}{
-%	\begin{table}[H]
-%		\centering
-%		\begin{tabular}{|c|c|c|c|c|}
-%		\hline
-%		\textbf{Revision} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
-%    \docversion	              & \specialdate\today & \docdescription  & \docauthor        & \docchecker      \\ \hline
-%		\end{tabular}
-%	\end{table}
 \ArtifactTableArgs{\docid}{\docversion}{\specialdate\today}{\docdescription}{\docauthor}{\docchecker}
 }
 
