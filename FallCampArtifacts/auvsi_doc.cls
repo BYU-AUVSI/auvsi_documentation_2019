@@ -16,12 +16,40 @@
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{vmargin}
+% \usepackage{hyperref}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{float}
 \setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\usepackage{etextools}
+\usepackage[font={small,it}]{caption}
+\usepackage{tabularx}
 
 \usepackage{datetime}
 \newdateformat{specialdate}{\twodigit{\THEMONTH}-\twodigit{\THEDAY}-\THEYEAR}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 % Arguments (defaults and keys)
 \RequirePackage{xkeyval}
@@ -103,6 +131,64 @@
 \cfoot{\thepage}
 
 % Custom Command Definitions
+
+\newenvironment{largequote}
+{
+	\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+	\begingroup
+	\fontsize{10pt}{12pt}\selectfont
+}{
+	\endgroup
+	\end{minipage}
+}
+
+% - column num (integer)
+% - column width (cm)
+% - caption
+% - label
+\newenvironment{AUVSITable}[4]
+{
+	\begin{table}[H]
+	\centering
+	\caption{#3}
+	\label{#4}
+	\begin{tabular}{ |c@{} *{#1}{p{#2}|} } \hline
+}{
+	\end{tabular}
+	\end{table}
+}
+
+\newenvironment{artifacttable}
+{
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|c@{} p{1.5cm}|p{1cm}|p{1.6cm}|p{2.75cm}|p{3cm}|p{3cm}|}
+	\hline
+	\rowcolor[HTML]{C0C0C0}
+	& \textbf{ID} & \textbf{Rev.} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
+}{
+	\end{tabular}
+	\end{table}
+}
+
+\newcommand{\rowentryformat}[1]{& #1}
+
+\newcommand{\entry}[1]{
+	\edef\result{\csvloop[\rowentryformat]{#1}}
+	\result \\ \hline
+}
+
+% 1. filepath
+% 2. width
+% 3. caption
+% 4. label
+\newcommand{\AUVSIFigure}[4]{
+	\begin{center}
+	\includegraphics[width=#2]{#1}
+	\captionof{figure}{#3}
+	\label{#4}
+	\end{center}
+}
 
 \newcommand{\AUVSISection}[2]{
 	\newpage

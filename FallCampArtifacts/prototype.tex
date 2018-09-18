@@ -1,0 +1,111 @@
+% !TEX root=main.tex
+
+\subsection{Controls}
+
+\begin{artifacttable}
+\entry{PR-001, 0.1, 09-17-18, fall camp draft, John Akagi, Brady Moon}
+\end{artifacttable}
+
+\begin{lstlisting}
+init_obstacles();
+waypoint = rrt();
+current_waypoint = 0;
+transmit_waypoints(waypoint[current_waypoint]);
+
+while(mission_finished() == false){
+
+	unscented_kalman_filter(obstacles);
+
+  if(detect_collision()) {
+
+	 waypoint[current_waypoint] = fast_mpc();
+	 transmit_waypoints(waypoint[current_waypoint]);
+  }
+
+  if(hit_waypoint(waypoint[current_waypoint])) {
+
+	current_waypoint++;
+	transmit_waypoint(waypoint[current_waypoint]);
+  }
+}
+\end{lstlisting}
+
+This code is intended to outline the code that will be used to control the UAV for obstacle avoidance. At the beginning of the flight, the initial path will be calculated in order to avoid static obstacles. During the flight, deviations to the pre-planned flight path will be recalculated in order to avoid dynamic obstacles while still maintaining the flight path.
+
+\subsection{Automated Visual Target Detection System}
+
+\begin{artifacttable}
+\entry{PR-002, 0.1, 09-14-18, fall camp draft, Jake Johnson, Connor Olsen}
+\end{artifacttable}
+
+\lstset{language=Python}
+
+\begin{lstlisting}
+Automated Imaging Sequence:
+  #Process for detection while continuously taking new frames (at a rate > 10 fps)
+
+def main():
+	convertToHSV(image)
+	eliminateBackground(image)
+	arrayOfBlobs = findBlobs(image)
+	for each blob in arrayOfBlobs
+	if blob within size range
+		identifyFeatures()
+			sendToJudges()
+
+def convertToHSV(image):
+  # converts image to HSV colorspace
+
+def eliminateBackground(image, bounds):
+  # threshold by color to eliminate background
+
+def findBlobs(image):
+  # detect points of interest
+  # return False if the blob is not large enough
+  maskImage()
+
+def identifyFeatures():
+  findShape()
+  findText()
+  findTextColor()
+  findShapeColor()
+  findGeolocation()
+
+def maskImage():
+	# mask image with threshold
+
+def findShape():
+	# if no obvious shape found = false
+	# return shape
+
+def findText():
+	# if not found = false
+	# return shape
+
+def findTextColor():
+	# return text color
+
+def findShapeColor():
+	# return shape color
+
+def findGeolocation():
+	# use plane attitude and geometry to determine location of target
+
+def sendToJudges():
+	# Publish to ROSTopic for interop-relay
+
+# Process for detection while continuously taking new frames (at a rate > 10 fps)
+Threshold by color (eliminate background)
+Find blobs (interesting features)
+If blob is in a good size range (feature detected)
+  Mask image with threshold
+  Find shape
+  If no obvious shape found, return
+  Find text
+  If not found, return
+  Find color of text
+  Find color of shape
+  Use plane location and geometry to determine location of object
+  Send to judges
+Else, not detected
+\end{lstlisting}

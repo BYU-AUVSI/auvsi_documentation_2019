@@ -1,0 +1,58 @@
+% !TEX root=main.tex
+
+\begin{artifacttable}
+\entry{DJ-002, 0.1, 09-12-18, Fall camp draft, Ryan Anderson, Jacob Willis}
+\entry{DJ-002, 0.2, 09-14-18, Revisions after design review, Ryan Anderson, Kameron Eves}
+\end{artifacttable}
+
+\subsection{Path Planner}
+
+\textbf{Concept Selected:} Fast MPC
+
+In order to meet design requirements of autonomous flight and the ability to avoid static obstacles, the Fast MPC algorithm will be implemented in the controls of the aircraft. This algorithm will be used to create a path to reach several waypoints as determined by the competition. The following description is taken from DJ-001:
+
+\begin{largequote}
+Fast MPC is a feedforward form of high level control. This system uses a dynamic model of the aircraft to predict the future state of the aircraft and so allow it to make better informed control input decision at the current time step. A cost function is then used to bias the path towards a goal and away from obstacles. The predictive nature of the system would help with dynamic obstacles. The biggest downside of MPC in general is the computation speed due to the dynamic calculations. However, this is mitigated or even eliminated using the Fast MPC methods presented in a paper by Yang Wang and Stephen Boyd. (Wang and Boyd, 2008) Using these methods, MPC has been performed at speeds of up to 500 Hz, which is more than fast enough to accomplish our goals.
+\end{largequote}
+
+As illustrated in fig.~\ref{fig:controls_cd}, the Fast MPC will begin by creating a path to reach all required waypoints while avoiding obstacles at their current state. Then, it will predict the state of the aircraft at a future time and update its path accordingly, effectively evading dynamic obstacles. The genius of Fast MPC lies in its predictive model. The state of the plane at a future time is predicted based on the velocities and positions of dynamic and static obstacles, which is fed back into the optimizer, which adjusts its route accordingly. Obstacle velocities change continuously, so the predictive model must be continually updated to compensate.
+
+\AUVSIFigure
+{./figs/controls_cd.png}
+{\textwidth}
+{Fast MPC algorithm block diagram}
+{fig:controls_cd}
+
+First, waypoint and obstacle locations will be fed into the optimizer, which will then create a set of ideal intermediate waypoints. These waypoints will then be sent to the path manager, which in turn creates a path for the plane to follow. This is in turn sent to ROSPlane, which actuates the ailerons and other controls of the plane to execute the path.
+
+Last year’s plane avionics configuration already includes elements of this structure. Fig.~\ref{fig:interop_cd} illustrates the current state of the architecture and what remains to be implemented.
+
+\AUVSIFigure
+{./figs/interop_cd.png}
+{\textwidth}
+{Autopilot software architecture block diagram}
+{fig:interop_cd}
+
+\subsection{Visual Object Classification}
+
+\textbf{Concept Selected:} Autonomous Without Gimbal
+
+To meet team requirements and maximize possible score, a fully autonomous image recognition system without use of a gimbal was chosen. Building this side-by-side with last years manual image submission system provides redundancy and the highest chance of success in this portion of the competition. The following broad overview is taken from DJ-001:
+
+\begin{largequote}
+Autonomous w/o gimbal is end-to-end autonomy with no gimbal stabilization. It includes automatic recognition and submission to judges. It does not include targeting of objects outside bounds. As such it will require the UAS banking to view the off axis object.
+\end{largequote}
+
+While autonomous with gimbal stabilization was initially the preferred choice, the concept selection matrix highlighted the issues with this concept. The gimbal would add additional weight and more potential points of failure to the UAS. The stabilization provided by the gimbal is not significant enough given the robustness of the industrial camera system purchased by last years team. Aiming the vision system out of bounds is the one detriment to having no gimbal, however the reduced weight and complexity more than make up for this.
+
+As shown in fig.~\ref{fig:vision_cd}, the autonomous vision system will be built as an add-on to the already existing manual system. Using OpenCV and image filtering techniques, key features (letter, color, shape, location) will be identified and associated with an image. A database will keep track of identified results. Once an adequate threshold of duplicate results are identified in sequence, the system will submit these results to the judge server using the interop relay. 10-15 images are streamed per second, which should allow multiple shots of the target feature.
+
+Streamed images will also be forwarded to the frontend GUI for manual identification and submission, as was done by last year’s team. Multi-submission systems such as this incur no penalty and allow us to maximize potential score.
+
+The OpenCV image processing block algorithm is defined in more detail in the vision prototyping document.
+
+\AUVSIFigure
+{./figs/vision_cd.png}
+{\textwidth}
+{Autonomous image system block diagram}
+{fig:vision_cd}

@@ -1,0 +1,122 @@
+% !TEX root=main.tex
+
+\begin{artifacttable}
+\entry{DJ-001, 0.1, 09-13-18, Fall camp draft, Kameron Eves, John Akagi}
+\entry{DJ-001, 0.2, 09-13-18, Revisions after design review, John Akagi, Kameron Eves}
+\end{artifacttable}
+
+\subsection{Purpose}
+
+The purpose of this artifact is to present the reasoning behind the decisions we made to form our first prototype. In this artifact three decision matrices are presented to justify our decisions in choosing a path planner, airframe, and visual object classification method.
+
+\subsection{Path Planner}
+
+\textbf{Decision Justification}
+
+Almost all aspects of the competition rely on a path planning system. Even the vision based sections can not function without a path planner leading the aircraft to the search area. As such, careful consideration was given to choosing the optimal path planning system. Last year’s AUVSI team used Rapidly Exploring Random Tree (RRT) to moderate success. The largest detriment to the RRT system already in place is its inability to deal with dynamic obstacles. This limitation is primarily due to computation speed. After following the logical decision process described in the decision matrix, we decided to move forward with Fast Model Predictive Control (MPC). What follows is a short high level description of each algorithm.
+
+\textbf{Alternatives Considered}
+\begin{itemize}
+\item \textbf{RRT (Reference)} uses the monte carlo method to randomly place way points around the navigation area. A straight line path is then placed between each random point and the closest point of a previously generated path. If the path passes through an obstacle then that path is considered infeasible and dropped from consideration.
+\item \textbf{A*}  was one of the first path planning systems developed for robotics and has proven itself robust. In A* a grid system is used to map the area to be traversed. Each point on the grid (known as a node) is given a cost to obtain that node. The algorithm explores each point adjacent to a previously explored point until the path with the lowest cost is found.
+\item \textbf{D*} is very similar to A* but is designed for circumstances when the location of obstacles is not known. It is assumed that no obstacles exists until the robot encounters an obstacle.
+\item \textbf{RRT*} is a form of RRT that is biased towards a goal or waypoint. This would decrease the computational effort required as fewer unhelpful paths would be explored.
+\item \textbf{Fast MPC} is a feedforward form of high level control. This system uses a dynamic model of the aircraft to predict the future state of the aircraft and so allow it to make better informed control input decision at the current time step. A cost function is then used to bias the path towards a goal and away from obstacles. The predictive nature of the system would help with dynamic obstacles. The biggest downside of MPC in general is the computation speed due to the dynamic calculations. However, this is mitigated or even eliminated using the Fast MPC methods presented in a paper by Yang Wang and Stephen Boyd. (Wang and Boyd, 2008) Using these methods, MPC has been performed at speeds of up to 500 Hz, which is more than fast enough to accomplish our goals.
+\item \textbf{Artificial Potential Fields:} uses a dummy force modeled as a spring to push the aircraft away from obstacles and towards waypoints.
+\item \textbf{Probabilistic Road Map:} uses a monte carlo method similar to RRT, but rather then connecting each point to the nearest path, each point is connected to k other nearest points.
+\end{itemize}
+
+\textbf{Evaluation Methods and Results}
+
+As can be seen from the decision matrix in Table~\ref{cont_cs_tab}, Fast MPC performed the most favorably in the requirements that held the highest weight. Fast MPC would perform particularly well in Real-Time path mapping  (i.e. it would best help us avoid dynamic obstacles). Fast MPC also does well under kinematic feasibility and shortest path length. Admittedly, Fast MPC is not known to be a light load on the link bandwidth or to be easy to implement. However, as shown in the matrix, these minor difficulties were out weighed by the other important performance metrics.
+
+\begin{AUVSITable}
+{9}
+{1.35cm}
+{A decision matrix for a path planning system. A scale of 1-5 was used for weights with 5 having high importance and 1 having low importance. A 1-5 scale was also used to rate each option’s performance under each requirement. In this case, a 1 was used to indicate poor performance while a 5 indicates favorable performance. As can be seen, Fast MPC was shown to be the most favorable.}
+{cont_cs_tab}
+
+\entry{Path Planning Algorithm,Weight,A*,D*,RRT*,Fast MPC,Artificial Potential Fields,Proba- bilistic Road- map,RRT (Reference)}
+\entry{Ease of Implementation,4,4,3,2,2,4,4,3}
+\entry{Compu- tation Time,5,4,4,2,4,4,4,3}
+\entry{Link Bandwidth,2,3,3,3,2,3,3,3}
+\entry{Real-Time Path Flexibility,4,1,2,4,5,4,4,3}
+\entry{Robust- ness,5,4,2,3,3,2,2,3}
+\entry{Kine- matic Feasibility,3,2,2,3,5,4,3,3}
+\entry{Shortest Path Length,2,4,2,3,5,4,4,3}
+\entry{Totals,.,80,66,70,92,88,85,75}
+
+\end{AUVSITable}
+
+\subsection{Airframe}
+
+\textbf{Decision Justification}
+
+Several options were considered in choosing an airframe. Last year the team designed and built their own airframe from scratch. This year we also considered purchasing an “off the shelf” airframe or purchasing and modifying a commercially available aircraft. In the end we choose to modify an purchased aircraft because we can obtain the flexibility of building an aircraft with the efficiency of purchasing and aircraft.
+
+\textbf{Alternatives Considered}
+\begin{itemize}
+\item \textbf{Purchasing} an aircraft would involve using only an off the shelf airframe exactly as is. While being fast and easy, this method would lack the flexibility that would be essential to our project.
+\item \textbf{Purchase and Modify} an aircraft would involve using an off the shelf airframe with modifications to make it more flexible. Such modifications might include but are not limited to wing extensions, improved body payload, and replacing motors and servos.
+\item \textbf{Design and Building} an aircraft would involve a completely custom design using the principles of aerodynamics.  This method would allow us the most flexibility, but would also take the most time.
+\end{itemize}
+
+\textbf{Evaluation Methods and Results}
+
+As can be seen, modifying a commercially available aircraft was the chosen option primarily because of its development time and reusability. Previous years have encountered issues with crashing at or near the competition. This worst case scenario left the team without a usable aircraft. For this reason we rated replaceability highly. We also rated development time highly in this decision matrix because we intend to focus the majority of our effort on the controls and vision aspect of the competition. A purchased and modified aircraft will allow us maximum flexibility and reliability with minimum effort, thus aiding our efforts in other areas.
+
+\begin{AUVSITable}
+{5}
+{2.5cm}
+{A decision matrix for a path planning system. A scale of 1-5 was used for weights with 5 having high importance and 1 having low importance. A 1-5 scale was also used to rate each options performance under each requirement. In this case, a 1 was used to indicate poor performance while a 5 indicates favorable performance. As can be seen, purchasing and modifying a commercially available aircraft was shown to be the most favorable.}
+{cont_ar_tab}
+
+\entry{Airframe, Weight, Purchase, Purchase and Modify, Design and Build Reference)}
+\entry{Cost, 2, 2, 1, 3}
+\entry{Development Time, 5, 5, 4, 3}
+\entry{Flight Speed, 4, 2, 4, 3}
+\entry{Replaceability, 5, 5, 4, 3}
+\entry{Durability, 5, 4, 4, 3}
+\entry{Flexibility, 5, 1, 2, 3}
+\entry{Totals, ., 87, 88, 63}
+
+\end{AUVSITable}
+
+\subsection{Visual Object Classification}
+
+\textbf{Decision Justification}
+
+In choosing a method for visual object classification we considered for high level options. The method chosen was autonomous object classification without a gimbal. Previous teams that have won the competition have used a gimbal. We felt that this precedent made it important to consider the option. The decision to exclude the gimbal was made primarily because of simplicity. Gimbals can be finicky and would require more work than their benefit justifies. An autonomous system was chosen because we feel that using an autonomous system could differentiate us from other teams in the competition.
+
+\textbf{Alternatives Considered}
+\begin{itemize}
+\item \textbf{Autonomous w/ gimbal} is end-to-end autonomy with gimbal stabilization. It includes automatic recognition and submission to judges. It also allows targeting of objects outside bounds.
+\item \textbf{Autonomous w/o gimbal} is end-to-end autonomy with no gimbal stabilization. It includes automatic recognition and submission to judges. It does not include targeting of objects outside bounds. As such it will require the UAS banking to view the off axis object.
+\item \textbf{Manual w/ gimbal} uses manual recognition and submission to judges. Gimbal stabilization also enables easy targeting of objects outside bounds. With this option we also considered the possibility for partial autonomy.
+\item \textbf{Manual w/o gimbal} uses manual recognition and submission to judges. Lack of gimbal stabilization requires some type of banking algorithm for objects outside the boundary. With this option we also considered the possibility for partial autonomy.
+\end{itemize}
+
+\textbf{Evaluation Methods and Results}
+
+As can be seen in Table~\ref{cont_vis_tab}, we choose an autonomous system without a gimbal. This system was shown to be most favorable primarily because of its performance in the robust and reliable category. The chosen system did not perform well in viewing the off axis object, but this requirement was weighted low because of the relatively low amount of points obtained for identifying the off axis target. On the other hand, the chosen system did perform well under the robust and reliable requirement. This requirement we weighted highly because of its effect on the overall function of the UAS.
+
+\begin{AUVSITable}
+{6}
+{2cm}
+{A decision matrix for a visual object selection system. A scale of 1-5 was used for weights with 5 having high importance and 1 having low importance. A 1-5 scale was also used to rate each options performance under each requirement. In this case, a 1 was used to indicate poor performance while a 5 indicates favorable performance. As can be seen, using an autonomous system without a gimbal was shown to be the most favorable.}
+{cont_vis_tab}
+
+\entry{Require- ments, Weight, Autono- mous w/ Gimbal, Auto- nomous w/o Gimbal, Manual w/ Gimbal, Manual w/o Gimbal}
+\entry{Detect Features, 5, 4, 4, 5, 5}
+\entry{Off-Axis Object, 1, 3, 1, 4, 1}
+\entry{Return Object Locations, 5, 5, 5, 3, 3}
+\entry{Emergent Object, 2, 4, 4, 5, 5}
+\entry{Autono- mous, 3, 5, 5, 1, 1}
+\entry{Robust and Reli- able, 5, 3, 4, 2, 4}
+\entry{Totals, ., 86, 89, 67, 74}
+
+\end{AUVSITable}
+
+\textbf{References}
+
+Wang, Y. and Boyd, S. (2008). Fast Model Predictive Control Using Online Optimization. [online] Web.stanford.edu. Available at: \url{<https://web.stanford.edu/~boyd/papers/pdf/fast_mpc_ifac.pdf>} [Accessed 12 Sep. 2018].

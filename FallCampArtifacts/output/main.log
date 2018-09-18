@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.8.28)  17 SEP 2018 08:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.8.28)  17 SEP 2018 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -227,13 +227,54 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks28
 \@floatcapt=\box29
 )
+(/usr/share/texlive/texmf-dist/tex/latex/etextools/etextools.sty
+Package: etextools 2010/12/07 v3.1415926 e-TeX more useful tools for LaTeX pack
+age writers
+
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+\et@xins=\count105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/letltxmacro.sty
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+)
+\ettl@fter=\count107
+\ettl@for@nested=\count277
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count108
+Package caption Info: float package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen126
+\TX@old@table=\dimen127
+\TX@old@col=\dimen128
+\TX@target=\dimen129
+\TX@delta=\dimen130
+\TX@cols=\count109
+\TX@ftn=\toks29
+)
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count105
-)
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2017/12/24 v3.05
 
@@ -245,10 +286,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks29
-\XKV@tempa@toks=\toks30
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
 )
-\XKV@depth=\count106
+\XKV@depth=\count110
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -256,45 +297,73 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count107
+\fc@digit@counter=\count111
 ))
-\c@padzeroesN=\count108
-\fc@tmpcatcode=\count109
+\c@padzeroesN=\count112
+\fc@tmpcatcode=\count113
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-\@DT@modctr=\count110
-\@ordinalctr=\count111
-\@orgargctr=\count112
-\@strctr=\count113
-\@tmpstrctr=\count114
-\@DT@loopN=\count115
-\@DT@X=\count116
+\@DT@modctr=\count114
+\@ordinalctr=\count115
+\@orgargctr=\count116
+\@strctr=\count117
+\@tmpstrctr=\count118
+\@DT@loopN=\count119
+\@DT@X=\count120
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count117
-\@month=\count118
-\@year=\count119
-\c@HOUR=\count120
-\c@HOURXII=\count121
-\c@MINUTE=\count122
-\c@TOHOUR=\count123
-\c@TOMINUTE=\count124
-\c@SECOND=\count125
-\currenthour=\count126
-\currentminute=\count127
-\currentsecond=\count128
+\@day=\count121
+\@month=\count122
+\@year=\count123
+\c@HOUR=\count124
+\c@HOURXII=\count125
+\c@MINUTE=\count126
+\c@TOHOUR=\count127
+\c@TOMINUTE=\count128
+\c@SECOND=\count129
+\currenthour=\count130
+\currentminute=\count131
+\currentsecond=\count132
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count129
-\dayofyear=\count130
-\dayofweek=\count131
+\@dtctr=\count133
+\dayofyear=\count134
+\dayofweek=\count135
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks31
-\dt@b=\toks32
+\dt@a=\toks32
+\dt@b=\toks33
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count136
+\lst@gtempboxa=\box30
+\lst@token=\toks34
+\lst@length=\count137
+\lst@currlwidth=\dimen131
+\lst@column=\count138
+\lst@pos=\count139
+\lst@lostspace=\dimen132
+\lst@width=\dimen133
+\lst@newlines=\count140
+\lst@lineno=\count141
+\lst@maxwidth=\dimen134
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count142
+\lst@skipnumbers=\count143
+\lst@framebox=\box31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 ))
 (output/main.aux)
 \openout1 = `main.aux'.
@@ -316,17 +385,17 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen119
-\scratchbox=\box30
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen120
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count144
+\scratchdimen=\dimen135
+\scratchbox=\box32
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen136
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -383,6 +452,10 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count150
 <./figs/logo.pdf, id=1, 371.49857pt x 155.61263pt>
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
@@ -401,12 +474,22 @@ File: ./figs/logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 14.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [1] (./objective_statement.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\OT1/cmr/m/n/12 Make more
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+\OT1/cmr/m/n/12 ap-pli-ca-ble to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+\OT1/cmr/m/n/12 com-pe-ti-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\OT1/cmr/m/n/12 Brandon
  []
 
@@ -416,126 +499,138 @@ File: ./figs/logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 17.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [2] (./requirements_matrix.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
-
 <figs/requirements_matrix.pdf, id=21, 412.57672pt x 380.04485pt>
 File: figs/requirements_matrix.pdf Graphic file (type pdf)
 <use figs/requirements_matrix.pdf>
-Package pdftex.def Info: figs/requirements_matrix.pdf  used on input line 6.
+Package pdftex.def Info: figs/requirements_matrix.pdf  used on input line 9.
 (pdftex.def)             Requested size: 455.8843pt x 419.9469pt.
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 19.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [3 <./figs/requirements_matrix.pdf>] (./team_charter.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
+ [3 <./figs/requirements_matrix.pdf>]
+(./team_charter.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[]|\OT1/cmr/m/n/12 Brandon
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 10--10
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+\OT1/cmr/m/n/12 McBride and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[]|\OT1/cmr/m/n/12 Kameron Eves
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+\OT1/cmr/m/n/12 and Tyler
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 13--13
 []|\OT1/cmr/bx/n/12 Preferred Con-tact
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\OT1/cmr/bx/n/12 Team Mem-ber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\OT1/cmr/bx/n/12 Strengths re-lated to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []|\OT1/cmr/bx/n/12 Weaknesses re-lated to
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 32--32
+Underfull \hbox (badness 1102) in paragraph at lines 35--35
 \OT1/cmr/m/n/12 Pro-gram-ming, Math-e-mat-ics,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 []|\OT1/cmr/m/n/12 Sometimes im-pa-tient with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 \OT1/cmr/m/n/12 slow progress, Air-frame
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 33--33
+Underfull \hbox (badness 5460) in paragraph at lines 36--36
 []|\OT1/cmr/m/n/12 C++, Python, MAT-LAB,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--34
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []|\OT1/cmr/m/n/12 Python, Ba-sic OpenCV,
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 35--35
+Underfull \hbox (badness 2744) in paragraph at lines 38--38
 []|\OT1/cmr/m/n/12 Python, MAT-LAB, Ask-ing
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 37--37
+Underfull \hbox (badness 2035) in paragraph at lines 40--40
 []|\OT1/cmr/m/n/12 Firmware, C++, C, ROS-
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 40--40
+Underfull \hbox (badness 1043) in paragraph at lines 43--43
 \OT1/cmr/m/n/12 LAB, Com-mand Line, Git,
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 1314) in paragraph at lines 41--41
+Underfull \hbox (badness 1314) in paragraph at lines 44--44
 \OT1/cmr/m/n/12 ware, Project Man-age-ment,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 []|\OT1/cmr/m/n/12 C++, OOP, Em-bed-ded
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 43--43
+Underfull \hbox (badness 5008) in paragraph at lines 46--46
 \OT1/cmr/m/n/12 Writ-ing, Mat-lab, Busi-ness
  []
 
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 46.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 49.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 53.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 56.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [5]
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 99.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 97.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [6]
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 143.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 144.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [7])
 File: ./figs/logo.pdf Graphic file (type pdf)
@@ -543,84 +638,365 @@ File: ./figs/logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 21.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
 
-[8] (./concept_selection_artifact_CONTROL.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
-
-)
+[8] (./concept_selection.tex
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 23.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [9] (./concept_selection_artifact_VISION.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 Path
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 Plan-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 ning
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 Al-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 Fast
+ []
+
+
+Overfull \hbox (6.95203pt too wide) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 Artificial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 Po-ten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 tial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 Proba-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 bilis-tic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 Road-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 RRT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 (Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/12 Im-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\OT1/cmr/m/n/12 men-ta-
+ []
+
+
+Overfull \hbox (2.71318pt too wide) in paragraph at lines 41--41
+[]|\OT1/cmr/m/n/12 Compu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmr/m/n/12 tation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/12 Link
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\OT1/cmr/m/n/12 Band-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\OT1/cmr/m/n/12 Real-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmr/m/n/12 Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmr/m/n/12 Path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmr/m/n/12 Flex-i-
+ []
+
+
+Overfull \hbox (2.2868pt too wide) in paragraph at lines 44--44
+[]|\OT1/cmr/m/n/12 Robust-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\OT1/cmr/m/n/12 Kine-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmr/m/n/12 matic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmr/m/n/12 Fea-si-
+ []
+
+
+Overfull \hbox (4.084pt too wide) in paragraph at lines 46--46
+[]|\OT1/cmr/m/n/12 Shortest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\OT1/cmr/m/n/12 Path
+ []
+
+
+Overfull \hbox (1.81818pt too wide) in paragraph at lines 37--49
+ [][] 
+ []
+
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 50.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+[10]
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 56.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]|\OT1/cmr/m/n/12 Design and
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 74--74
+\OT1/cmr/m/n/12 Build Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]|\OT1/cmr/m/n/12 Development
+ []
+
+
+Overfull \hbox (1.48682pt too wide) in paragraph at lines 78--78
+[]|\OT1/cmr/m/n/12 Replaceability| 
+ []
+
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 84.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+[12]
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 96.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/12 Require-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/12 Autono-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\OT1/cmr/m/n/12 mous w/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/12 Auto-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\OT1/cmr/m/n/12 nomous
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 109--109
+\OT1/cmr/m/n/12 w/o Gim-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/12 Manual
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 109--109
+\OT1/cmr/m/n/12 w/o Gim-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+[]|\OT1/cmr/m/n/12 Detect
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+[]|\OT1/cmr/m/n/12 Off-Axis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[]|\OT1/cmr/m/n/12 Return
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+\OT1/cmr/m/n/12 Ob-ject
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+[]|\OT1/cmr/m/n/12 Emergent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]|\OT1/cmr/m/n/12 Autono-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]|\OT1/cmr/m/n/12 Robust
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+\OT1/cmr/m/n/12 and Reli-
+ []
+
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 122.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+[14])
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 23.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [15] (./concept_definition.tex
+<./figs/controls_cd.png, id=330, 763.85374pt x 422.57875pt>
+File: ./figs/controls_cd.png Graphic file (type png)
+<use ./figs/controls_cd.png>
+Package pdftex.def Info: ./figs/controls_cd.png  used on input line 24.
+(pdftex.def)             Requested size: 455.8843pt x 252.20157pt.
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 24.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [16]
+<./figs/interop_cd.png, id=336, 856.19875pt x 804.00375pt>
+File: ./figs/interop_cd.png Graphic file (type png)
+<use ./figs/interop_cd.png>
+Package pdftex.def Info: ./figs/interop_cd.png  used on input line 34.
+(pdftex.def)             Requested size: 455.8843pt x 428.09512pt.
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 34.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [17 <./figs/controls_cd.png>]
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 42.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+
+[18 <./figs/interop_cd.png>]
+<./figs/vision_cd.png, id=346, 1802.735pt x 720.6925pt>
+File: ./figs/vision_cd.png Graphic file (type png)
+<use ./figs/vision_cd.png>
+Package pdftex.def Info: ./figs/vision_cd.png  used on input line 58.
+(pdftex.def)             Requested size: 455.8843pt x 182.25108pt.
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 25.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [10] (./concept_definition_artifact_CONTROL.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
-
+ [19 <./figs/vision_cd.png>] (./prototype.tex
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 44.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [20]
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 86.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [21])
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 27.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [11] (./concept_definition_artifact_VISION.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
 
-)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 29.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [12] (./prototype_CONTROL.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
-
-)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 31.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [13] (./prototype_VISION.tex
-Overfull \hbox (2.0596pt too wide) in paragraph at lines 3--3
-[]|\OT1/cmr/bx/n/12 Revision| 
- []
-
-)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 33.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [14] (output/main.aux) ) 
+[22] (output/main.aux) ) 
 Here is how much of TeX's memory you used:
- 5627 strings out of 494845
- 76186 string characters out of 6179054
- 186888 words of memory out of 5000000
- 8794 multiletter control sequences out of 15000+600000
- 9171 words of font info for 33 fonts, out of 8000000 for 9000
+ 9057 strings out of 494845
+ 126445 string characters out of 6179054
+ 275552 words of memory out of 5000000
+ 12187 multiletter control sequences out of 15000+600000
+ 11522 words of font info for 40 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 48i,18n,51p,1088b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
->
-Output written on output/main.pdf (15 pages, 238816 bytes).
+ 48i,18n,83p,1088b,2025s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on output/main.pdf (23 pages, 454703 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 388 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
