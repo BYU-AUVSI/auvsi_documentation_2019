@@ -228,7 +228,7 @@
 		\vspace*{1 cm}
 		\begin{center}
     \textsc{\LARGE Brigham Young University}\\[0.5 cm]
-		\textsc{\LARGE AUVSI Capstone Team}\\[1.25 cm]  % University Name
+		\textsc{\LARGE AUVSI Capstone Team (Team 45)}\\[1.25 cm]  % University Name
 		\end{center}
     % \textsc{\Large \today}\\[0.75 cm]               % Course Code
     \rule{\linewidth}{0.2 mm} \\[0.4 cm]
@@ -247,7 +247,7 @@
 		\vspace*{1 cm}
 		\begin{center}
     \textsc{\LARGE Brigham Young University}\\[0.5 cm]
-		\textsc{\LARGE AUVSI Capstone Team}\\[1.25 cm]  % University Name
+		\textsc{\LARGE AUVSI Capstone Team (Team 45)}\\[1.25 cm]  % University Name
 		\end{center}
     % \textsc{\Large \today}\\[0.75 cm]               % Course Code
     \rule{\linewidth}{0.2 mm} \\[0.4 cm]
