@@ -1,0 +1,6 @@
+PWD /Users/kameroneves/Documents/School/School/AUVSI/auvsi_documentation_2019/DesignReports/OpportunityDevelopment
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/kameroneves/Documents/School/School/AUVSI/auvsi_documentation_2019/DesignReports/OpportunityDevelopment/benchmarking.tex
+OUTPUT benchmarking.log
