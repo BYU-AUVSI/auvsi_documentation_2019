@@ -56,3 +56,7 @@ If this command is inserted at the beginning of the document section, it will ge
 
 If this command is inserted before your section headings in your document section, it will generate a formatted table of contents.
 
+## Documentation Style Notes
+**Revision Numbers**
+
+All documents start at revision 0.1. The revision numbering scheme is primary.secondary. When the document is published, the primary  revision number is rolled up to the next integer and the secondary number is reset to 0. (i.e 0.4 -> 1.0). Note that 0.9 < 0.10.
