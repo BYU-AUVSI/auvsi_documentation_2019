@@ -5,6 +5,7 @@
 }
 
 \usepackage[toc,page]{appendix}
+\newcommand{\ts}[1]{\textsuperscript{#1}}
 
 \begin{document}
 
@@ -13,26 +14,45 @@
 The following is a list of our goals for the past week, as well as descriptions of their completion and/or progress:
 
 \begin{enumerate}
-\item \textbf{Goal 1}\\
-(goal 1 description)
+\item \textbf{Define dates for design reviews and reports for the semester}\\
+We were able to define these dates as ranges throughout the next two semesters, and they are as follows:
+\begin{itemize}
+\item \textit{Opportunity Development}: October 5\ts{th}--19\ts{th}, 2018
+\item \textit{Concept Development}: November 2\ts{nd}--16\ts{th}, 2018
+\item \textit{Subsystem Engineering}: January 18\ts{th}--31\ts{st}, 2019
+\item \textit{System Refinement}: March 22\ts{nd}--31\ts{st}, 2019
+\end{itemize}
+\item \textbf{Redefine the design requirements for the Payload/Controls subteam}\\
+We have defined updated design requirements for both teams. These new requirements are found in the attached requirements matrix artifact, which we request for you to review.
+\item \textbf{Construct a Team Contract}\\
+We expect to have the completed contract finished by tomorrow, and we will submit it for your review as all team members, instructors, and sponsors must ratify the document.
+\item \textbf{Complete the team safety training for projects lab use}\\
+We successfully completed all Capstone team safety trainings last week, and now all have card access to the lab where we work.
+\item \textbf{Finish taking inventory of available hardware}
+There are still boxes of unidentified items, but the most critical pieces of hardware to our flight test have been identified and are currently being utilized by the half of the team working on getting the old system up and running.
+\item \textbf{Set an official date for running a mock competition flight test with last year's competition setup}
+An official date has not yet been set, but work has begun on getting last year's system in the air. The team has been able to successfully communicate via ssh with the on-board computer, as well as set up a ROS network with last year's camera. This has been helpful for identifying weaknesses in last year's system right off the bat.
 \end{enumerate}
 
 \section{Goals for the Coming Week}
 
-The following is a list of our goals for the coming week, as well as details about how we plan to accomplish them:
+The following is a list of our goals for the coming week, as well as explanations and details about how we plan to accomplish them:
 
 \begin{enumerate}
-\item \textbf{Goal 1}\\
-Goal 1 Description
+\item \textbf{Finalize and ratify the Opportunity Development artifacts}\\
+This will include a signed project contract, as well as additional artifacts illustrating the work and research we've accomplished.
+\item \textbf{Investigate a Ubiquiti data link upgrade}\\
+There is a member of the MAGICC Lab, Jacob, who apparently knows about a locally-manufactured data link system which gives more desired performance than Ubiquiti. We want to investigate the matter more, and determine whether or not it is worth it to invest in an upgraded system.
+\item \textbf{Have the entire team focusing on implementing a mock competition with last year's system}\\
+Once the Opportunity Development artifacts are completed, we will be able to focus the majority, if not all, of our efforts on getting a mock competition up-and-running as soon as possible. This will help facilitate our putting our own plane up in the air by the end of the semester.
+\item \textbf{Investigate better options for a camera lens}\\
+After some investigation, the team determined that last year's camera system consisted of an expensive camera paired with a relatively inexpensive lens. Initial testing concluded that the lens is not of the best quality (when used indoors), so we want to solidify that conclusion with further testing (outdoors, with long distances), and perhaps look into buying a better lens for the job.
+\item \textbf{Establish a wireless connection with the odroid computer}\\
+Connection is currently done with ethernet. This goal runs in tandem with getting the entire wireless network for the plane up in general.
+\item \textbf{Modify the ground station to subscribe to raw images instead of compressed images}\\
+This will allow us to have access to higher-quality images of targets, which will be necessary for capturing targets hundreds of feet away.
 \end{enumerate}
 
 \textbf{Please send us any feedback with regards to the progress we've made, as well as our plans for the coming week.}
-
-\newpage
-\begin{appendices}
-
-
-
-\end{appendices}
 
 \end{document}
