@@ -1,0 +1,6 @@
+# ignore pdflatex outputs
+*.aux
+*.log
+
+# ignore aspell backup files
+*.bak
