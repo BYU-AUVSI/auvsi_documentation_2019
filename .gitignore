@@ -4,3 +4,6 @@
 
 # ignore aspell backup files
 *.bak
+
+# ignore synctex files
+*.synctex*
