@@ -166,7 +166,7 @@
 {
 	\begin{table}[H]
 	\centering
-	\begin{tabular}{|c@{} p{1.5cm}|p{1cm}|p{1.6cm}|p{2.75cm}|p{3.3cm}|p{3.3cm}|}
+	\begin{tabular}{|c@{} P{1.5cm}|P{1cm}|P{1.6cm}|P{2.75cm}|P{3.3cm}|P{3.3cm}|}
 	\hline
 	\rowcolor[HTML]{C0C0C0}
 	& \textbf{ID} & \textbf{Rev.} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
