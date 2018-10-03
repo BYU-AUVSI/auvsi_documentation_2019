@@ -1,0 +1,8 @@
+\babel@toc {english}{}
+\contentsline {section}{Revision History}{2}
+\contentsline {section}{Introduction}{3}
+\contentsline {section}{Project Objective Statement}{4}
+\contentsline {section}{Contact Information}{5}
+\contentsline {section}{Project Approval Matrix}{6}
+\contentsline {section}{Key Success Measures}{7}
+\contentsline {section}{Change Management Procedure}{8}
