@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.24)  3 OCT 2018 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.24)  4 OCT 2018 09:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,6 +266,39 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@cols=\count109
 \TX@ftn=\toks29
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box30
+\sift@deathcycles=\count110
+\@vwid@loff=\dimen131
+\@vwid@roff=\dimen132
+)
+\c@taburow=\count111
+\tabu@nbcols=\count112
+\tabu@cnt=\count113
+\tabu@Xcol=\count114
+\tabu@alloc=\count115
+\tabu@nested=\count116
+\tabu@target=\dimen133
+\tabu@spreadtarget=\dimen134
+\tabu@naturalX=\dimen135
+\tabucolX=\dimen136
+\tabu@Xsum=\dimen137
+\extrarowdepth=\dimen138
+\abovetabulinesep=\dimen139
+\belowtabulinesep=\dimen140
+\tabustrutrule=\dimen141
+\tabu@thebody=\toks30
+\tabu@footnotes=\toks31
+\tabu@box=\box31
+\tabu@arstrutbox=\box32
+\tabu@hleads=\box33
+\tabu@vleads=\box34
+\tabu@cellskip=\skip60
+)
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
@@ -280,10 +313,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks30
-\XKV@tempa@toks=\toks31
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count110
+\XKV@depth=\count117
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -291,65 +324,65 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count111
+\fc@digit@counter=\count118
 ))
-\c@padzeroesN=\count112
-\fc@tmpcatcode=\count113
+\c@padzeroesN=\count119
+\fc@tmpcatcode=\count120
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-\@DT@modctr=\count114
-\@ordinalctr=\count115
-\@orgargctr=\count116
-\@strctr=\count117
-\@tmpstrctr=\count118
-\@DT@loopN=\count119
-\@DT@X=\count120
+\@DT@modctr=\count121
+\@ordinalctr=\count122
+\@orgargctr=\count123
+\@strctr=\count124
+\@tmpstrctr=\count125
+\@DT@loopN=\count126
+\@DT@X=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count121
-\@month=\count122
-\@year=\count123
-\c@HOUR=\count124
-\c@HOURXII=\count125
-\c@MINUTE=\count126
-\c@TOHOUR=\count127
-\c@TOMINUTE=\count128
-\c@SECOND=\count129
-\currenthour=\count130
-\currentminute=\count131
-\currentsecond=\count132
+\@day=\count128
+\@month=\count129
+\@year=\count130
+\c@HOUR=\count131
+\c@HOURXII=\count132
+\c@MINUTE=\count133
+\c@TOHOUR=\count134
+\c@TOMINUTE=\count135
+\c@SECOND=\count136
+\currenthour=\count137
+\currentminute=\count138
+\currentsecond=\count139
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count133
-\dayofyear=\count134
-\dayofweek=\count135
+\@dtctr=\count140
+\dayofyear=\count141
+\dayofweek=\count142
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks32
-\dt@b=\toks33
+\dt@a=\toks34
+\dt@b=\toks35
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count136
-\lst@gtempboxa=\box30
-\lst@token=\toks34
-\lst@length=\count137
-\lst@currlwidth=\dimen131
-\lst@column=\count138
-\lst@pos=\count139
-\lst@lostspace=\dimen132
-\lst@width=\dimen133
-\lst@newlines=\count140
-\lst@lineno=\count141
-\lst@maxwidth=\dimen134
+\lst@mode=\count143
+\lst@gtempboxa=\box35
+\lst@token=\toks36
+\lst@length=\count144
+\lst@currlwidth=\dimen142
+\lst@column=\count145
+\lst@pos=\count146
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
+\lst@newlines=\count147
+\lst@lineno=\count148
+\lst@maxwidth=\dimen145
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count142
-\lst@skipnumbers=\count143
-\lst@framebox=\box31
+\c@lstnumber=\count149
+\lst@skipnumbers=\count150
+\lst@framebox=\box36
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -362,20 +395,20 @@ Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip60
-\RaggedLeftLeftskip=\skip61
-\RaggedRightLeftskip=\skip62
-\CenteringRightskip=\skip63
-\RaggedLeftRightskip=\skip64
-\RaggedRightRightskip=\skip65
-\CenteringParfillskip=\skip66
-\RaggedLeftParfillskip=\skip67
-\RaggedRightParfillskip=\skip68
-\JustifyingParfillskip=\skip69
-\CenteringParindent=\skip70
-\RaggedLeftParindent=\skip71
-\RaggedRightParindent=\skip72
-\JustifyingParindent=\skip73
+\CenteringLeftskip=\skip61
+\RaggedLeftLeftskip=\skip62
+\RaggedRightLeftskip=\skip63
+\CenteringRightskip=\skip64
+\RaggedLeftRightskip=\skip65
+\RaggedRightRightskip=\skip66
+\CenteringParfillskip=\skip67
+\RaggedLeftParfillskip=\skip68
+\RaggedRightParfillskip=\skip69
+\JustifyingParfillskip=\skip70
+\CenteringParindent=\skip71
+\RaggedLeftParindent=\skip72
+\RaggedRightParindent=\skip73
+\JustifyingParindent=\skip74
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -383,34 +416,34 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (output/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
-\scratchdimen=\dimen135
-\scratchbox=\box32
-\nofMPsegments=\count145
-\nofMParguments=\count146
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count147
-\MPscratchDim=\dimen136
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count151
+\scratchdimen=\dimen146
+\scratchbox=\box37
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen147
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -470,14 +503,14 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count150
+\c@lstlisting=\count157
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 9.
+LaTeX Info: Redefining \selectfont on input line 12.
 <./figs/logo.pdf, id=1, 371.49857pt x 155.61263pt>
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 11.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 14.
 (pdftex.def)             Requested size: 284.52756pt x 119.19048pt.
  [1
 
@@ -488,7 +521,7 @@ main.toc)
 
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 26.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 45.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [1]
 (./revision_history.tex
@@ -499,17 +532,17 @@ Overfull \hbox (1.60555pt too wide) in paragraph at lines 3--10
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 29.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 48.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [2] (./introduction.tex)
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 31.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 50.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [3] (./objective_statement.tex)
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 33.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 52.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [4]
 (./contact_info.tex
@@ -530,65 +563,67 @@ Overfull \hbox (17.04248pt too wide) in paragraph at lines 5--23
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 35.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 54.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [5] (./proj_app_mat.tex
-Underfull \hbox (badness 4328) in paragraph at lines 10--10
+Underfull \hbox (badness 4328) in paragraph at lines 12--12
 []|\OT1/cmr/bx/n/12 Expected Com-
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 13--13
+Underfull \hbox (badness 3068) in paragraph at lines 15--15
 []|\OT1/cmr/m/n/12 Subsystem En-gi-neer-
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 13--13
+Underfull \hbox (badness 1325) in paragraph at lines 15--15
 \OT1/cmr/m/n/12 sys-tem Test Pro-ce-dure and
  []
 
 
-Overfull \hbox (3.83516pt too wide) in paragraph at lines 7--19
+Overfull \hbox (3.83516pt too wide) in paragraph at lines 9--21
 [][] 
  []
 
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 37.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 56.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [6] (./key_measures.tex
-Overfull \hbox (22.13689pt too wide) in paragraph at lines 4--20
+Overfull \hbox (22.13689pt too wide) in paragraph at lines 8--24
  [][] 
  []
 
 )
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 39.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 58.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [7] (./change_mgmt_proc.tex)
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 41.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 60.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
  [8] (output/main.aux) ) 
 Here is how much of TeX's memory you used:
- 8313 strings out of 492982
- 119169 string characters out of 6134896
- 256393 words of memory out of 5000000
- 11690 multiletter control sequences out of 15000+600000
- 9934 words of font info for 34 fonts, out of 8000000 for 9000
+ 9053 strings out of 492982
+ 129632 string characters out of 6134896
+ 272436 words of memory out of 5000000
+ 12421 multiletter control sequences out of 15000+600000
+ 10580 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,18n,74p,1088b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,18n,79p,1088b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on output/main.pdf (9 pages, 73739 bytes).
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on output/main.pdf (9 pages, 104265 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
