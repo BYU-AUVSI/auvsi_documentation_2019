@@ -7,3 +7,5 @@
 
 # ignore synctex files
 *.synctex*
+# garbage mac files:
+.DS_Store
