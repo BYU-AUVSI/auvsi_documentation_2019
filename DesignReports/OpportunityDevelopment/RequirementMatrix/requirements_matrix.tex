@@ -1,12 +1,30 @@
-% !TEX root=main.tex
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Requirements Matrix},
+	AUVSIRevision=0.0,
+	AUVSIDescription={Initial Draft},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={John Akagi},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={DJ-005}
+}
 
-\begin{artifacttable}
-\entry{RM-001, 0.1, 09-07-18, Fall camp draft, Brady Moon, Jacob Willis}
-\entry{RM-001, 0.2, 09-14-18, Revisions after design review, Derek Knowles, Kameron Eves}
-\entry{RM-001, 1.1, 10-08-18, asdf, Kameron Eves, Brandon McBride}
+% include extra packages, if needed
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable} 
+%\entry{PC-444, 1.0, 10-02-2018, Opportunity development initial stage, Andrew Torgesen, Kameron Eves\, Ryan Anderson\, Jacob Willis\, Tyler Critchfield\, John Akagi}
+\entry{RM-001, 0.1, 09-07-2018, Fall camp draft, Brady Moon, Jacob Willis}
+\entry{RM-001, 0.2, 09-14-2018, Revisions after design review, Derek Knowles, Kameron Eves}
+\entry{RM-001, 1.1, 10-08-2018, Expansion for stage approval, Kameron Eves, Brandon McBride}
 \end{artifacttable}
+\end{AUVSITitlePage}
 
-\begin{center}
     \includegraphics[width=\textwidth]{figs/requirements_matrix.pdf}
     \label{fig:reqMat}
-\end{center}
+\end{document}

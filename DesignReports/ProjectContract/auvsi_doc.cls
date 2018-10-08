@@ -165,7 +165,7 @@
 
 \newenvironment{artifacttable}
 {
-	\begin{table}[H]
+	\begin{table}[H!]
 	\centering
 	\begin{tabular}{|c@{} P{1.5cm}|P{1cm}|P{1.6cm}|P{2.75cm}|P{3.3cm}|P{3.3cm}|}
 	\hline
