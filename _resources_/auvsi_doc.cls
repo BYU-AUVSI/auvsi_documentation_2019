@@ -23,6 +23,7 @@
 \usepackage{etextools}
 \usepackage[font={small,it}]{caption}
 \usepackage{tabularx}
+\usepackage{tabu} % for different font sizes in each row
 
 \usepackage{datetime}
 \newdateformat{specialdate}{\twodigit{\THEMONTH}-\twodigit{\THEDAY}-\THEYEAR}
