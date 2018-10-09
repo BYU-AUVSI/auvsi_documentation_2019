@@ -2,8 +2,8 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
 	AUVSITitle={Benchmarking Artifact},
-	AUVSIRevision=0.1,
-	AUVSIDescription={Initial Draft},
+	AUVSIRevision=0.2,
+	AUVSIDescription={Pre-Design Review Revision},
 	AUVSIAuthor={Kameron Eves},
 	AUVSIChecker={Andrew Torgesen},
 	AUVSILogoPath={./figs/logo.pdf},
@@ -21,17 +21,15 @@
 
 \begin{document}
 
-% \CapstoneTitlePage
-\begin{AUVSITitlePage}
+\CapstoneTitlePage
+
 \begin{artifacttable}
-\entry{DJ-003, 0.1, 10-05-2018, Initial Draft, Kameron Eves, Andrew Torgesen}
-% additional \entry{} commands for extra rows in the revision table, if needed
-\end{artifacttable}
-\end{AUVSITitlePage}
+	\entry{DJ-003,0.1,10-05-2018, Initial Draft, Kameron Eves, Andrew Torgesen}
+	\entry{DJ-003,0.2,10-09-2018, Final Edits for Design Review, Ryan Anderson, Tyler Critchfield}
 
 \section{Introduction}
 
-This project is inherently a competition. Therefore, how the product compares against other teams is an important metric.  A quick search of previous years shows that the same several teams tend to finish at the top, only swapping places among themselves. For this reason, it is valuable to observe these top 5 teams' performances. At this stage of the product development process, the main focus of this external examination is to see where we should focus our time. If we can find where last year's BYU's team lacked but the best teams performed well then we can have a suggestion as to where to focus our efforts.
+This project is inherently a competition. Therefore, the way in which the product compares against other teams is an important metric.  A quick search through results of previous years shows that the same several teams tend to finish at the top, only swapping places among themselves. For this reason, it is valuable to examine the performances of these top 5 teams. At this stage of the product development process, the main focus of this external examination is to see where we should focus our time. Finding where last year's BYU team was deficient and where the best teams performed well will provide an indication of where we should focus our efforts.
 
 \section{Method}
 The AUVSI-SUAS administration publishes copies of each team's final report. From these reports we were able to parse what the teams attempted. The competition organizers also distributed a summary of the points for each team. From this we found what each team successfully achieved. This information is tabulated in Table~\ref{table:benchmark}
@@ -71,13 +69,13 @@ The AUVSI-SUAS administration publishes copies of each team's final report. From
 
 \section{Results}
 
-As can be seen in Table~\ref{table:benchmark}, the teams that won the competition attempted and succeeded at all of the tasks. However, the table indicates that when a top team does not succeed at something, it is in the object detection section of the competition. One team, MPSTME \& NMIMS, did not even attempt this portion of the competition. VT \& VSU did not successfully achieve object detection despite the fact that they attempted to do so manually (the easier method) rather then autonomously. However, three of the five best best teams did successfully achieve autonomous object detection. For this reason, we feel that autonomous object detection is the right thing to pursue. Autonomous object detection is a difficult task. Thus, for reasons of reliability, we will also manually detect the objects. The competition allows for both methods to be employed. Points are only awarded for the method that results in the highest final score.
+As can be seen in Table~\ref{table:benchmark}, the teams that won the competition attempted and succeeded at all of the tasks. However, the table indicates that when a top team does not succeed at something, it is in the object detection section of the competition. One team, MPSTME \& NMIMS, did not even attempt this portion of the competition. VT \& VSU did not successfully achieve object detection despite the fact that they attempted to do so manually (the easier method) rather then autonomously. However, three of the five best teams did successfully achieve autonomous object detection. For this reason, we feel that achieving autonomous object detection is a worthwhile goal. Autonomous object detection is a difficult task. Thus, for the sake of redundancy, we will also manually detect the objects. The competition allows for both methods to be employed. Points are only awarded for the method that results in the highest final score.
 
-Also of note in Table~\ref{table:benchmark} is that every team in the top five attempted and achieved payload drop. Last years BYU team did attempt payload drop, but did not achieve it due to unrelated technical issues. This will be the place were the highest improvement to cost ratio can be obtained. This is especially true because the percentage of competition points awarded for the payload drop has increased. Therefore, we feel that focusing on the payload drop will be a good use of time.
+Also of note in Table~\ref{table:benchmark} is that every team in the top five attempted and achieved payload drop. Last year's BYU team did attempt payload drop, but did not achieve it due to unrelated technical issues. This is were the highest improvement to cost ratio can be obtained. This is especially true this year because the percentage of competition points awarded for the payload drop has increased. Therefore, we feel that focusing on the payload drop will be a worthwhile use of our time.
 
 \section{Discussion}
 
-The current system upon which we are iterating was successful at autonomous flight and obstacle avoidance. These system components are designed such that they will continue to work well for this years competition. However, as shown above, effort must be put into the payload delivery and autonomous obstacle detection. Because there is not currently an autonomous object detection system and because the payload delivery is significantly more complicated then previous years, these two tasks will consume most of our time. We have divided our teams into two sub teams, one for the payload delivery and one for. By focusing on these two tasks we feel that our performance in the competition will rise to and even exceed the performance of the top teams.
+The current system upon which we are iterating was successful at autonomous flight and obstacle avoidance. These system components are designed such that they will continue to work well for this year's competition. However, as shown above, effort must be put into the payload delivery and autonomous obstacle detection. Because there is not currently an autonomous object detection system and because the payload delivery is significantly more complicated then previous years, these two tasks will consume most of our time. We have divided our teams into two sub teams: one for payload delivery and one for object detection. By focusing on these two tasks we feel that our performance in the competition will rise to and even exceed the performance of the top teams.
 
 
 
