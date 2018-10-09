@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.24)  8 OCT 2018 09:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.24)  8 OCT 2018 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,23 +529,7 @@ Overfull \hbox (1.60555pt too wide) in paragraph at lines 3--10
  [][] 
  []
 
-)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 48.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [2] (./introduction.tex)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 50.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [3] (./objective_statement.tex)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 52.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [4]
-(./contact_info.tex
+) (./introduction.tex) (./objective_statement.tex) (./contact_info.tex
 Underfull \hbox (badness 6825) in paragraph at lines 16--16
 []|\OT1/cmr/m/n/12 Controls/Payload and Air-
  []
@@ -560,56 +544,120 @@ Overfull \hbox (17.04248pt too wide) in paragraph at lines 5--23
  [][] 
  []
 
-)
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 54.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 24.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [5] (./proj_app_mat.tex
-Underfull \hbox (badness 4328) in paragraph at lines 12--12
+[2]) (./proj_app_mat.tex
+File: ./figs/logo.pdf Graphic file (type pdf)
+<use ./figs/logo.pdf>
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 8.
+(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
+ [3]
+Underfull \hbox (badness 4328) in paragraph at lines 14--14
 []|\OT1/cmr/bx/n/12 Expected Com-
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 15--15
+Underfull \hbox (badness 2253) in paragraph at lines 16--16
+[]|\OT1/cmr/m/n/12 Description of Vi-sion Con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 cept, De-scrip-tion of Un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 manned Ground Ve-hi-cle
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 of Air-frame, Con-cept Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 Pro-ce-dures and Re-sults,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 Con-cept Se-lec-tion Ma-tri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\OT1/cmr/m/n/12 ces, Sub-sys-tem In-ter-face
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 17--17
 []|\OT1/cmr/m/n/12 Subsystem En-gi-neer-
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 15--15
-\OT1/cmr/m/n/12 sys-tem Test Pro-ce-dure and
+Underfull \hbox (badness 8151) in paragraph at lines 17--17
+\OT1/cmr/m/n/12 CAD Model, UGV Drop
  []
 
 
-Overfull \hbox (3.83516pt too wide) in paragraph at lines 9--21
-[][] 
+Underfull \hbox (badness 2205) in paragraph at lines 17--17
+\OT1/cmr/m/n/12 Model, Sub-sys-tem Re-quire-
  []
 
-)
+
+Underfull \hbox (badness 6808) in paragraph at lines 17--17
+\OT1/cmr/m/n/12 ment Ma-tri-ces, Sub-sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/12 Refined In-te-grated Sys-tem
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 18--18
+\OT1/cmr/m/n/12 Def-i-ni-tion, Sys-tem Re-quire-
+ []
+
+
+Underfull \hbox (badness 8019) in paragraph at lines 19--19
+[]|\OT1/cmr/m/n/12 Final Re-port Com-pi-la-tion,
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 19--19
+\OT1/cmr/m/n/12 lot Log, Team Pro-mo-tional
+ []
+
+
+Overfull \hbox (3.83516pt too wide) in paragraph at lines 11--23
+ [] 
+ []
+
+) (./key_measures.tex
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 56.
+Package pdftex.def Info: ./figs/logo.pdf  used on input line 4.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [6] (./key_measures.tex
+ [4]
 Overfull \hbox (22.13689pt too wide) in paragraph at lines 8--24
  [][] 
  []
 
-)
-File: ./figs/logo.pdf Graphic file (type pdf)
-<use ./figs/logo.pdf>
-Package pdftex.def Info: ./figs/logo.pdf  used on input line 58.
-(pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [7] (./change_mgmt_proc.tex)
+) (./change_mgmt_proc.tex)
 File: ./figs/logo.pdf Graphic file (type pdf)
 <use ./figs/logo.pdf>
 Package pdftex.def Info: ./figs/logo.pdf  used on input line 60.
 (pdftex.def)             Requested size: 64.01869pt x 26.8147pt.
- [8] (output/main.aux) ) 
+ [5] (output/main.aux) ) 
 Here is how much of TeX's memory you used:
  9053 strings out of 492982
  129632 string characters out of 6134896
- 272436 words of memory out of 5000000
+ 276436 words of memory out of 5000000
  12421 multiletter control sequences out of 15000+600000
  10580 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -620,10 +668,10 @@ nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on output/main.pdf (9 pages, 104350 bytes).
+Output written on output/main.pdf (6 pages, 103251 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

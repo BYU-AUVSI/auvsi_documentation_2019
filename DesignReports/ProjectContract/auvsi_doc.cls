@@ -24,6 +24,7 @@
 \usepackage[font={small,it}]{caption}
 \usepackage{tabularx}
 \usepackage{tabu} % for different font sizes in each row
+\usepackage{multirow}
 
 \usepackage{datetime}
 \newdateformat{specialdate}{\twodigit{\THEMONTH}-\twodigit{\THEDAY}-\THEYEAR}
@@ -165,7 +166,7 @@
 
 \newenvironment{artifacttable}
 {
-	\begin{table}[H!]
+	\begin{table}[H]
 	\centering
 	\begin{tabular}{|c@{} P{1.5cm}|P{1cm}|P{1.6cm}|P{2.75cm}|P{3.3cm}|P{3.3cm}|}
 	\hline
@@ -196,7 +197,7 @@
 }
 
 \newcommand{\AUVSISection}[2]{
-	\newpage
+	% \newpage
 	\section{#1}
 	\input{#2}
 }

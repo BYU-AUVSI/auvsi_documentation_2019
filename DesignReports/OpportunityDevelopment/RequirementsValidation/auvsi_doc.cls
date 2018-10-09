@@ -23,12 +23,17 @@
 \usepackage{etextools}
 \usepackage[font={small,it}]{caption}
 \usepackage{tabularx}
+\usepackage{tabu} % for different font sizes in each row
 
 \usepackage{datetime}
 \newdateformat{specialdate}{\twodigit{\THEMONTH}-\twodigit{\THEDAY}-\THEYEAR}
 
 \usepackage{listings}
 \usepackage{color}
+
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -162,7 +167,7 @@
 {
 	\begin{table}[H]
 	\centering
-	\begin{tabular}{|c@{} p{1.5cm}|p{1cm}|p{1.6cm}|p{2.75cm}|p{3cm}|p{3cm}|}
+	\begin{tabular}{|c@{} P{1.5cm}|P{1cm}|P{1.6cm}|P{2.75cm}|P{3.3cm}|P{3.3cm}|}
 	\hline
 	\rowcolor[HTML]{C0C0C0}
 	& \textbf{ID} & \textbf{Rev.} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
@@ -206,7 +211,7 @@
 \newcommand{\ArtifactTableArgs}[6]{
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|p{1.5cm}|p{1.7cm}|p{1.6cm}|p{2.75cm}|p{2.75cm}|p{2.75cm}|}
+		\begin{tabular}{|p{1.5cm}|p{1.7cm}|p{1.6cm}|p{2.75cm}|p{3.0cm}|p{3.0cm}|}
 		\hline
 		\rowcolor[HTML]{C0C0C0}
 		\textbf{ID} & \textbf{Revision} & \textbf{Date} & \textbf{Description} & \textbf{Author} & \textbf{Checked By} \\ \hline
@@ -238,8 +243,9 @@
 	\end{titlepage}
 }
 
-% Title page WITHOUT artifact table
-\newcommand{\AUVSITitlePage}{
+
+\newenvironment{AUVSITitlePage}
+{
 	\begin{titlepage}
     \centering
     \vspace*{0.25 cm}
@@ -253,6 +259,7 @@
     \rule{\linewidth}{0.2 mm} \\[0.4 cm]
     { \huge \bfseries \thetitle}\\
     \rule{\linewidth}{0.2 mm} \\[1.5 cm]
+}{
 	\end{titlepage}
 }
 
