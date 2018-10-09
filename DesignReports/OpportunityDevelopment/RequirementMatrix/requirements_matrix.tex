@@ -10,6 +10,7 @@
 }
 
 % include extra packages, if needed
+\usepackage{rotating}
 
 % Remove Heading Numbers
 \setcounter{secnumdepth}{0}
@@ -22,9 +23,17 @@
 \entry{RM-001, 0.1, 09-07-2018, Fall camp draft, Brady Moon, Jacob Willis}
 \entry{RM-001, 0.2, 09-14-2018, Revisions after design review, Derek Knowles, Kameron Eves}
 \entry{RM-001, 1.0, 10-08-2018, Expansion for stage approval, Kameron Eves, Brandon McBride}
+\entry{RM-001, 1.1, 10-08-2018, Reordered requirements to match priority, Jacob Willis, Brady Moon}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-\AUVSIFigure{figs/requirements_matrix.pdf}{0.8\textwidth}{Top-level requirements matrix for the unmanned aerial system.}{fig:reqMat}
+%\AUVSIFigure{figs/requirements_matrix.pdf}{0.8\textwidth}{Top-level requirements matrix for the unmanned aerial system.}{fig:reqMat}
+\begin{sidewaysfigure}
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{figs/requirements_matrix.pdf}
+	\captionof{figure}{Top-level requirements matrix for the unmanned aerial system.}
+	\label{fig:reqMat}
+	\end{center}
+\end{sidewaysfigure}
 
 \end{document}
