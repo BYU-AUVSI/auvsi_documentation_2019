@@ -1,0 +1,42 @@
+\documentclass[]{article}
+
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+% \includepdfset{offset=2.5cm -2.5cm} % because pdfpages doesn't seem to recognize auvsi_doc's offsets!
+
+\includepdf[pages=-]{./_TitlePage_/TitlePage.pdf}
+
+\section{Table of Contents}
+
+\hyperlink{proj_con.1}{\textbf{Capstone Team 45 Project Contract}}
+
+\hyperlink{req_mat.1}{\textbf{Requirements Matrix}}
+
+\hyperlink{req_val.1}{\textbf{Requirements Validation}}
+
+\hyperlink{rule_brk.1}{\textbf{2019 Rules Breakdown}}
+
+\hyperlink{last_yr.1}{\textbf{Last Year's Performance}}
+
+\hyperlink{bench.1}{\textbf{Benchmarking Artifact}}
+
+\includepdf[pages=-,link,linkname=proj_con,pagecommand={\refstepcounter{includepdfpage}\label{proj_con.\theincludepdfpage}}]{./../ProjectContract/Capstone Team 45 Project Contract.pdf}
+
+\includepdf[pages=-,link,linkname=req_mat,pagecommand={\refstepcounter{includepdfpage}\label{req_mat.\theincludepdfpage}}]{./RequirementMatrix/requirements_matrix.pdf}
+
+\includepdf[pages=-,link,linkname=req_val,pagecommand={\refstepcounter{includepdfpage}\label{req_val.\theincludepdfpage}}]{./RequirementsValidation/RequirementsValidation.pdf}
+
+\includepdf[pages=-,link,linkname=rule_brk,pagecommand={\refstepcounter{includepdfpage}\label{rule_brk.\theincludepdfpage}}]{./RulesBreakdown/2019 Rules Breakdown.pdf}
+
+\includepdf[pages=-,link,linkname=last_yr,pagecommand={\refstepcounter{includepdfpage}\label{last_yr.\theincludepdfpage}}]{./LastYear/LastYear.pdf}
+
+\includepdf[pages=-,link,linkname=bench,pagecommand={\refstepcounter{includepdfpage}\label{bench.\theincludepdfpage}}]{./Benchmarking/benchmarking.pdf}
+
+\end{document}

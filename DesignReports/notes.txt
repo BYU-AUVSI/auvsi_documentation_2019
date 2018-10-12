@@ -1,0 +1,7 @@
+- Have the WHOLE team review BEFORE turning in
+
+- make a simple "\input{}" script to combine all documents for reviewing
+    
+- have a mechanised way to prescribe changes (google doc?)
+
+- is Capstone okay with the mixed page numbers for design reviews? what about for the final "bound" book?
