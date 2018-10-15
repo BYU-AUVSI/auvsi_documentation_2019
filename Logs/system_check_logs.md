@@ -20,3 +20,20 @@ Once again, we tried to go through the entire pre-flight checklist, this time pr
 - RC appears to be working great, but we didn’t test it with ROSPlane also attached
 - We need to replace the left motor, and set a limit on the throttle command. Kameron, Ryan, and Tyler are looking into that.
 - We will try to do the full pre-flight check tomorrow. This will probably set back our test flight to Tuesday.
+
+## 10/15/2018: Pre-flight checklist test run 3
+
+Steps followed:
+
+1. Power on
+2. Verify network connection
+3. Check RC
+4. Launch ROSPlane
+5. Launch Interop Server
+6. Launch Groundstation
+7. Calibrate sensors, verify on groundstation
+
+Issues encountered:
+- the groundstation kept running into the issue "waiting for send_waypoints service to become available"
+    - we were able to view the states on the old groundstation on Brandon's computer
+    - it's apparent that ***we are not sufficiently familiar with last year's path planning/ground station setup***
