@@ -37,3 +37,30 @@ Issues encountered:
 - the groundstation kept running into the issue "waiting for send_waypoints service to become available"
     - we were able to view the states on the old groundstation on Brandon's computer
     - it's apparent that ***we are not sufficiently familiar with last year's path planning/ground station setup***
+
+## 10/16/2018: FLIGHT TEST I
+
+**Issue:** 
+
+We were unable to connect to the plane via ssh; the bullet couldn't seem to get full bars, and we're not sure why. The computers were able to connect to the rocket.
+
+**Debugging:**
+
+- We repeatedly reset our systems, turning on things in a different order, etc.
+- The computers were able to connect to the rocket, so that wasn't the issue.
+- After the flight test, we connected everything to my car's power, so powering things through the car wasn't the issue.
+- With the rocket connected to my car and the bullet connected to the Airplane's battery, a connection was easily established...maybe we just ran into some really bad luck.
+
+**Issue:** 
+
+We launched the plane incorrectly, and damaged the airframe. We were not able to fly and had to go back to campus.
+
+**Debugging:**
+
+Kameron and Brandon believe that the following may have been the causes:
+
+- the plane was launched at a slight angle, which diminished its lift capabilities from the beginning
+- the elevator was not pinned sufficiently during launch
+- not enough throttle was given at launch
+
+The two of them will attempt to get some practice in a separate setting, and perhaps take on one more team member to be familiar with the launching process.
