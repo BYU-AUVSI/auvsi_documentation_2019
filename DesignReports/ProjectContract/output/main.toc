@@ -1,8 +1,8 @@
 \babel@toc {english}{}
 \contentsline {section}{Revision History}{2}
 \contentsline {section}{Introduction}{2}
-\contentsline {section}{Project Objective Statement}{2}
+\contentsline {section}{Project Objective Statement}{3}
 \contentsline {section}{Contact Information}{3}
-\contentsline {section}{Project Approval Matrix}{3}
-\contentsline {section}{Key Success Measures}{5}
-\contentsline {section}{Change Management Procedure}{5}
+\contentsline {section}{Project Approval Matrix}{4}
+\contentsline {section}{Key Success Measures}{6}
+\contentsline {section}{Change Management Procedure}{6}
