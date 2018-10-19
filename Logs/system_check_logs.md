@@ -64,3 +64,27 @@ Kameron and Brandon believe that the following may have been the causes:
 - not enough throttle was given at launch
 
 The two of them will attempt to get some practice in a separate setting, and perhaps take on one more team member to be familiar with the launching process.
+
+## 10/19/2018: VISION FLIGHT TEST
+
+**Issue:**
+
+We weren't able to connect to the bullet again.
+
+**Debugging:**
+
+We moved down a block and the bullet connected just fine. It's weird the location would be the issue.
+
+**Issue:**
+
+We believe the plane's RC cut out and the autopilot (which was disarmed) took over and went full throttle and then elevated all the way causing the plane to go upside down. Then it pulled out of the loop and then rolled. The left side of the plane hit the ground and the wing disconnected.
+
+**Debugging:**
+
+After looking at the ROS bag, RC did indeed cutout.
+To prevent this in the future, we need to create a launch file that still launches ROSFlight, but has no autopilot.
+
+**Successes:**
+
+The bullet connected to the network.
+We launched the plane overhead and it worked smoothly.
