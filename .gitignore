@@ -5,6 +5,10 @@
 # ignore aspell backup files
 *.bak
 
+# compiled files
+*.fls
+*.fdb_latexmk
+
 # ignore synctex files
 *.synctex*
 # garbage mac files:
