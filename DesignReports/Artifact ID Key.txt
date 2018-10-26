@@ -6,3 +6,4 @@ DJ-003		Benchmarking Artifact
 DJ-004		2019 Rules Breakdown
 DJ-005		Requirements Validation
 DJ-006		Last Year's Performance
+GV-002		Concept Test Procedures and Results
