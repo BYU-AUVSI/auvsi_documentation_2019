@@ -5,7 +5,7 @@
 # ignore aspell backup files
 *.bak
 
-# compiled files
+# intermediate compiled files
 *.fls
 *.fdb_latexmk
 

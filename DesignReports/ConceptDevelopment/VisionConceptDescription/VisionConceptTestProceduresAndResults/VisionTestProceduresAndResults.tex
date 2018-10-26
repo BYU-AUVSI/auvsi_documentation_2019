@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={[TITLE OF YOUR DOCUMENT]},
+	AUVSITitle={Camera Test Procedures},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -10,11 +10,38 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{[ARTIFACT ID], [REVISION NUMBER], [DATE], [DESCRIPTION], [AUTHOR], [CHECKED BY]}
+\entry{TP-002, 0.1, 10-26-2018, Initial release, Connor Olsen, Tyler Miller}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-% document contents (see below for LaTex commands that make your life easier)
+\section{Purpose}
+
+Due to the flaws discovered with the camera used for the 2018 BYU AUVSI aircraft, It has been determined that a set of tests be outlined to test the effectiveness and reliability of cameras to meet the needs of the imaging team. These tests are designed to prove a camera’s ability to show clear images at a long range to facilitate the machine learning algorithm which will identify and categorize targets.
+
+\section{Test Objectives}
+
+The camera will be tested for the following features:\\
+\textbf{Focal Length}: The camera must be able to focus on targets at a range of at least 150 feet.\\
+\textbf{Depth of Field}: Targets must remain in focus with a tolerance of 50 ft.\\
+\textbf{Image Clarity}: The image must be clear, and its details visible.\\
+\textbf{Image Stability}: The image must remain reasonably clear when camera is unsteady.\\
+
+
+\section{Required Hardware and Software}
+
+- Camera to be tested\\
+- Computer to control camera\\
+- Measuring wheel to measure distance\\
+- Test target with letter
+
+\section{Test Procedure}
+Mount the camera in a location that is sturdy (tripod or on a secure flat surface. Measure 150 feet with the measuring wheel and have someone hold the target with letter at that distance. Have someone capture an image and inspect the quality and detail of the captured target.
+
+Disturb the camera to simulate the instability of flight and capture another image. Inspect the pixels of the image for sharpness and clarity
+
+\section{Special Instructions}
+
+To eliminate excessive variables, all camera tests (outside of the plane) are performed in the long alleyway between the EB and the CB, using the cement half-wall as a mount for the camera.
 
 \end{document}
