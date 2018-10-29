@@ -25,6 +25,35 @@ Vision's competition requirements are complex and as such required multiple conc
 
 \section{Definition}
 
+This year's vision team is changing our system architecture that will allow for better
+communication and organization. Instead of downloading each image and image state
+onto someone's personal computer, the onboard computer will send image and vehicle state
+date to a server on the ground. This server will have a compilied library of all images
+and will attach classification data onto each image as it is manually processed. Our 
+autonomous detection script will also be querying the server image database and outputing
+its results. One team member will be monitoring the autonomous output ready to kill the 
+program if it is sending too many false positives (which cause the team in incur a 
+penalty). Our system architecture is outlined in Figure~\ref{fig:blockfig}.
+
+\AUVSIFigure
+{./figs/block.pdf}
+{\textwidth}
+{Target classification system architecture}
+{fig:blockfig}
+
+Our autonomous classification system design is outlined in Figure~\ref{fig:autofig}.
+These concepts for autonomous target recognition are based on methods that
+other competition teams were able to successfully use at the comptition to
+identify targets. We will continue to iterate on the autonomous process, but
+we are confident that we can create a reliable and robust system for autonomous
+target classification.
+
+\AUVSIFigure
+{./figs/auto.pdf}
+{\textwidth}
+{Autonomous classification system design}
+{fig:autofig}
+
 \section{Justification}
 
 % document contents (see below for LaTex commands that make your life easier)
