@@ -25,6 +25,35 @@ Vision's competition requirements are complex and as such required multiple conc
 
 \section{Definition}
 
+This year's vision team is changing our system architecture that will allow for better
+communication and organization. Instead of downloading each image and image state
+onto someone's personal computer, the onboard computer will send image and vehicle state
+date to a server on the ground. This server will have a compilied library of all images
+and will attach classification data onto each image as it is manually processed. Our 
+autonomous detection script will also be querying the server image database and outputing
+its results. One team member will be monitoring the autonomous output ready to kill the 
+program if it is sending too many false positives (which cause the team in incur a 
+penalty). Our system architecture is outlined in Figure~\ref{fig:blockfig}.
+
+\AUVSIFigure
+{./figs/block.pdf}
+{\textwidth}
+{Target classification system architecture}
+{fig:blockfig}
+
+Our autonomous classification system design is outlined in Figure~\ref{fig:autofig}.
+These concepts for autonomous target recognition are based on methods that
+other competition teams were able to successfully use at the comptition to
+identify targets. We will continue to iterate on the autonomous process, but
+we are confident that we can create a reliable and robust system for autonomous
+target classification.
+
+\AUVSIFigure
+{./figs/auto.pdf}
+{\textwidth}
+{Autonomous classification system design}
+{fig:autofig}
+
 \section{Justification}
 
 Since all of our high-level concepts depend on our imaging hardware, we decided it would be beneficial for us to choose a camera as soon as possible. Our list of potential cameras came from previous years systems as well as cameras used by last years top-placing teams. Critical performance measures are shown in our measured camera values table (CS-002). This table was directly translated into a selection matrix(CS-002). Based off the camera concept selection matrix, it was decided that the Sony a6000 would give us the greatest cost to performance. It's large 24MP sensor will improve image quality when flying at higher altitudes and make autonomous classification easier. Its auto-stabilization and fast exposure time also remove a lot of burden from the user to adjust settings mid-flight. Additionally 7 of the top 15 teams used the a6000 or the earlier generation (but basically equivalent) a5100.
