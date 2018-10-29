@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={[TITLE OF YOUR DOCUMENT]},
+	AUVSITitle={UGV Drop Mechanism Concept Test Procedures and Results},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -10,11 +10,179 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{[ARTIFACT ID], [REVISION NUMBER], [DATE], [DESCRIPTION], [AUTHOR], [CHECKED BY]}
+\entry{GV-002, 0.1, 10-26-2018, Initial creation\, proceedures listed, Jacob Willis, CHECKED BY}
+
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
 % document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+This document describes the proceedures used to test each of the UGV concepts.
+Some of the tests were unecessary for selecting between concepts, so they will not be performed until subsystem engineering.
+
+\section {Test Proceedures and Results}
+	\subsection{Drop mechanisim mass}
+	\textbf{Proceedure}
+
+	Weigh all mechanisms related to landing the UGV using a scale, and sum with weights given on datasheets.
+
+	\textbf{Results} 
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              & .026 kg                \\
+		Parachute w/ control   & .124 kg                \\
+		Skycrane               & .160 kg                \\
+		Glider                 & .08 kg				 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Weight mechanism can support}
+	\textbf{Proceedure}
+	
+	Calculated based on maximum load ratings of mechanism components.
+
+	\textbf{Result}
+
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 & 			 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Aircraft internal volume consumed}
+	\textbf{Proceedure}
+
+	The volume of all of the UGV drop mechanisms, and the volume needed for the UGV if the mechanism requires it be inside the aircraft is measured. This measurement is normalized by the internal diameter of the aircraft fuselage.
+
+	\textbf{Result}
+
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 & 			 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Mounting distance from aircraft CG}
+	\textbf{Proceedure}
+
+	The distance between the center of gravity of the UGV and drop mechanism is measured and normalized by the chord length of the aircraft.
+
+	\textbf{Result}
+
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 &				 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Stowed drop mechanism drag}                                   
+	\textbf{Proceedure}
+
+	A preliminary estimate of this is made using the area of the mechanism that is exposed outside of the airframe. 
+	An accurate measurement of the mechanism drag is done by using a wind tunnel to measure the difference in drag between the airframe without the mechanism and the airframe with the mechanism.
+	
+	\textbf{Result}
+	
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 &				 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Maximum landing velocity}
+	\textbf{Proceedure}
+	
+	A preliminary estimate of this is made using calculations to determine the speed 
+
+	\textbf{Result}
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 &				 \\
+		\hline
+	\end{tabular}
+
+	\subsection{UGV Landing distance from target}
+	\textbf{Proceedure}
+
+	A preliminary estimate of this is made by dropping a representative load with the mechanism from a height of 40 feet. The distance between where the load lands and the target is scaled to a 100 foot drop height.
+
+	\textbf{Result}
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 &				 \\
+		\hline
+	\end{tabular}
+
+	\subsection{Rule violations}
+	\textbf{Proceedure}
+
+	A checklist of the relevant rules is checked for the concept. The number of violations for the concept is summed.
+
+\subsubsection{UGV Rules Requirements}
+The following outline the rules which must be followed in order to achieve any points. 
+\begin{itemize}
+\item Must carry 8 oz water bottle
+\item Must not fly below minimum altitude
+\item Must land gently and without damage (subjective measure)
+\item Max weight of 48 oz
+\item Max speed of 10 mph
+\item UGV must terminate driving after 30 seconds of communication loss or after driving out of the boundary specified
+\item Drive termination must be activated by member of team
+\item No exotic fuels or batteries
+\item Batteries must be brightly colored (bright tape)
+\item The UGV may only drive autonomously
+\end{itemize}
+
+	\textbf{Result}
+
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Concept}       & \textbf{Result} \\
+		\hline
+		Parachute              &                 \\
+		Parachute w/ control   &                 \\
+		Skycrane               &                 \\
+		Glider                 &				 \\
+		\hline
+	\end{tabular}
 
 \end{document}
