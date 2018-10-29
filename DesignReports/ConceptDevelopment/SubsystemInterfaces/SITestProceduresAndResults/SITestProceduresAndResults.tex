@@ -1,27 +1,82 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={[TITLE OF YOUR DOCUMENT]},
+	AUVSITitle={UAS Subsystem Testing},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
-% include extra packages, if needed
+\usepackage{longtable}
 
 \begin{document}
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{[ARTIFACT ID], [REVISION NUMBER], [DATE], [DESCRIPTION], [AUTHOR], [CHECKED BY]}
-% additional \entry{} commands for extra rows in the revision table, if needed
+\entry{SS-002, 0.1, 10-29-2018, initial draft, Andrew Torgesen, [CHECKED BY]}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-% document contents (see below for LaTex commands that make your life easier)
+\section{Motivation}
 
-% NOTES
+As described in the UAS Subsystem Interface Definition document (SS-001), there are two main data links between the aircraft and the subsystems on the ground during a competition flight:
 
-% tests:
-% - camera stream rate over ubiquiti network
-% - get a mission up-and-running in interop & sim w/ groundstation
-% - rc testing
+\begin{itemize}
+	\item The \textbf{2.4 Ghz Radio Link} between the RC transmitter and receiver constitutes the minimal level of communication necessary for flight. The RC link allows a safety pilot to arm/disarm the aircraft's throttle and toggle the autopilot. If RC is lost, then the autopilot should immediately activate a \textit{failsafe} mode.
+	\item The \textbf{Ubiquiti WiFi Link} between the Ubiquiti Rocket (on the ground) and Bullet (on the aircraft) allows for the exchanging of data over a ROS network. Effectively, the Rocket and the Bullet allow for network connectivity between all subsystems on the ground and in the air.
+\end{itemize}
+
+Almost all subsystem interfaces depend on these two data links. Outlined in this document are testing procedures and results to evaluate the quality and reliability of each of these vital data links for the UAS system as a whole.
+
+\section{Testing Descriptions and Procedures}
+
+Table \ref{tab:sstests} outlines key characteristics of the WiFi and RC data links that should be tested, as well as how they should be tested.
+
+\begin{center}
+	%\captionof{table}{Description of testing procedures for UAS WiFi and RC data links.}
+	%\label{tab:sstests}
+	\begin{longtable}[H]{|P{3cm}|P{5.75cm}|P{5.75cm}|}
+		\caption{Description of testing procedures for UAS WiFi and RC data links.}
+		\label{tab:sstests}\\
+		\hline
+		\rowcolor[HTML]{C0C0C0}
+		{\color[HTML]{000000} \textbf{Test name}} & {\color[HTML]{000000}\textbf{Characteristic being tested}}	& {\color[HTML]{000000}\textbf{Procedure}} \\
+		\hline
+		\textbf{RC failsafe}	& If RC connection is lost, then the flight control software should execute a failsafe mode to avoid an uncontrolled crash. &	While the aircraft's autopilot is active, kill the RC transmitter. Observe what the autopilot does. It should guide the aircraft into a loiter flight. \\
+		\hline
+		\textbf{Network loss}	& If the network connection between the aircraft and the ground is lost, then the aircraft should still be able to complete the tasks allocated to it until connectivity is regained. &	While the aircraft is flying a mission, point the Ubiquity Rocket away from the aircraft, killing the ground-to-air WiFi connection. There should be no visible deviation of the aircraft from its current mission, and RC the connection should still be active. \\
+		\hline
+		\textbf{Network reliability}	& The network should be able to connect upon boot-up of all subsystem components. Connection should be robust to external conditions and allow for a satisfactory data transfer rate. &	In an outdoor environment, turn on all subsystem components and ensure that they all connect to the network automatically. Activate all subsystems that communicate over the network, and measure data transfer rates--particularly the following: \begin{itemize}
+			\item Images should be able to stream over the network at a rate of $\geq 1$ hz.
+			\item UAS state data should be viewable on the ground station machines at a rate of  $\geq 4$ hz.
+			\item JSON data packets should be able to be sent to the interop server at a rate of $\geq 4$ hz.
+		\end{itemize} \\
+		\hline
+		\textbf{ROS failure}	& If the ROS network fails, then the autopilot can no longer fly the aircraft. The safety pilot should be able to take back control of the aircraft over RC to guide it to safety. &	... \\
+		\hline
+	\end{longtable}
+\end{center}
+
+\section{Testing Results and Conclusions}
+
+Table \ref{tab:ssresults} gives the results of testing according to the procedures outlined in Table \ref{tab:sstests}, as well as conclusions drawn from those results.
+
+\begin{center}
+	% \captionof{table}{Test results for the evaluation of the UAS WiFi and RC data links.}
+	% \label{tab:ssresults}
+	\begin{longtable}[H]{|P{3cm}|P{5.75cm}|P{5.75cm}|}
+		\caption{Test results for the evaluation of the UAS WiFi and RC data links.}
+		\label{tab:ssresults}\\
+		\hline
+		\rowcolor[HTML]{C0C0C0}
+		{\color[HTML]{000000} \textbf{Test name}} & {\color[HTML]{000000}\textbf{Test results}}	& {\color[HTML]{000000}\textbf{Conclusions}} \\
+		\hline
+		\textbf{RC failsafe}	& ... &	... \\
+		\hline
+		\textbf{Network loss}	& ... &	... \\
+		\hline
+		\textbf{Network reliability}	& ... &	... \\
+		\hline
+		\textbf{ROS failure}	& ... &	... \\
+		\hline
+	\end{longtable}
+\end{center}
 
 \end{document}
