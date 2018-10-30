@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={[TITLE OF YOUR DOCUMENT]},
+	AUVSITitle={Vision Subsystem Concept Definition},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -10,11 +10,79 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{[ARTIFACT ID], [REVISION NUMBER], [DATE], [DESCRIPTION], [AUTHOR], [CHECKED BY]}
+\entry{CD-002, 0.1, 10-25-2018, Initial release, Tyler Miller, Derek Knowles}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-% document contents (see below for LaTex commands that make your life easier)
+\section{Purpose}
+
+Last year's vision subsystem achieved less than 25\% of possible points related to the subsystem. As such, 
+it was determined that major improvements will be made at both the manual and autonomous 
+levels.
+
+The competition gives points for correct classification of ground targets' shape, shape color,
+alphanumeric, alphanumeric color, alphanumeric orientation, and geolocation. Additional points
+are given if the process between taking the image and submitting the classified image to the
+judges' server is fully autonomous without the intervention of a human. There is a penalty, 
+however, if false positive targets are submitted to the judges' server.
+
+\section{Concept Selected}
+
+Vision's competition requirements are complex and as such required multiple concepts to 
+fit into a larger system. After internal discussion, we decided to pursue a base concept 
+of manual and autonomous classification systems running in parallel.
+
+\section{Definition}
+
+This year's vision team is changing our system architecture for classifying targets which will
+ allow for better communication and organization. Instead of downloading each image and image state
+onto someone's personal computer, the computer oboard the plane will send image and vehicle state
+data to a server on the ground. This server will have a compiled database of all images captured
+and will attach classification data onto each image as it is manually processed. Our 
+autonomous detection script will also be querying the server image database and classifying
+images. One team member will be monitoring the autonomous output ready to kill the 
+program if it is sending too many false positives (which cause the team to incur a 
+penalty). Our system architecture is outlined in Figure~\ref{fig:blockfig}.
+
+\AUVSIFigure
+{./figs/block.pdf}
+{\textwidth}
+{Target classification system architecture}
+{fig:blockfig}
+
+Our autonomous classification system design is outlined in Figure~\ref{fig:autofig}.
+These concepts for autonomous target recognition are based on methods that
+other competition teams were able to successfully use at the comptition to
+identify targets. We will continue to iterate on the autonomous process, but
+we are confident that we can create a reliable and robust system for autonomous
+target classification.
+
+\AUVSIFigure
+{./figs/auto.pdf}
+{\textwidth}
+{Autonomous classification system design}
+{fig:autofig}
+
+\section{Justification}
+
+Since all of our high-level concepts depend on our imaging hardware, we decided it would be beneficial for us to choose a camera as 
+soon as possible. Our list of potential cameras came from previous years systems as well as cameras used by last years top-placing 
+teams. Critical performance measures are shown in our measured camera values table (CS-002). This table was directly translated 
+into a selection matrix(CS-002). Based off the camera concept selection matrix, it was decided that the Sony a6000 would give us 
+the greatest cost to performance. Its large 24MP sensor will improve image quality when flying at higher altitudes and make 
+autonomous classification easier. Its auto-stabilization and fast exposure time also remove a lot of burden from the user to adjust 
+settings mid-flight. Additionally 7 of the top 15 teams used the a6000 or the earlier generation (but basically equivalent) a5100.
+
+The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics we are 
+required to identify could potentially be done using a different method. Given the high-enumeration of concepts this generates, we 
+determined it would be most beneficial for us to select one high level concept which would help define the rest of the system.
+
+Concepts for autonomous classification were formed in three ways. The first was discussing our system requirements with market experts. 
+They offered excellent advice on how to best go about the classification problem. The second was researching how top-placing teams from 
+previous years tackled the problem. Teams are required to submit a design report which is made publicly available, allowing us understand 
+from a high level how their image classification systems worked. Third, we did extensive online research on available software libraries 
+and tools that could be used. As we pursued these three methods, our best concept for autonomous classification evolved into its current 
+form. We feel that this final concept is the best combination of these three sources.
 
 \end{document}
