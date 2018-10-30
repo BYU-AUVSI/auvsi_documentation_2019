@@ -15,6 +15,22 @@
 \end{artifacttable}
 \end{AUVSITitlePage}
 
+
+\section{Descriptions}
+Each of the primary concepts is described in further detail below. 
+
+\subsection{Parachute}
+A parachute is attached to the UGV, and is opened upon release of the UGV from the aircraft. To improve the accuracy of this concept, the effect of wind on the parachute and payload is characterized and used to calculate the optimal drop location given the estimated wind speed at the time of drop. No control mechanisms are used during the drop.
+
+\subsection{Parachute w\ Controls}
+Similar to the Parachute concept, but control surfaces (fins) are attached to the payload and actuated as the payload drops. This provides some controlability to stabilize the drop and to improve accuracy.
+
+\subsection{Skycrane}
+The UGV is lowered on a string or rope while the airframe circles overhead. The circling motion causes the UGV to orbit in a smaller circle as it is lowered. When the UGV hits the ground, it releases itself from the string to prevent interrupting the flight of the airframe. Preferably the UGV controls the rate of descent so it can easily feed back its distance from the ground.
+
+\subsection{Glider}
+A glider is carried onboard the airframe and is released when the UGV drop is attempted. The glider either incorporates or carries a ground vehicle. The glider is unpowered, but is controled like a normal aircraft. 
+
 \section{Evaluation Methods and Results}
 
 As can be seen from the decision matrix in Table~\ref{cont_cs_tab}, 
