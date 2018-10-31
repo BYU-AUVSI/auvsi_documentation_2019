@@ -1,0 +1,76 @@
+\documentclass[]{article}
+
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\newcommand{\pdflink}[2]{
+\hyperlink{#1.1}{\textbf{#2}}
+}
+
+\newcommand{\pdflinkdoc}[2]{
+\includepdf[pages=-,link,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+% \includepdfset{offset=2.5cm -2.5cm} % because pdfpages doesn't seem to recognize auvsi_doc's offsets!
+
+\includepdf[pages=-]{./_TitlePage_/TitlePage.pdf}
+
+\section{Table of Contents}
+
+\pdflink{ss_def}{UAS Subsystem Interface Definition}
+
+\pdflink{ss_test}{UAS Subsystem Testing}
+
+
+\pdflink{af_reqmat}{Airframe Subsystem Requirements Matrix}
+
+\pdflink{af_select}{Airframe Subsystem Concept Selection Matrices}
+
+\pdflink{af_test}{Airframe Subsystem Testing}
+
+\pdflink{af_def}{Airframe Subsystem Description}
+
+
+\pdflink{ugv_init}{UGV Delivery Subsystem Initial Concepts}
+
+\pdflink{ugv_reqmat}{UGV Delivery Subsystem Requirements Matrix}
+
+\pdflink{ugv_select}{UGV Delivery Subsystem Concept Selection Matrices}
+
+\pdflink{ugv_test}{UGV Delivery Subsystem Testing}
+
+\pdflink{ugv_def}{UGV Delivery Subsystem Description}
+
+
+\pdflink{vis_select}{Vision Subsystem Concept Selection Matrices}
+
+\pdflink{vis_test}{Vision Subsystem Testing}
+
+\pdflink{vis_def}{Vision Subsystem Description}
+
+
+\pdflinkdoc{ss_def}{./SubsystemInterfaces/SubsystemInterfacesDescription/SubsystemInterfaceDefinitions.pdf}
+\pdflinkdoc{ss_test}{./SubsystemInterfaces/SITestProceduresAndResults/SITestProceduresAndResults.pdf}
+
+\pdflinkdoc{af_reqmat}{./Airframe/AirframeRequirementsMatrix/AirframeRequirementsMatrix.pdf}
+\pdflinkdoc{af_select}{./Airframe/AirframeConceptSelectionMatrices/AirframeConceptSelectionMatrices.pdf}
+\pdflinkdoc{af_test}{./Airframe/AirframeConceptTestProceduresAndResults/AirframeConceptTestProceduresAndResults.pdf}
+\pdflinkdoc{af_def}{./Airframe/AirframeDescription/AirframeDescription.pdf}
+
+\pdflinkdoc{ugv_init}{./UGV/UGVInitialConcepts/InitialConceptGeneration.pdf}
+\pdflinkdoc{ugv_reqmat}{./UGV/UGVRequirmentsMatrix/main.pdf}
+\pdflinkdoc{ugv_select}{./UGV/UGVConceptSelectionMatrices/UGVConceptSelectionMatrices.pdf}
+\pdflinkdoc{ugv_test}{./UGV/UGVConceptTestProceduresAndResults/UGVConceptTestProceduresAndResults.pdf}
+\pdflinkdoc{ugv_def}{./UGV/UGVDescription/UGVConceptDescription.pdf}
+
+\pdflinkdoc{vis_select}{./VisionConceptDescription/VisionConceptSelectionMatrices/VisionConceptSelectionMatrices.pdf}
+\pdflinkdoc{vis_test}{./VisionConceptDescription/VisionConceptTestProceduresAndResults/VisionTestProceduresAndResults.pdf}
+\pdflinkdoc{vis_def}{./VisionConceptDescription/VisionDescription/VisionConceptDescription.pdf}
+
+\end{document}
