@@ -25,6 +25,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{SS-001, 0.1, 10-25-2018, initial draft, Andrew Torgesen, Jake Johnson \& John Akagi}
+\entry{SS-001, 0.2, 10-30-2018, adjusted wording, Andrew Torgesen, Kameron Eves}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -70,6 +71,6 @@ Figure \ref{fig:sys-diag} gives a top-level description of the major hardware an
 
 As can be seen from Figure \ref{fig:sys-diag}, both radio and WiFi will be used to facilitate connection between the subsystems on the ground and in the air. The Ubiquiti data link allows for communication between the ground and the plane over a WiFi network. A 2.4 Ghz radio link (independent )between the radio transmitter and receiver allows for manual control and arming/disarming of the aircraft.
 
-For inter-component communication, the Robot Operating System (ROS) interface features prominently. ROS is a Linux middle-ware and development protocol for creating modular programs for robotics. ROS allows for real-time communication between machines running individual nodes, or executables, over a WiFi network. In our system, all subsystems communicating via ROS either are or will be developed as ROS nodes to be run on a machine with Linux installed. For more information about ROS nodes and how they communicate over a network, see \url{http://www.ros.org/}.
+The Robot Operating System (ROS) is what facilitates the majority of inter-component communication over the WiFi network. ROS is a Linux middle-ware and development protocol for creating modular programs for robotics. ROS allows for real-time communication between machines running individual nodes, or executables, over a WiFi network. In our system, all subsystems communicating via ROS either are or will be developed as ROS nodes to be run on a machine with Linux installed. For more information about ROS nodes and how they communicate over a network, see \url{http://www.ros.org/}.
 
 \end{document}
