@@ -1,8 +1,22 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={[TITLE OF YOUR DOCUMENT]},
-	AUVSILogoPath={./figs/logo.pdf}
+	AUVSITitle={UGV Delivery System Selected Concept Description},
+	AUVSIRevision=0.1,
+	AUVSIDescription={Initial Draft},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={????????},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={GV-001}
 }
+
+% include extra packages, if needed
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
 
 % include extra packages, if needed
 
@@ -10,20 +24,34 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{[GV-04], [1.0], [10-30-2018], [Wrote concept description], [Jacob Willis], [CHECKED BY]}
+\entry{GV-04, 1.0, 10-30-2018, Wrote concept description, Jacob Willis, CHECKED BY}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
 % document contents (see below for LaTex commands that make your life easier)
 \section{Introduction}
-This document describes the purpose of the Unmanned Ground Vehicle concept selection. 
+This document gives a more detailed description of the selected concept for the UGV delivery system. As can be seen from our selection matrix (GV-00?????) and test results (GV-00?????) 
 
 \section{Description}
-In the 2019 AUVSI SUAS competion, points are awarded for successfully delivering an ``unmanned ground vehicle" (UGV) to a target location; additional points are awarded if the vehicle drives to another target location. 
-The UGV must be capable of carrying an 8oz water bottle, and the impact must subjectively be ``soft."
-During the delivery the airframe cannot drop below 100ft ASL, so a system or mechanism for landing the UGV without damage is required.
-Because this payload drop problem is the most challenging part of the UGV design, determining how to accomplish the payload drop is the subject of this concept development. 
-The UGV is assumed to be a ``black box" capable of driving to its target once it is on the ground.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=90mm]{./figs/Parachute_Side.jpg}
+\caption{A simple prototype of our parachute seen from the side.\label{overflow}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=90mm]{./figs/Parachute_Top.jpg}
+\caption{A simple prototype of our parachute seen from the top. Note the hole in the middle of the parachute. As mentioned above, we found that this greatly improved the accuracy of the parachute. \label{overflow}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=90mm]{./figs/Parachute_Fins.jpg}
+\caption{The payload we used to simulate the UGV. Note the fins. As mentioned above, preliminary results seem to indicate that these fins provided a small amount of control authority over the parachute's trajectory. This will help us improve accuracy \label{overflow}}
+\end{figure}
 
 \end{document}
