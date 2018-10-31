@@ -10,7 +10,11 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
+<<<<<<< HEAD
 \entry{SS-002, 0.1, 10-29-2018, initial draft, Andrew Torgesen, Derek Knowles}
+=======
+\entry{SS-002, 0.1, 10-29-2018, initial draft, Andrew Torgesen, Tyler Miller}
+>>>>>>> f90ef7983879f81762bbe684f9c22db6b9dbd3cd
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -19,7 +23,7 @@
 As described in the UAS Subsystem Interface Definition document (SS-001), there are two main data links between the aircraft and the subsystems on the ground during a competition flight:
 
 \begin{itemize}
-	\item The \textbf{2.4 Ghz Radio Link} between the RC transmitter and receiver constitutes the minimal level of communication necessary for flight. The RC link allows a safety pilot to arm/disarm the aircraft's throttle and toggle the autopilot. If RC is lost, then the autopilot should immediately activate a \textit{failsafe} mode.
+	\item The \textbf{900 Mhz Radio Link} between the RC transmitter and receiver constitutes the minimal level of communication necessary for flight. The RC link allows a safety pilot to arm/disarm the aircraft's throttle and toggle the autopilot. If RC is lost, then the autopilot should immediately activate a \textit{failsafe} mode.
 	\item The \textbf{Ubiquiti WiFi Link} between the Ubiquiti Rocket (on the ground) and Bullet (on the aircraft) allows for the exchanging of data over a ROS network. Effectively, the Rocket and the Bullet allow for network connectivity between all subsystems on the ground and in the air.
 \end{itemize}
 
