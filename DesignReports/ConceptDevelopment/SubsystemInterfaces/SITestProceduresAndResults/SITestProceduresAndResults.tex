@@ -10,7 +10,8 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{SS-002, 0.1, 10-29-2018, initial draft, Andrew Torgesen, Tyler Miller}
+\entry{SS-002, 0.1, 10-29-2018, initial draft, Andrew Torgesen, Derek Knowles}
+\entry{SS-002, 1.0, 10-31-2018, pre-design review revisions, Andrew Torgesen, Tyler Miller}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -68,7 +69,7 @@ Table \ref{tab:ssresults} gives the results of testing according to the procedur
 		\rowcolor[HTML]{C0C0C0}
 		{\color[HTML]{000000} \textbf{Test name}} & {\color[HTML]{000000}\textbf{Test results}}	& {\color[HTML]{000000}\textbf{Conclusions}} \\
 		\hline
-		\textbf{RC failsafe}	& After RC is lost for $\approx 30s$, the autopilot triggers a "return to land" protocol, landing near where it took off from. &	The RC failsafe mechanism built into the autopilot has been found to be in line with the AUVSI competition rules. \\
+		\textbf{RC failsafe}	& After RC is lost for $\approx 30s$, the autopilot triggers a ``return to land" protocol, landing near where it took off from. &	The RC failsafe mechanism built into the autopilot has been found to be in line with the AUVSI competition rules. \\
 		\hline
 		\textbf{Network loss}	& Loss of connection between the Ubiquiti Rocket and Bullet has no discernible impact on the autopilot--the only consequence is that the groundstation computers are unable to view the states of the aircraft over the ROS network. Communication resumes once the aircraft is back in range of the Rocket. &	\begin{itemize}
 			\item It will be beneficial to have an on-board state recorder to record all ROS messages for later viewing, even if connection to the aircraft is lost temporarily.
@@ -81,7 +82,7 @@ Table \ref{tab:ssresults} gives the results of testing according to the procedur
 			\item \textit{JSON stream rate:} 3-4 hz
 		\end{itemize} &	\begin{itemize}
 		\item The network streaming rate has been found to be adequate. It is possible that we will want to purchase a more powerful router to allow for faster streaming rates at longer distances.
-		\item We have only run the network speed test with the plane on the ground; it would be nice to run another speed test in conjunction with a test of the maximum range of the Ubiquiti network connection.
+		\item We have only run the network speed test with the aircraft on the ground; it would be nice to run another speed test in conjunction with a test of the maximum range of the Ubiquiti network connection.
 		\item The instance of never being able to connect in a particular geographical location is troubling. This quirk merits further investigation.
 	\end{itemize} \\
 		\hline
