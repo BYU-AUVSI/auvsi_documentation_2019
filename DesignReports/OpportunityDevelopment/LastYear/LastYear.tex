@@ -1,0 +1,68 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Last Year's Performance},
+	AUVSIRevision=0.0,
+	AUVSIDescription={Initial Draft},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={Ryan Anderson},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={DJ-006}
+}
+
+% include extra packages, if needed
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+\begin{AUVSITitlePage}
+\begin{artifacttable} 
+	\entry{DJ-006, 0.1, 10-03-2018, Initial Draft, Kameron Eves, Ryan Anderson}
+	\entry{DJ-006, 1.0, 10-08-2018, Fixed math errors and improved clarity, Jacob Willis, Andrew Torgesen}
+\end{artifacttable}
+\end{AUVSITitlePage}
+% document contents
+\section{Introduction}
+As our objective statement states, the goal of our capstone team is to improve upon last year's design. Therefore, an important consideration in developing requirements and key success measures is the performance of last years team. Analysis of this performance will reveal which areas require the most development as well as which areas are already optimized.
+
+\section{Last Year's Performance}
+
+\begin{center}
+\begin{table}[h!]
+\caption{The results from last year's mission tabulated. Category Scores are scoring weights from last year's competition rules, with each subsection's Category Score given as a percentage of its section. Last year's results are shown on the same scale as it's corresponding section. E.g., a perfect performance means that the percentage listed under \textbf{Last Year's Results} exactly matches the corresponding section percentage listed under \textbf{Category Score}. All of last year's results are rounded to the nearest integer.}
+\begin{tabular}{l c c}
+	\large{\textbf{Category}}			& \large{\textbf{Category Score}} 	&	\large{\textbf{Last Year's Results}} \\
+	\hline\hline
+	\textbf{Timeline}					  	& \textbf{10\%}				& 	\textbf{0\%} \\
+	\quad Mission Time 							& \qquad 80\%				& \qquad 	2\% \\
+	\quad Timeout								& \qquad 20\%				&  \qquad	0\% \\
+	\hline
+	\textbf{Autonomous Flight}				& \textbf{20\%}				& 	\textbf{16\%}	\\
+	\quad Autonomous Flight 						& \qquad 40\%				& \qquad 	36\%	\\
+	\quad Waypoint Capture	 					& \qquad 10\%				& \qquad 	10\%	\\
+	\quad Waypoint Accuracy						& \qquad 50\%				& \qquad 	42\% 	\\
+	\hline
+	\textbf{Obstacle Avoidance}				& \textbf{20\%}				& 	\textbf{10\%}	\\
+	\hline
+	\textbf{Object Classification}				& \textbf{20\%}				&	\textbf{4\%}	\\
+	\quad Characteristics						& \qquad 20\%				& \qquad 	6\%	\\
+	\quad Geolocation							& \qquad 30\%				& \qquad	0\%	\\
+	\quad Actionable							& \qquad 30\%				& \qquad	15\%	\\
+	\quad Autonomy							& \qquad 20\%				& \qquad	0\%	\\
+	\hline
+	\textbf{Air Drop}						& \textbf{20\%}				&	\textbf{0\%}	\\
+	\hline
+	\textbf{Operation Excellence}				& \textbf{10\%}				& 	\textbf{8\%}		\\
+	\hline
+	\hline
+	\large{\textbf{Total}} & \large{\textbf{100\%}} & \large{\textbf{38\%}}\\
+	\hline
+\end{tabular}
+\label{table:Results}
+\end{table}
+\end{center}
+
+\section{Discussion}
+As shown in Table~\ref{table:Results}, last year's team performed very well in the Autonomous Flight section and the Operational Excellence section. However, they underperformed in the Timeline, Obstacle Avoidance, Object Classification, and Air Drop sections. This year, we have specifically assigned subteams to focus on the Air Drop and Object Classification, respectively, since these are the two areas in need of the largest improvement. Because Object Detection was the primary obstacle to last year's performance in the Timeline section, improving Object Detection performance should also allow improve the Timeline section for this year.
+
+\end{document}
