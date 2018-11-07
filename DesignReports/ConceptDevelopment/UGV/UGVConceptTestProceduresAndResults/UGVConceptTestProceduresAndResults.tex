@@ -11,6 +11,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{GV-005, 0.1, 10-26-2018, Initial creation\, proceedures listed, Jacob Willis, Andrew Torgesen}
+\entry{GV-005, 1.0, 11-6-2018, Additional detail added based on design review, John Akagi, NEEDS REVIEW}
 
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
@@ -18,17 +19,20 @@
 
 % document contents (see below for LaTex commands that make your life easier)
 \section{Introduction}
-This document describes the proceedures used to test each of the UGV concepts.
+This document describes the proceedures used to test each of the Unmanned Ground Vehicle (UGV) payload delivery concepts.
 Some of the tests were unecessary for selecting between concepts, so they will not be performed until subsystem engineering.
 
 \section {Test Proceedures and Results}
-	\subsection{Drop mechanisim mass}
-	\textbf{Proceedure}
+	\subsection{Drop Mechanism Mass}
 
-	Weigh all mechanisms related to landing the UGV using a scale, and sum with weights given on datasheets.
+	The mass of all components related to landing the UGV safely were determined and summed for each concept. Results are found in Table \ref{mass}.
 
-	\textbf{Results} 
 
+	\begin{table}[!h]
+	\centering
+	
+	\caption{Estimated total mass for the delivery system for the UGV.}
+\label{mass}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -39,15 +43,20 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 & .08 kg				 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
-	\subsection{Weight mechanism can support}
-	\textbf{Proceedure}
+	\subsection{Maximum Deilverable Weight}
+
 	
-	Calculated based on maximum load ratings of mechanism components.
-
-	\textbf{Result}
+	In order to determine the maximum weight the concepts could deliver, the weight constraints of the inidividual components were determined. The maximum weight is the minimum load ratings. Results are found in Table \ref{weight}.
 
 
+
+	\begin{table}[!h]
+\centering
+
+\caption{Maximum weight the concept can safely deliver. Weight determined by load ratings of components.}
+\label{weight}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -58,34 +67,39 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 & 		1 kg	 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
-	\subsection{Aircraft internal volume consumed}
-	\textbf{Proceedure}
+	\subsection{Drop Mechanism Volume}
 
-	The volume of all of the UGV drop mechanisms, and the volume needed for the UGV if the mechanism requires it be inside the aircraft is measured.
-
-	\textbf{Result}
+	The volume of all of the UGV drop mechanisms, and the volume needed for the UGV if the mechanism requires it be inside the aircraft is measured. Results are found in Table \ref{volume}.
 
 
+	\begin{table}[!h]
+\centering
+
+\caption{Volume required for each drop mechanism.}
+\label{volume}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
 		\hline
-		Parachute              &        462 cm\textsuperscript{2}         \\
-		Parachute w/ control   &    462 cm\textsuperscript{2}             \\
-		Skycrane               &          92 cm\textsuperscript{2}       \\
-		Glider                 & 		864 cm\textsuperscript{2}	 \\
+		Parachute              &        462 cm\textsuperscript{3}         \\
+		Parachute w/ control   &    462 cm\textsuperscript{3}             \\
+		Skycrane               &          92 cm\textsuperscript{3}       \\
+		Glider                 & 		864 cm\textsuperscript{3}	 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
 	\subsection{Mounting distance from aircraft CG}
-	\textbf{Proceedure}
 
-	The distance between the center of gravity of the UGV and drop mechanism is measured and normalized by the chord length of the aircraft.
+	The distance between the center of gravity of the UGV and drop mechanism is measured. Since our airframe and internal layout is still undecided, this distance was unable to be measured.Results are found in Table \ref{cg}.
 
-	\textbf{Result}
+	\begin{table}[!h]
+\centering
 
-
+\caption{Distance between the aircraft center of gravity and the drop mechanism.}
+\label{cg}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -96,15 +110,19 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 &		Not Tested		 \\
 		\hline
 	\end{tabular}
+\end{table}
 
-	\subsection{Stowed drop mechanism drag}                                   
-	\textbf{Proceedure}
+	\subsection{Stowed Drop Mechanism Drag}                                   
 
-	A preliminary estimate of this is made using the area of the mechanism that is exposed outside of the airframe. 
-	An accurate measurement of the mechanism drag is done by using a wind tunnel to measure the difference in drag between the airframe without the mechanism and the airframe with the mechanism.
+
+	A preliminary estimate of this is made using the area of the mechanism that is exposed outside of the airframe and computing drag with $D = \frac{1}{2}\rho v^2 C_d A$ where air density $\rho = 1.225 kg/m^3$, velocity $v = 15 m/s$ is the estimated aircraft flight speed, area $A$ is the cross sectional area of the drop mechanism, and $C_d$ is the estimated coefficient of drag based on cross sectional area and standard drag coefficient tables. Results are found in Table \ref{drag}.
 	
-	\textbf{Result}
-	
+
+	\begin{table}[!h]
+	\centering
+
+	\caption{Estimated drag of the drop mechanism.}
+\label{drag}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -115,14 +133,18 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 &		.245 N		 \\
 		\hline
 	\end{tabular}
+	\end{table}
+	\subsection{Maximum Landing Velocity}
 
-	\subsection{Maximum landing velocity}
-	\textbf{Proceedure}
 	
-	A preliminary estimate of this is made using calculations to determine the speed 
+	A preliminary estimate of this is made by calculating the landing velocity based on video data taken during the drop testing. The the payload was compared to a known measure placed behind the payload and the change in position over time was used to calculate the impact velocity. Results are found in Table \ref{vel}.
 
-	\textbf{Result}
 
+	\begin{table}[!h]
+	\centering
+
+	\caption{Estimated landing velocity of delivery system.}
+	\label{vel}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -134,14 +156,17 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 &			1.9 m/s	 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
-	\subsection{UGV Landing distance from target}
-	\textbf{Proceedure}
+	\subsection{Delivery Precision}
 
-	A preliminary estimate of this is made by dropping a representative load with the mechanism from a height of 40 feet. The distance between where the load lands and the target is scaled to a 100 foot drop height and the standard deviation of the spread is reported. The precision of the glider was tested by dropping it from heights of 5, 6, and 7 ft and the precision was scaled to 100 ft.
+	A preliminary estimate of this is made by dropping a representative load with the mechanism from a height of 35 feet. The distance between where the load lands and the target is scaled to a 100 foot drop height and the standard deviation of the spread is reported. The precision of the glider was tested by dropping it from heights of 5, 6, and 7 ft and the precision was scaled to 100 ft. For more detailed explination of the test procedure, see CD-004 UGV Parachute Testing Description. Results are found in Table \ref{precision}.
 
-	\textbf{Result}
+	\begin{table}[!h]
+	\centering
 
+	\caption{Standard deviation of initial impact, scaled to a 100 ft drop.}
+	\label{precision}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -153,11 +178,12 @@ Some of the tests were unecessary for selecting between concepts, so they will n
 		Glider                 &		28 ft		 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
-	\subsection{Rule violations}
-	\textbf{Proceedure}
+	\subsection{Rule Violations}
 
-	A checklist of the relevant rules is checked for the concept. The number of violations for the concept is summed.
+
+	A checklist of the relevant rules is checked for the concept. The number of violations for the concept is summed. Results are found in Table \ref{rules}.
 
 \subsubsection{UGV Rules Requirements}
 The following outline the rules which must be followed in order to achieve any points. 
@@ -168,8 +194,12 @@ The following outline the rules which must be followed in order to achieve any p
 \item Max weight of 48 oz
 \end{itemize}
 
-	\textbf{Result}
 
+	\begin{table}[!h]
+	\centering
+
+	\caption{Number of rules violated by delivery system.}
+	\label{rules}
 	\begin{tabular}{|l|l|}
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
@@ -180,5 +210,6 @@ The following outline the rules which must be followed in order to achieve any p
 		Glider                 &		1		 \\
 		\hline
 	\end{tabular}
+	\end{table}
 
 \end{document}

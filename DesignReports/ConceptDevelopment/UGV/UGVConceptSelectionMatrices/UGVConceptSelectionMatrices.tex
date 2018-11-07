@@ -12,6 +12,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{GV-003, 1.0, 10-31-2018, Created document and decision matrix, Jacob Willis, Andrew Torgesen}
+\entry{GV-003, 1.1, 11-6-2018, Document revised with comments from design review, John Akagi, NEED REVIEW}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -21,19 +22,19 @@
 Each of the primary concepts is described in further detail below. 
 
 \subsection{Parachute}
-A parachute is attached to the UGV, and is opened upon release of the UGV from the aircraft. To improve the accuracy of this concept, the effect of wind on the parachute and payload is characterized and used to calculate the optimal drop location given the estimated wind speed at the time of drop. No control mechanisms are used during the drop.
+A parachute is attached to the UGV, and is opened upon release of the UGV from the aircraft. To improve the accuracy of this concept, the effect of wind on the parachute and payload is characterized and used to calculate the optimal drop location given the estimated wind speed at the time of drop. No control mechanisms are used during the drop. For concept verification purposes, the parachute is dropped from a height of 35 ft with no wind to test  if the accuracy and impact speed are within the acceptable limits.
 
 \subsection{Parachute with Controls}
-Similar to the Parachute concept, but control surfaces (fins) are attached to the payload and actuated as the payload drops. This provides some controlability to stabilize the drop and to improve accuracy.
+Similar to the Parachute concept, but control surfaces (fins) are attached to the payload and actuated as the payload drops. This provides some controlability to stabilize the drop and to improve accuracy. For concept verification purposes, the parachute is dropped from a height of 35 ft with no wind to test  if the accuracy and impact speed are within the acceptable limits.
 
 \subsection{Skycrane}
-The UGV is lowered on a string or rope while the airframe circles overhead. The circling motion causes the UGV to orbit in a smaller circle as it is lowered. When the UGV hits the ground, it releases itself from the string to prevent interrupting the flight of the airframe. Preferably the UGV controls the rate of descent so it can easily feed back its distance from the ground.
+The UGV is lowered on a string or rope while the airframe circles overhead. The circling motion causes the UGV to orbit in a smaller circle as it is lowered. When the UGV hits the ground, it releases itself from the string to prevent interrupting the flight of the airframe. Preferably the UGV controls the rate of descent so it can easily feed back its distance from the ground. Potential winches that could be used to lower the payload were found online and their characteristics were used to check compliance with the needed guidelines. We were unable to devise tests to determine landing velocity and precision since these measures are highly reliant on the control of the airframe. However, we did disuss with Dr. McLain, who has had experience with tethered payloads, to determine the relative performance of the skycrane option.
 
 \subsection{Glider}
-A glider is carried onboard the airframe and is released when the UGV drop is attempted. The glider either incorporates or carries a ground vehicle. The glider is unpowered, but is controled like a normal aircraft. 
+A glider is carried onboard the airframe and is released when the UGV drop is attempted. The glider either incorporates or carries a ground vehicle. The glider is unpowered, but is controlled like a normal aircraft. 
 
 \subsection{Un-aided drop}
-The UGV is dropped from the airplane without any mechanisms for slowing its descent. This is used as the reference for the other concepts. Because the competition rules require a gentle landing, an un-aided drop cannot be used as the selected concept.
+The UGV is dropped from the airplane without any mechanisms for slowing its descent. This is used as the reference for the other concepts. Because the competition rules require a gentle landing, an un-aided drop cannot be used as the selected concept. Using the equation for terminal velocity, $V_t = \sqrt{\frac{2mg}{\rho A C_d}}$, with values of  surface area $A = .0225 m^2$, coefficient of drag $C_d = 1.05$ (coefficient of drag for a cube), air density $\rho = 1.225 kg/m^3$, and mass $m = .711 kg$ (mass of payload used to test parachute concepts) gives a estimated terminal velocity of 22.0 m/s. Compared to the estimated speeds of the parachutes which ranged from 2.7 m/s to 4.8 m/s, 22.0 m/s is certainly a hard landing. This was additionally confirmed when we dropped the payload from a height of 35 ft without a parachute and one of the water bottles broke on impact.
 
 \section{Decision}
 
