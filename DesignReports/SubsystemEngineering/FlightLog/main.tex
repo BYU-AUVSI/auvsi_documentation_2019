@@ -1,0 +1,61 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Flight Test Log},
+	AUVSIRevision=0.0,
+	AUVSIDescription={Created},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={[Checker]},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={AF-004}
+}
+
+% include extra packages, if needed
+\usepackage{makecell}
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+\begin{AUVSITitlePage}
+\begin{artifacttable} 
+	\entry{AF-004, 0.1, 11-07-2018, Created*, Kameron Eves, [Checker]}
+\end{artifacttable}
+*Note that additions to this log will not necessitate a revision update. Only formatting or other content additions will require that.
+\end{AUVSITitlePage}
+% document contents
+
+
+\section{Log}
+
+\begin{center}
+%\begin{table}[h!]
+
+\captionof{table}{A log of each flight test conducted by our team.}
+\bgroup
+\def\arraystretch{1.25}%
+\begin{tabular}{| c | c | c | p{9 cm} |}
+	\hline 
+	\makecell{\textbf{Date} \\ \textbf{(m-d-y)}}&\textbf{Location} &	\makecell{\textbf{Length} \\ \textbf{(min)}} & 	\textbf{Notes} \\
+	\hline\hline
+	10-16-18 				& Springville			&	0.08					& 	Networking issues, later determined to be because of location. Moving down the road works. Attempted RC flight and crashed on launch. Need to practice launch procedure. \\
+	\hline
+	10-19-18 				& Springville			&	0.15 					& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced CG and so performed a loop and crash landed. \\
+	\hline
+	10-23-18 				& Springville			&	1.28					& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the batter forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
+	\hline
+	11-01-18 				& Springville			&	2.83					& 	Attempted RC flight for imaging. Still had minor stability issues. We lost control and crash landed near end of flight. We later determined these issues were because the battery was not secured properly. It slid around inflight affecting our static margin. This caused instability and aggressive flight maneuvers that caused the battery to fall out in flight. As such we lost control and crashed. Battery must be strapped down.  \\
+	\hline
+	11-06-18 				& Springville			&	4.77					& 	Attempted RC flight for imaging. Aircraft flew wonderfully. Images of ground targets successfully captured. Flight was terminated when RC was lost and aircraft crashed hard. More investigation into the cause is needed. Possibly because of RC interference over the trees or to low of transmission power.  \\
+	\hline
+\end{tabular}
+\egroup
+\label{table:Results}
+
+%\end{table}
+\end{center}
+
+
+
+
+
+\end{document}
