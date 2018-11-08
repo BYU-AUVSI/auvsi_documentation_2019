@@ -20,11 +20,11 @@
 As described in the UAS Subsystem Interface Definition document (SS-001), there are two main data links between the aircraft and the subsystems on the ground during a competition flight:
 
 \begin{itemize}
-	\item The \textbf{900 MHz Radio Link} between the RC transmitter and receiver constitutes the minimal level of communication necessary for flight. The RC link allows a safety pilot to arm/disarm the aircraft's throttle and toggle the autopilot. If RC is lost, then the autopilot should immediately activate a \textit{failsafe} mode.
-	\item The \textbf{Ubiquiti WiFi Link} between the Ubiquiti Rocket (on the ground) and Bullet (on the aircraft) allows for the exchanging of data over a ROS network. Effectively, the Rocket and the Bullet allow for network connectivity between all subsystems on the ground and in the air.
+	\item The \textbf{900 MHz Radio Link} between the RC transmitter and receiver constitutes the minimal level of communication necessary for flight. The RC link allows a safety pilot to arm/disarm the aircraft's throttle and toggle the autopilot. As stipulated in our key success measures, we are trying to minimize instances when the safety pilot must manually take over the aircraft via the RC link. The ideal flight would not utilize this communication method. However, the RC link is necessary for safe operation and as such is essential to our product. If RC is lost, then the autopilot should immediately activate a \textit{failsafe} mode.
+	\item The \textbf{Ubiquiti WiFi Link} between the Ubiquiti Rocket (on the ground) and Bullet (on the aircraft) allows for the exchanging of data over a ROS network. Effectively, the Rocket and the Bullet allow for network connectivity between all subsystems on the ground and in the air. For example, within our key success measures, target characteristics identified pre-requires the ability to communicate images with the ground station. The aircraft's proximity to waypoints and obstacles are also reported through this data link. Thus the Ubiquiti WiFi link will be essential to a successful performance in our key success measures.
 \end{itemize}
 
-Almost all subsystem interfaces depend on these two data links. Outlined in this document are testing procedures and results to evaluate the quality and reliability of each of these vital data links for the UAS system as a whole.
+Almost all subsystem interfaces and performance measures depend on these two data links. Outlined in this document are testing procedures and results to evaluate the quality and reliability of each of these vital data links for the UAS system as a whole.
 
 \section{Testing Descriptions and Procedures}
 
@@ -94,6 +94,6 @@ Table \ref{tab:ssresults} gives the results of testing according to the procedur
 	\end{longtable}
 \end{center}
 
-Based on the results documented in Table \ref{tab:ssresults}, we have determined that \textbf{our chosen principal inter-component data links are adequate for the competition environment}. Further tests are required to determine the boundary conditions (such as maximum possible distance) of their functional use.
+Based on the results documented in Table \ref{tab:ssresults}, we have determined that \textbf{our chosen principal inter-component data links are adequate for the competition environment and will not inhibit excellent performance in our key success measures}. Further tests are required to determine the boundary conditions (such as maximum possible distance) of their functional use.
 
 \end{document}
