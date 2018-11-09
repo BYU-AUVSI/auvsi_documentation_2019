@@ -31,8 +31,13 @@
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-At its heart, the AUVSI competition is a systems engineering competition, testing how well a team can bring together a complex amalgamation of software and hardware components to accomplish sophisticated tasks in autonomy and aviation. Thus, as part of the Concept Development process for the UAS, proper interface protocols must be defined so that inter-component testing can commence as soon as possible. Upon identifying the most critical subsystem interfaces, tests may be designed to evaluate the effectiveness of our chosen means of communicating between subsystems.
+\section{Introduction}
 
+At its heart, the AUVSI competition is a systems engineering competition, testing how well a team can bring together a complex amalgamation of software and hardware components to accomplish sophisticated tasks in autonomy and aviation.
+While no key success measure directly measures this integration, all of the key success measures are acheived through adequate system integration. 
+Thus, as part of the Concept Development process for the UAS, proper interface protocols must be defined so that inter-component testing can commence as soon as possible. Upon identifying the most critical subsystem interfaces, tests may be designed to evaluate the effectiveness of our chosen means of communicating between subsystems.
+
+\section{Subsystem Interfaces}
 Figure \ref{fig:sys-diag} gives a top-level description of the major hardware and software subsystems, as well as how they interface in the fully-functioning UAS. Table \ref{table:comp-des} lists descriptions of the functions of each software component listed in the figure.
 
 \vspace{0.3cm}
@@ -73,6 +78,7 @@ Figure \ref{fig:sys-diag} gives a top-level description of the major hardware an
 	\label{table:comp-des}
 \end{center}
 
+\section{Conclusion}
 As can be seen from Figure \ref{fig:sys-diag}, both radio and WiFi will be used to facilitate connection between the subsystems on the ground and in the air. The Ubiquiti data link allows for communication between the ground and the aircraft over a WiFi network. A 2.4 GHz radio link (independent) between the radio transmitter and receiver allows for manual control and arming/disarming of the aircraft.
 
 The Robot Operating System (ROS) is what facilitates the majority of inter-component communication over the WiFi network. ROS is a Linux middle-ware and development protocol for creating modular programs for robotics. ROS allows for real-time communication between machines running individual nodes, or executables, over a WiFi network. In our system, all subsystems communicating via ROS either are or will be developed as ROS nodes to be run on a machine with Linux installed. For more information about ROS nodes and how they communicate over a network, see \url{http://www.ros.org/}.
