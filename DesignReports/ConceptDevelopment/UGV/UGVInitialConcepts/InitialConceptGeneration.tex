@@ -15,7 +15,7 @@
 \begin{artifacttable}
 \entry{GV-001, 0.1, 2018-10-23, Initial Draft, John Akagi, Jacob Willis}
 \entry{GV-001, 1.0, 2018-10-31, Added introduction, Jacob Willis, Andrew Torgesen}
-\entry{GV-001, 1.1, 2018-11-8, Added conclusion and reference key success measures, Jacob Willis, }
+\entry{GV-001, 1.1, 2018-11-8, Added conclusion and reference key success measures, Jacob Willis, John Akagi}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -24,7 +24,7 @@
 This document describes the initial concept generation of the Unmanned Ground Vehicle system.
 
 \section{System Objective}
-In the 2019 AUVSI SUAS competition, points are awarded for successfully delivering an ``unmanned ground vehicle" (UGV) to a target location; additional points are awarded if the vehicle drives to another target location. 
+In the 2019 AUVSI SUAS competion, points are awarded for successfully delivering an Unmanned Ground Vehicle (UGV) to a target location; additional points are awarded if the vehicle drives to another target location. 
 The UGV must be capable of carrying an 8oz water bottle, and the impact must subjectively be ``soft."
 During the delivery the airframe cannot drop below 100ft ASL, so a system or mechanism for landing the UGV without damage is required.
 
@@ -33,9 +33,14 @@ With this in mind, determining how to accomplish the payload drop is the subject
 The UGV is assumed to be a 700 gram ``black box" capable of driving to its target once it is on the ground.
 
 \section{UGV Delivery Initial Concepts}
+The UGV delivery concepts were generated individually by team members and then discussed as a team to combine similar ideas. After all ideas were discussed, a subset were selected as being most promising and advanced to the testing stage. The concepts generated and initial decisions are listed in Table \ref{tab:initCon}. Additionally, the concepts are shown as a concept classification tree in Figure \ref{fig:ConceptTree} to highlight the variety of ideas generated. 
+
+
 \begin{center}
-\captionof{table}{Description of initial ideas and decisions made. ``Discarded" indicates the idea was considered unfeasible, ``Investigate" indicates the idea was studied further, ``Modify" indicates the idea was considered usable in conjunction with another idea or ideas. }
+
 \begin{longtable}[H]{|p{.15\columnwidth}|p{.34\columnwidth}|p{.12\columnwidth}|p{.34\columnwidth}|}
+\caption{Description of initial ideas and decisions made. ``Discarded" indicates the idea was considered unfeasible, ``Investigate" indicates the idea was studied further, ``Modify" indicates the idea was considered usable in conjunction with another idea or ideas. } \label{tab:initCon}\\
+
 \hline
 \textbf{Idea}	&	\textbf{Description}	&	\textbf{Decision} &	\textbf{Rationale} \\
 \hline
@@ -73,11 +78,12 @@ Nothing & Make the UGV as rugged as possible and drop it from the UAV with no sl
 \hline
 Low Drop & Drop below the minimum allowable flight level and drop the UGV from a lower altitude for increased survivability & Discarded & Would violate rules that state we must remain above a certain altitude\\
 \hline
+
 \end{longtable}
 \end{center}
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \tikzset{grow'=right,level distance=128pt}
