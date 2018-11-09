@@ -20,7 +20,7 @@
 % document contents (see below for LaTex commands that make your life easier)
 \section{Introduction}
 This document describes the procedures used to test each of the Unmanned Ground Vehicle (UGV) payload delivery concepts.
-Some of the tests were unnecessary for selecting between concepts, so they will not be performed until subsystem engineering.
+Some of the tests were unnecessary for selecting between concepts, so they will not be performed unless required by subsystem engineering.
 
 \section {Test Procedures and Results}
 	\subsection{Drop Mechanism Mass}
@@ -91,27 +91,6 @@ Some of the tests were unnecessary for selecting between concepts, so they will 
 	\end{tabular}
 	\end{table}
 
-	\subsection{Mounting distance from aircraft CG}
-
-	The distance between the center of gravity of the UGV and drop mechanism is measured. Since our airframe and internal layout is still undecided, this distance was unable to be measured.Results are found in Table \ref{cg}.
-
-	\begin{table}[!h]
-\centering
-
-\caption{Distance between the aircraft center of gravity and the drop mechanism.}
-\label{cg}
-	\begin{tabular}{|l|l|}
-		\hline
-		\textbf{Concept}       & \textbf{Result} \\
-		\hline
-		Parachute              &      Not Tested           \\
-		Parachute w/ control   &           Not Tested      \\
-		Skycrane               &     Not Tested            \\
-		Glider                 &		Not Tested		 \\
-		\hline
-	\end{tabular}
-\end{table}
-
 	\subsection{Stowed Drop Mechanism Drag}                                   
 
 
@@ -127,8 +106,8 @@ Some of the tests were unnecessary for selecting between concepts, so they will 
 		\hline
 		\textbf{Concept}       & \textbf{Result} \\
 		\hline
-		Parachute              &         .278 N        \\
-		Parachute w/ control   &    .278             \\
+		Parachute              &        .278 N        \\
+		Parachute w/ control   &    	.278 N            \\
 		Skycrane               &        .315 N         \\
 		Glider                 &		.245 N		 \\
 		\hline
@@ -211,5 +190,8 @@ The following outline the rules which must be followed in order to achieve any p
 		\hline
 	\end{tabular}
 	\end{table}
+
+\subsection{Conclusion}
+The preceding test results are used to select the optimal concept in GV-002.
 
 \end{document}
