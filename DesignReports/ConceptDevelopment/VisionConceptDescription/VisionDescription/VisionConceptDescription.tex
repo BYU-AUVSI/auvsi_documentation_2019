@@ -10,17 +10,17 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{CD-002, 0.1, 10-25-2018, Initial release, Tyler Miller, Derek Knowles}
-\entry{CD-002, 0.2, 11-09-2018, Feedback edits, Tyler Miller, Connor Olsen}
+\entry{CD-002, 1.0, 10-25-2018, Initial release, Tyler Miller, Derek Knowles}
+\entry{CD-002, 1.1, 11-09-2018, Feedback edits, Tyler Miller, Connor Olsen}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
 \section{Introduction}
 
-Last year's vision subsystem achieved less than 25\% of the possible points related to the subsystem. 
-Vision's key success measure for this year is achieving at least 40\% classification with a stretch 
-goal of 80\%. Given this measure, it was determined that major improvements must be made in both 
+Last year's vision subsystem achieved less than 25\% of the possible points related to the subsystem.
+Vision's key success measure for this year is achieving at least 40\% classification with a stretch
+goal of 80\%. Given this measure, it was determined that major improvements must be made in both
 the manual and autonomous recognition systems.
 
 \section{Purpose}
@@ -28,14 +28,14 @@ the manual and autonomous recognition systems.
 The competition gives points for correct classification of ground targets' shape, shape color,
 alphanumeric, alphanumeric color, alphanumeric orientation, and geolocation. Additional points
 are given if the process between taking the image and submitting the classified image to the
-judges' server is fully autonomous without the intervention of a human. There is a penalty, 
+judges' server is fully autonomous without the intervention of a human. There is a penalty,
 however, if false positive targets are submitted to the judges' server. The purpose of these
 concepts is to maximize accurate classification performance and thus our key success measure.
 
 \section{Concept Selected}
 
-Vision's competition requirements are complex and as such required multiple concepts to 
-fit into a larger system. After internal discussion, we decided to pursue a base concept 
+Vision's competition requirements are complex and as such required multiple concepts to
+fit into a larger system. After internal discussion, we decided to pursue a base concept
 of manual and autonomous classification systems running in parallel.
 
 \section{Definition}
@@ -44,10 +44,10 @@ This year's vision team is changing our system architecture for classifying targ
  allow for better communication and organization. Instead of downloading each image and image state
 onto someone's personal computer, the computer oboard the plane will send image and vehicle state
 data to a server on the ground. This server will have a compiled database of all images captured
-and will attach classification data onto each image as it is manually processed. Our 
+and will attach classification data onto each image as it is manually processed. Our
 autonomous detection script will also be querying the server image database and classifying
-images. One team member will be monitoring the autonomous output ready to kill the 
-program if it is sending too many false positives (which cause the team to incur a 
+images. One team member will be monitoring the autonomous output ready to kill the
+program if it is sending too many false positives (which cause the team to incur a
 penalty). Our system architecture is outlined in Figure~\ref{fig:blockfig}.
 
 \AUVSIFigure
@@ -71,29 +71,38 @@ target classification.
 
 \section{Justification}
 
+<<<<<<< Updated upstream
 Since all of our high-level concepts depend on our imaging hardware, we decided it would be beneficial for us to choose a camera as 
 soon as possible. Our list of potential cameras came from previous years systems as well as cameras used by last years top-placing 
 teams. Critical performance measures are shown in our measured camera values table (CS-002). This table was directly translated 
 into a selection matrix (CS-002). Based off the camera concept selection matrix, it was decided that the Sony a6000 would give us 
 the greatest cost to performance. Its large 24MP sensor will improve image quality when flying at higher altitudes and make 
 autonomous classification easier. Its auto-stabilization and fast exposure time also remove a lot of burden from the user to adjust 
+=======
+Since all of our high-level concepts depend on our imaging hardware, we decided it would be beneficial for us to choose a camera as
+soon as possible. Our list of potential cameras came from previous years systems as well as cameras used by last years top-placing
+teams. Critical performance measures are shown in our measured camera values table (CS-002). This table was directly translated
+into a selection matrix(CS-002). Based off the camera concept selection matrix, it was decided that the Sony a6000 would give us
+the greatest cost to performance. Its large 24MP sensor will improve image quality when flying at higher altitudes and make
+autonomous classification easier. Its auto-stabilization and fast exposure time also remove a lot of burden from the user to adjust
+>>>>>>> Stashed changes
 settings mid-flight. Additionally 7 of the top 15 teams used the a6000 or the earlier generation (but basically equivalent) a5100.
 
-The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics we are 
-required to identify could potentially be done using a different method. Given the high-enumeration of concepts this generates, we 
+The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics we are
+required to identify could potentially be done using a different method. Given the high-enumeration of concepts this generates, we
 determined it would be most beneficial for us to select one high level concept which would help define the rest of the system.
 
-Concepts for autonomous classification were formed in three ways. The first was discussing our system requirements with market experts. 
-They offered excellent advice on how to best go about the classification problem. The second was researching how top-placing teams from 
-previous years tackled the problem. Teams are required to submit a design report which is made publicly available, allowing us understand 
-from a high level how their image classification systems worked. Third, we did extensive online research on available software libraries 
-and tools that could be used. As we pursued these three methods, our best concept for autonomous classification evolved into its current 
+Concepts for autonomous classification were formed in three ways. The first was discussing our system requirements with market experts.
+They offered excellent advice on how to best go about the classification problem. The second was researching how top-placing teams from
+previous years tackled the problem. Teams are required to submit a design report which is made publicly available, allowing us understand
+from a high level how their image classification systems worked. Third, we did extensive online research on available software libraries
+and tools that could be used. As we pursued these three methods, our best concept for autonomous classification evolved into its current
 form. We feel that this final concept is the best combination of these three sources.
 
 \section{Conclusion}
 
-Changes to the vision subsystem will allow us to achieve our key success measure. The winning concepts allow us to reuse much of the 
-code from last year, while improving the reliability and ease of use of the system. The addition of autonomous recognition allows 
+Changes to the vision subsystem will allow us to achieve our key success measure. The winning concepts allow us to reuse much of the
+code from last year, while improving the reliability and ease of use of the system. The addition of autonomous recognition allows
 us to maximize possible competition points.
 
 \end{document}
