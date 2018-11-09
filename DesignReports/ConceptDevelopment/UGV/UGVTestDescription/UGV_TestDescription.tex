@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Unmanned Ground Vehicle (UGV) Parachute Testing Description}
+	AUVSITitle={Unmanned Ground Vehicle (UGV) Parachute and Glider Testing Description}
 	%AUVSILogoPath={./logo.pdf]}
 }
 
@@ -16,7 +16,8 @@
 \begin{artifacttable}
 \entry{GV-003, 0.1, 2018-10-30, Initial Draft, John Akagi, Kameron Eves}
 \entry{GV-003, 1.0, 2018-11-6, Revised after design review, John Akagi, Andrew Torgesen}
-\entry{GV-003, 1.1, 2018-11-8, Added Intro and Conclusion. Fixed minor errors, Brady Moon, John Akagi and Tyler Critchfield}
+\entry{GV-003, 1.1, 2018-11-8, Added Intro and Conclusion, Brady Moon, John Akagi}
+\entry{GV-003, 1.2, 2018-11-9, Added Glider Test procedures, Tyler Critchfield, Ryan Anderson}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -70,7 +71,7 @@ Small Parachute with Fins & 4.8~m/s \\
 \end{table}
 
 \section{Glider Testing}
-A rough prototype was constructed based on a simple glider design in XFLR5 that was designed to carry a payload of 1~kg (see Figure X). The prototype had a span of about 1~m and a mean aerodynamic center of 10~cm. In testing we taped a small water bottle to the underside of the glider and dropped it from heights of 5~ft, 6~ft, and 7~ft (10 times for each height). The location it hit the ground was recorded and a standard deviation was calculated that was then extrapolated to a height of 100~ft. These results are summarized in the artifact GV-004 UGV Drop Mechanism Concept Test Procedures and Results. One takeaway we learned was that our prototype could not support the designed weight. We assume this is because we were not testing it at its design velocity, and understand that this test was not very realistic. However, it did have adequate consistency with a small payload. This proves that with more design and better test procedures, the glider could perform well. 
+A rough prototype was constructed based on a simple glider design in XFLR5 that was designed to carry a payload of 1~kg (see Figure \ref{fig:combinedglider}). The prototype had a span of about 1~m and a mean aerodynamic chord of 10~cm. In testing we taped a small water bottle to the underside of the glider and dropped it 10 times from heights of 5~ft, 6~ft, and 7~ft, respectively. The horizontal glide distance was recorded. The standard deviation was calculated and then extrapolated to a drop height of 100~ft. These results are summarized in the artifact GV-004 UGV Drop Mechanism Concept Test Procedures and Results. Unfortunately, the prototype did not have sufficient lift with the designed weight attached; it simply fell without gliding. We assume this is because we were not testing it at its design velocity, and understand that this test was not very realistic. However, it did have adequate consistency with a small payload. This proves that with more design and better test procedures, the glider could perform well. 
 
 \begin{figure}[h!]
 	\centering
@@ -106,7 +107,7 @@ A rough prototype was constructed based on a simple glider design in XFLR5 that 
 		\label{fig:glider}
 	\end{subfigure}
 	\caption{Testing setup for the glider concept. A simple model was built in XFLR5. This was then built by using the foam cutter to cut out each of the 3 sections. These sections were glued together with a spar in the middle section. A water bottle payload was taped underneath.}
-	\label{fig:combined}
+	\label{fig:combinedglider}
 \end{figure}
 
 \newpage
