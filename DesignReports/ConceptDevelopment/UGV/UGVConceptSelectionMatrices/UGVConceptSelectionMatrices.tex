@@ -12,7 +12,8 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{GV-002, 1.0, 10-31-2018, Created document and decision matrix, Jacob Willis, Andrew Torgesen}
-\entry{GV-002, 1.1, 11-6-2018, Document revised with comments from design review, John Akagi, Andrew Torgesen}
+\entry{GV-002, 1.1, 11-6-2018, Document revised with comments from design review, John Akagi, Andrew Torgesen and Ryan Anderson}
+
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -26,7 +27,7 @@ Each of the primary concepts is described in further detail below.
 A parachute is attached to the UGV, and is opened upon release of the UGV from the aircraft. To improve the accuracy of this concept, the effect of wind on the parachute and payload is characterized and used to calculate the optimal drop location given the estimated wind speed at the time of drop. No control mechanisms are used during the drop. For concept verification purposes, the parachute is dropped from a height of 35 ft with no wind to test  if the accuracy and impact speed are within the acceptable limits.
 
 \subsection{Parachute with Controls}
-Similar to the Parachute concept, but control surfaces (fins) are attached to the payload and actuated as the payload drops. This provides some controlability to stabilize the drop and to improve accuracy. For concept verification purposes, the parachute is dropped from a height of 35 ft with no wind to test  if the accuracy and impact speed are within the acceptable limits.
+Similar to the parachute concept, but control surfaces (fins) are attached to the payload and actuated as the payload drops. This provides some controlability to stabilize the drop and to improve accuracy. For concept verification purposes, the parachute is dropped from a height of 35 ft with no wind to test  if the accuracy and impact speed are within the acceptable limits.
 
 \subsection{Skycrane}
 The UGV is lowered on a string or rope while the airframe circles overhead. The circling motion causes the UGV to orbit in a smaller circle as it is lowered. When the UGV hits the ground, it releases itself from the string to prevent interrupting the flight of the airframe. Preferably the UGV controls the rate of descent so it can easily feed back its distance from the ground. Potential winches that could be used to lower the payload were found online and their characteristics were used to check compliance with the needed guidelines. We were unable to devise tests to determine landing velocity and precision since these measures are highly reliant on the control of the airframe. However, we did disuss with Dr. McLain, who has had experience with tethered payloads, to determine the relative performance of the skycrane option.
@@ -44,7 +45,7 @@ The concepts were scored on a 1-5 scale, and the results are captured in Table~\
 
 
 \begin{table} [H]
-\caption{A decision matrix for the UGV Drop Method. A scale of 1-5 was used for weights with 5 having high importance and 1 having low importance. A 1-5 scale was also used to rate each option’s performance under each requirement. In this case, a 1 was used to indicate poor performance while a 5 indicates favorable performance.}
+\caption{A decision matrix for the UGV Drop Method. A scale of 1-5 was used for weights with 5 having high importance and 1 having low importance. Because no points are awarded if the UGV is damaged or does not land "softly" (this is determined subjectively by the judges), a weight of 10 was applied to the max landing velocity. A 1-5 scale was used to rate each option’s performance under each requirement. In this case, a 1 was used to indicate poor performance while a 5 indicates favorable performance.}
 \label{cont_cs_tab}
 	\begin{tabular}{|>{\raggedright}p{2.5cm}| l | l | l | l | p{2.5cm} | p{2.5cm} |}
 \hline
@@ -59,21 +60,24 @@ Aircraft internal volume consumed&                  4&4&2&3&3&4 \\
 \hline
 Stowed drop mechanism drag&                         5&1&4&4&4&5 \\
 \hline
-Max landing velocity&                               4&2&5&4&4&1 \\
+%Max landing velocity&                               4&2&5&4&4&1 \\
+%\hline
+Max landing velocity&                               10&2&5&4&4&1 \\
 \hline
 UGV landing distance from target&                   5&2&3&4&5&5 \\
 \hline
 Development complexity&                             5&1&1&4&2&5 \\
 \hline
-Totals&                                             -&62&89&115&110&125 \\
+%Totals&                                             -&62&89&115&110&125 \\
+%\hline
+Totals&                                             -&74&119&139&134&131 \\
 \hline
-
 \end{tabular}
 \end{table}
 
 
 \section{Conclusion}
-As can be seen from the decision matrix in Table~\ref{cont_cs_tab}, the un-aided drop scored highest, while the parachute concept scored second highest. The parachute concept is selected because the un-aided drop will result in disqualification for too hard of an impact. The parachute is the closest concept to unaided drop, but reduces the impact velocity. The parachute will allow us the best chance of meeting our key success measure of 25ft drop accuracy. This concept is described in more detail in GV-005.
+As can be seen from the decision matrix in Table~\ref{cont_cs_tab}, the parachute concept scored the highest. Other high-scoring concepts included the parachute with controls, which was slightly more accurate but has much worse development complexity. The unaided drop is extremely simple and actually most accurate, but is unacceptable since it would be very difficult to construct a UGV capable of surviving the drop, let alone achieve a soft landing as required by the competition rules. The parachute will allow us the best chance of meeting our key success measure of 25ft drop accuracy. This concept is described in more detail in GV-005.
 
 \end{document}
 
