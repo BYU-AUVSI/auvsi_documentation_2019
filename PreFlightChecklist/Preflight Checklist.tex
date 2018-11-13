@@ -53,6 +53,7 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Hex driver for wings
 	\item Battery monitor
 	\item Safety glasses
+	\item Screwdriger
 	\item Table (optional)
 	\item Targets (optional)
 \end{itemize}
@@ -67,11 +68,15 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Extra ethernet cable
 	\item Car power adapter
 	\item 3-plug extension cable
+	\item UART cable
 \end{itemize}
 
 \hrulefill
 
 \textbf{Flight Checklist: \textit{Before Launching}}
+
+Before Powering Motor:
+
 \begin{itemize}
 	\item Start network
 	\item Attach wings and check bolt tightness
@@ -81,18 +86,42 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Check plane CG
 	\item Connect battery
 	\item Ensure network connection
-	\item Launch ROS
-	\item Ensure RC transmitter is emitting enough power ($>10mW$)
-	\item Check prop direction
-	\item Check control surface direction
-	\begin{itemize}
-		\item Ailerons
-		\item Elevators
-		\item Rudder
-	\end{itemize}
-	\item RC Range Test (100ft)
+	\item Launch ROS (through \textit{screen}, if possible)
 	\item Ensure GPS Fix ($\geq 3$ satellites)
+	\item Calibrate Sensors
+	\begin{itemize}
+		\item IMU: rosservice call \textit{/calibrate\_imu}
+		\item Airspeed: rosservice call \textit{/calibrate\_airspeed}
+		\item Barometer: rosservice call \textit{/calibrate\_baro}
+		\item Check attitude estimation (if wrong, update ins offset)
+		\item Check airspeed
+		\item Check GPS
+	\end{itemize}
+	\item Check RC
+	\begin{itemize}
+		\item Ensure RC transmitter is emitting enough power ($>10mW$)
+		\item Wire wiggle test
+		\item Check control surface direction
+		\begin{itemize}
+			\item Ailerons
+			\item Elevators
+			\item Rudder
+		\end{itemize}
+	\end{itemize}	
 \end{itemize}
+
+After Powering Motor:
+
+\begin{itemize}
+	\item Check arm/disarm
+	\item Check prop direction
+	\item Check RC override
+	\item RC Range Test (100ft) 
+\end{itemize}
+
+\hrulefill
+
+\textit{\textbf{FLY}}
 
 \hrulefill
 
