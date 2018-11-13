@@ -1,0 +1,4 @@
+- Rocket has two antennas, a vertical and a horizontal
+    - the horizontal doesn't do much if your plane isn't banking past 45 degrees (it doesn't do that much), so you might be well served to replace the horizontal antenna with an omnidirectional one
+    - especially consider doing this is you lose connection when the plane flies above the rocket, since the vertical range of the rocket is much smaller than the horizontal range
+- Consider putting a circular (instead of linear) antenna on the plane; you lose 3db of power that way, but that might not matter if you're never flying that far away
