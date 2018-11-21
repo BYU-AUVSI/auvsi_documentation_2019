@@ -1,0 +1,51 @@
+\documentclass[]{../auvsi_doc}
+\setkeys{../auvsi_doc.cls}{
+	AUVSITitle={Capstone Team 45 Status Update 11-21-2018},
+	AUVSILogoPath={./../logo.pdf}
+}
+% ATOM BUILD: Ctrl+Alt+B
+\usepackage[toc,page]{appendix}
+
+\begin{document}
+
+\section{Goals for the Past Week}
+
+The following is a list of our goals for the past week, as well as descriptions of their completion and/or progress:
+
+\begin{enumerate}
+	\item \textbf{Outfit the new airframe with RC components for a test flight}\\
+	Various members of the team have begun outfitting the airframe with these components, and all extra needed components have been ordered. We created a comprehensive wiring diagram and bill of materials to make it easy to wire things up in the future. Our airframe team modeled the new airframe and calculated key properties, such as desired center of gravity and required propellers.
+	\item \textbf{Finish upgrading ROSFlight to the F4 chip, and integrate into the new airframe}\\
+	The F4 chip was ordered and is still on its way; the software is in place to make the upgrade as soon as we receive it.
+	\item \textbf{Set up a programmatic way to generate missions on the interop server}\\
+	We have established a way to generate missions and preserve them on the interop server database.
+	\item \textbf{Consolidate controls code for easier launching and maintaining}\\
+	Members of our controls team have been working on testing the path planning for different mission objectives. Various errors have been fixed. Work is being done to make the interface with the interop serve seamless. We also have a team member working on consolidating the many places where parameters are defined in the code.
+	\item \textbf{Generate a dataset of image targets for the vision team to continue algorithm development}\\
+	Our vision team created a photoshop script that makes over 500,000 synthetic targets to train our machine learning image classifier.
+\end{enumerate}
+
+Additionally, our safety pilot reviewed the drone safety procedures for the competition, and several members of the team studied the ROSFlight docs more extensively.
+
+\section{Goals for the Coming Week}
+
+The following is a list of our goals for the coming week, as well as details about how we plan to accomplish them:
+
+\begin{enumerate}
+\item \textbf{Interface the image server and the interop client} (\textit{Tyler Miller})
+\item \textbf{Finish constructing the image database, with all of its Data Access Objects} (\textit{Connor Olsen})
+\item \textbf{Get the image GUI operating fully as an image client with the database} (\textit{Derek Knowles, Brandon McBride})
+\item \textbf{Fully outfit the airframe with RC components and payload drop} (\textit{Ryan Anderson, Tyler Critchfield, Jacob Willis})
+\item \textbf{Get the controls code working in simulation} (\textit{Brady Moon, John Akagi, Kameron Eves, Andrew Torgesen})
+\end{enumerate}
+
+\textbf{Please send us any feedback with regards to the progress we've made, as well as our plans for the coming week.}
+
+% \newpage
+% \begin{appendices}
+%
+%
+%
+% \end{appendices}
+
+\end{document}
