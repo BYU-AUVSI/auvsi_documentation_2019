@@ -1,0 +1,144 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Preflight Checklist v0.1},
+	AUVSILogoPath={./figs/logo.pdf}
+}
+
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\renewcommand{\labelitemi}{$\square$}
+\renewcommand{\labelitemii}{$\square$}
+\renewcommand{\labelitemiii}{$\square$}
+\renewcommand{\labelitemiv}{$\square$}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{PF-001, 0.1, 11-3-2018, Wrote checklist based on google sheet, Andrew Torgesen, [CHECKED BY]}
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section{Purpose}
+
+The purpose of this artifact is to keep an up-to-date, standard protocol for ensuring safety and good performance for test flights in hardware. It is important that all test flights are run systematically, and according to the procedures and timelines outlined in this document.
+
+\section{Checklist}
+
+\textbf{Day Before}
+\begin{itemize}
+	\item Check that the launch file does what it needs to with the plane grounded
+	\item Ensure that the ROSbag records the data you want
+	\item Charge airplane LiPo(s)
+	\item Charge RC transmitter battery
+	\item Parameter check
+	\item Check WiFi config
+	\item Check disk space on Odroid
+\end{itemize}
+
+\hrulefill
+
+\textbf{Hardware Packing List}
+\begin{itemize}
+	\item Plane
+	\item Wings w/ bolt attached
+	\item Airplane batteries
+	\item RC transmitter
+	\item RC transmitter batteries
+	\item 2+ sets of props
+	\item Fiber tape
+	\item Launch gloves
+	\item Wrench for props
+	\item Hex driver for wings
+	\item Battery monitor
+	\item Safety glasses
+	\item Screwdriger
+	\item Table (optional)
+	\item Targets (optional)
+\end{itemize}
+
+\hrulefill
+
+\textbf{Comms Packing List}
+\begin{itemize}
+	\item Router + power cable
+	\item Litebeam + 2 ethernet cables
+	\item A/C POE adapter
+	\item Extra ethernet cable
+	\item Car power adapter
+	\item 3-plug extension cable
+	\item UART cable
+\end{itemize}
+
+\hrulefill
+
+\textbf{Flight Checklist: \textit{Before Launching}}
+
+Before Powering Motor:
+
+\begin{itemize}
+	\item Start network
+	\item Attach wings and check bolt tightness
+	\item Attach props and check tightness
+	\item Strap down battery
+	\item Connect battery monitor
+	\item Check plane CG
+	\item Connect battery
+	\item Ensure network connection
+	\item Launch ROS (through \textit{screen}, if possible)
+	\item Ensure GPS Fix ($\geq 3$ satellites)
+	\item Calibrate Sensors
+	\begin{itemize}
+		\item IMU: rosservice call \textit{/calibrate\_imu}
+		\item Airspeed: rosservice call \textit{/calibrate\_airspeed}
+		\item Barometer: rosservice call \textit{/calibrate\_baro}
+		\item Check attitude estimation (if wrong, update ins offset)
+		\item Check airspeed
+		\item Check GPS
+	\end{itemize}
+	\item Check RC
+	\begin{itemize}
+		\item Ensure RC transmitter is emitting enough power ($>10mW$)
+		\item Wire wiggle test
+		\item Check control surface direction
+		\begin{itemize}
+			\item Ailerons
+			\item Elevators
+			\item Rudder
+		\end{itemize}
+	\end{itemize}	
+\end{itemize}
+
+After Powering Motor:
+
+\begin{itemize}
+	\item Check arm/disarm
+	\item Check prop direction
+	\item Check RC override
+	\item RC Range Test (100ft) 
+\end{itemize}
+
+\hrulefill
+
+\textit{\textbf{FLY}}
+
+\hrulefill
+
+\textbf{Flight Checklist: \textit{After Landing}}
+\begin{itemize}
+	\item Kill ROS
+	\item Backup ROSbag
+	\item Clean shutdown
+	\item Unplug battery
+	\item Gather all items
+\end{itemize}
+
+\hrulefill
+
+\textbf{Post-flight}
+\begin{itemize}
+	\item Set battery to storage voltage
+\end{itemize}
+
+\end{document}

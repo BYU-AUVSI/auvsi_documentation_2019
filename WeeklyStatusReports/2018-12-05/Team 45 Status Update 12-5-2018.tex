@@ -1,0 +1,51 @@
+\documentclass[]{../auvsi_doc}
+\setkeys{../auvsi_doc.cls}{
+	AUVSITitle={Capstone Team 45 Status Update 12-5-2018},
+	AUVSILogoPath={./../logo.pdf}
+}
+% ATOM BUILD: Ctrl+Alt+B
+\usepackage[toc,page]{appendix}
+
+\begin{document}
+
+\section{Goals for the Past Week}
+
+The following is a list of our goals for the past week, as well as descriptions of their completion and/or progress:
+
+\begin{enumerate}
+	\item \textbf{Interface the image server and the interop client} (\textit{Tyler Miller}) \\
+	This item is still in progress, though it is on pace for usage in the mock competition.
+	\item \textbf{Finish constructing the image database, with all of its Data Access Objects} (\textit{Connor Olsen}) \\
+	This item is still in progress, though it is on pace for usage in the mock competition.
+	\item \textbf{Get the image GUI operating fully as an image client with the database} (\textit{Derek Knowles, Brandon McBride}) \\
+	This item is still in progress, though it is on pace for usage in the mock competition.
+	\item \textbf{Fully outfit the airframe with RC components and payload drop} (\textit{Ryan Anderson, Tyler Critchfield, Jacob Willis}) \\
+	As of today, this stage of development is finished. We will commence glide testing, RC range testing, and
+	\item \textbf{Get the controls code working in simulation} (\textit{Brady Moon, John Akagi, Kameron Eves, Andrew Torgesen}) \\
+	Progress has been made here in fixing some bugs, and work has begun to tune the performance, but efforts here have largely been postponed to make sure we get the plane in the air as soon as possible.
+\end{enumerate}
+
+All in all, assembly of the plane and getting it ready for RC flight has taken longer than anticipated for a variety of reasons. That being said, we are on the verge of RC tests, and are putting a very high priority on safe and thorough practices (as outlined in our preflight checklist, as well as guidance from experienced RC enthusiasts) to avoid crashing again.
+
+\section{Goals for the Coming Week}
+
+The following is a list of our goals for the coming week, as well as details about how we plan to accomplish them:
+
+\begin{enumerate}
+	\item \textbf{Use sensor and Inertial Sense data to tune the ROSPlane estimator and improve the quality of the airspeed sensor signal} (\textit{Andrew Torgesen}) \\
+	Tuning the ROSPlane estimator will add redundancy to our system, which will continue to principally rely on the Inertial Sense's state estimation. Improving the quality of the airspeed signal using Kalman Filtering and covariance gating will help with the hardware performance of our path following algorithms.
+	\item \textbf{RC test flights with the new airframe} (\textit{Kameron Eves, Tyler Miller, Ryan Anderson, Tyler Critchfield, Andrew Torgesen})
+	\item \textbf{Tuning the gains in ROSPlane for controlled, autonomous flight} (\textit{Brady Moon, John Akagi, Jacob Willis, Kameron Eves})
+	\item \textbf{Getting the imaging software ready for the mock competition} (\textit{Tyler Miller, Connor Olsen, Derek Knowles, Brandon McBride, Jake Johnson})
+\end{enumerate}
+
+\textbf{Please send us any feedback with regards to the progress we've made, as well as our plans for the coming week.}
+
+% \newpage
+% \begin{appendices}
+%
+%
+%
+% \end{appendices}
+
+\end{document}

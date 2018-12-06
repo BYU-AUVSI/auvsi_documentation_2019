@@ -5,3 +5,6 @@
 - have a mechanised way to prescribe changes (google doc?)
 
 - is Capstone okay with the mixed page numbers for design reviews? what about for the final "bound" book?
+
+- for the alternating margin offset for the final bound book, see the content of the following webpage:
+http://gilmation.com/articles/latex-margins-for-book-binding/
