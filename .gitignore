@@ -13,3 +13,12 @@
 *.synctex*
 # garbage mac files:
 .DS_Store
+
+# Files produced by epydoc
+*.dvi
+*.out
+*.idx
+*.ilg
+*.ind
+*.ps
+*.toc
