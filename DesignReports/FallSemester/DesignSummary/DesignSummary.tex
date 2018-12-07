@@ -68,7 +68,12 @@ We have already built much of the server system architecture. There is a strong 
 from the server. We have also constructed a draft of the user interface that contacts the server and requests images and sends back
 cropped and classified images back to the server. The system for manual target recognition is already mostly complete.
 
-We have been focusing on first achieving the ability for manual target recognition, but we do have ...
+We have been focusing on first achieving the ability for manual target recognition, but we have also been investing some effort into developing
+the autonomous target detection and classification system. As was mentioned previously, the system must be capable of detecting a target
+within a frame, geolocating it, and classifying its shape, shape color, alphanumeric, and alphanumeric color. Thus far, we have developed a 
+system capable of detecting targets with around 70\% accuracy. We have also modified a deep learning-based character recognition system
+to detect synthetic letters with over 90\% accuracy. In the future, we will be working on testing the character recognizer on
+real images of targets. We will also be devoloping the shape classifier and color recognition systems.
 \subsection{Payload Delivery}
 \section{Conclusion}
 
