@@ -74,14 +74,39 @@ We have stipulated several key success measures which are enumerated in Table~\r
 \section{Description of Design}
 \subsection{Airframe}
 \subsection{Visual Target Classification}
+This year's vision team is changing our system architecture for classifying targets which will
+allow for better communication and organization. Instead of downloading each image and image state
+onto someone's personal computer, the computer oboard the plane will send image and vehicle state
+data to a server on the ground. This server will have a compiled database of all images captured
+and will attach classification data onto each image as it is manually processed. Our
+autonomous detection script will also be querying the server image database and classifying
+images. One team member will be monitoring the autonomous output ready to kill the
+program if it is sending too many false positives (which cause the team to incur a
+penalty).
 \subsection{Payload Delivery}
 \section{Summary of Expected Performance}
 \subsection{Airframe}
 \subsection{Visual Target Classification}
+The new server system architecture is expected to perform much better for target classification that preveious year's methods. We are
+confident in our ability to send images from the camera to our onboard computer and down to our groundstation.
+
+The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics we are
+required to identify could potentially be done using a different method. We expect to be able to reliable classify fifty percent of
+targets autonomously.
 \subsection{Payload Delivery}
 \section{Status and Future Plans}
 \subsection{Airframe}
 \subsection{Visual Target Classification}
+We have already built much of the server system architecture. There is a strong framework in place for saving and accessing pictures
+from the server. We have also constructed a draft of the user interface that contacts the server and requests images and sends back
+cropped and classified images back to the server. The system for manual target recognition is already mostly complete.
+
+We have been focusing on first achieving the ability for manual target recognition, but we have also been investing some effort into developing
+the autonomous target detection and classification system. As was mentioned previously, the system must be capable of detecting a target
+within a frame, geolocating it, and classifying its shape, shape color, alphanumeric, and alphanumeric color. Thus far, we have developed a 
+system capable of detecting targets with around 70\% accuracy. We have also modified a deep learning-based character recognition system
+to detect synthetic letters with over 90\% accuracy. In the future, we will be working on testing the character recognizer on
+real images of targets. We will also be devoloping the shape classifier and color recognition systems.
 \subsection{Payload Delivery}
 \section{Conclusion}
 

@@ -1,0 +1,31 @@
+\documentclass[]{article}
+
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\newcommand{\pdflink}[2]{
+\hyperlink{#1.1}{\textbf{#2}}
+}
+
+\newcommand{\pdflinkdoc}[2]{
+\includepdf[pages=-,link,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\includepdf[pages=-]{./_TitlePage_/TitlePage.pdf}
+
+
+% \section*{Table of Contents}
+
+% \pdflink{api_doc}{GUI Server Interface API}
+
+
+\pdflinkdoc{api_doc}{./api/api.pdf}
+
+\end{document}
