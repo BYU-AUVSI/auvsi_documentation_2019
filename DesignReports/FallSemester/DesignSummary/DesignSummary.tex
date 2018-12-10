@@ -19,7 +19,8 @@
 \begin{document}
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-	\entry{TW-002, 0.1, 12-03-2018, Created, Kameron Eves, [Checker]}
+	\entry{TW-002, 0.1, 12-03-2018, Created, Kameron Eves, Andrew Torgesen}
+	\entry{TW-002, 0.2, 12-10-2018, Added payload delivery sections, Andrew Torgesen, [CHECKER]}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -84,6 +85,7 @@ images. One team member will be monitoring the autonomous output ready to kill t
 program if it is sending too many false positives (which cause the team to incur a
 penalty).
 \subsection{Payload Delivery}
+To achieve excellent performance on the key success measure of airdrop accuracy for our unmanned ground vehicle (UGV) payload, the results of our preliminary prototying and testing allowed us to converge on an uncontrolled parachute-deployed payload delivery system. The UGV will be loaded within the aircraft. Given the desired drop location, the autopilot will determine the optimal direction and speed from which to drop the payload, using estimated airspeed conditions. A command from the autopilot will open a small hatch on the bottom of the plane and the UGV will fall out. Strings will attach the UGV to a lightweight fabric parachute with a hole in its center. The fabric parachute will be loaded onto the aircraft in a tube that will allow the UGV to pull it out of the aircraft as it falls. After exiting the aircraft, the parachute will be opened by drag. The drag caused by the fabric will slow down the system enough to allow the UGV to survive impact without damage.
 \section{Summary of Expected Performance}
 \subsection{Airframe}
 \subsection{Visual Target Classification}
@@ -94,6 +96,7 @@ The autonomous classification system is the largest undertaking of this year's v
 required to identify could potentially be done using a different method. We expect to be able to reliable classify fifty percent of
 targets autonomously.
 \subsection{Payload Delivery}
+As part of the design process, we have considered multiple points of failure and used those points to inform our design. This, along with the testing documented in the \textit{Unmanned Ground Vehicle Drop Mechanism Concept Test Procedures and Results} artifact, give us confidence that we can achieve an airdrop accuracy within 25 feet from the target drop location, as listed in our key success measures in our Project Contract. In our tests, we evaluated several different delivery mechanisms, and tested for their mass, volume, weight, drag, and drop precision in a controlled environment. These results were weighed against competition requirements for weight and volume, as well as our key success measure concerning drop precision. Our testing convinces us that our chosen payload delivery system, together with refinement and testing of the autopilot drop calculation algorithm, will adhere to the requirements of the competition and allow us to capture our key success measure criteria for excellent performance.
 \section{Status and Future Plans}
 \subsection{Airframe}
 \subsection{Visual Target Classification}
@@ -103,12 +106,14 @@ cropped and classified images back to the server. The system for manual target r
 
 We have been focusing on first achieving the ability for manual target recognition, but we have also been investing some effort into developing
 the autonomous target detection and classification system. As was mentioned previously, the system must be capable of detecting a target
-within a frame, geolocating it, and classifying its shape, shape color, alphanumeric, and alphanumeric color. Thus far, we have developed a 
+within a frame, geolocating it, and classifying its shape, shape color, alphanumeric, and alphanumeric color. Thus far, we have developed a
 system capable of detecting targets with around 70\% accuracy. We have also modified a deep learning-based character recognition system
 to detect synthetic letters with over 90\% accuracy. In the future, we will be working on testing the character recognizer on
 real images of targets. We will also be devoloping the shape classifier and color recognition systems.
 \subsection{Payload Delivery}
+At the outset, our overarching plans were to decide on a payload delivery method, build a prototype, and get last year's payload delivery system up and running. As of right now, we have converged on a method, built a prototype, and tested the software and hardware from last year's system on the ground, but not in the air. Because we have verified that the payload hardware works from last year, the only thing we were not able to do that we planned to do was test the accuracy of the autopilot drop calculation algorithm. We were planning on refining this algorithm anyway, so we will push this step to next semester without much concern.
+Next semester, in addition to testing and refining the drop calculation algorithm, we want to build a final version of our parachute delivery system, as well as the UGV payload itself. The majority of our work next semester concerning payload delivery will be iterating the combined payload delivery system (drop calcualtion algorithm, parachute, and UGV) with repeated simulation and hardware testing to ensure repeatability of expected performance in the face of differing environmental conditions, such as wind speed and direction.
 \section{Conclusion}
-
+From our design work outlined above and expounded upon in the artifacts below, we are confident that we will be able to construct and refine a product capable of meeting all of our key success measures and performing well in the AUVSI competition.
 % document contents
 \end{document}
