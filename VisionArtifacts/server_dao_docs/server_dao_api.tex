@@ -1,0 +1,31 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Vision Server API},
+	AUVSILogoPath={./../../_resources_/logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\newcommand{\pdflinkdoc}[2]{
+\includepdf[pages=-,link,offset=25mm -30mm,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
+}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{IM-003, 1.0, 12-10-2018, Initial release, Tyler Miller, Brandon McBride}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\pagenumbering{gobble}
+
+\pdflinkdoc{apidoc}{./api/api.pdf}
+
+\end{document}
