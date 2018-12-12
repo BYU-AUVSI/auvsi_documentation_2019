@@ -1,0 +1,31 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Geolocation Algoritm Description},
+	AUVSILogoPath={./../../_resources_/logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\newcommand{\pdflinkdoc}[2]{
+\includepdf[pages=-,link,offset=23mm -40mm,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
+}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{IM-008, 1.0, 12-12-2018, Initial release, Connor Olsen, Tyler Miller}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\pagenumbering{gobble}
+
+\pdflinkdoc{apidoc}{./geolocation.pdf}
+
+\end{document}
