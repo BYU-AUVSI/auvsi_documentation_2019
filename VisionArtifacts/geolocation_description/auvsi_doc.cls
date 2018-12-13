@@ -3,7 +3,7 @@
 % Author: Andrew Torgesen, 2018
 
 \ProvidesClass{auvsi_doc}
-\LoadClass[11pt]{article}
+\LoadClass[12pt]{article}
 
 % Packages
 
