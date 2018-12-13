@@ -20,7 +20,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 	\entry{TW-002, 0.1, 12-03-2018, Created, Kameron Eves, Andrew Torgesen}
-	\entry{TW-002, 0.2, 12-10-2018, Added payload delivery sections, Andrew Torgesen, [CHECKER]}
+	\entry{TW-002, 0.2, 12-10-2018, Added payload delivery sections, Andrew Torgesen, Brandon McBride}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -34,7 +34,7 @@ The aircraft entered into the competition are judged primarily on a demonstratio
 \begin{itemize}
 	\item\textbf{Fly Waypoint Path} - Fly waypoints given to the the team just prior to the competition. In this process, and throughout the entire mission, the aircraft must avoid virtual obstacles and stay within boundaries (both horizontal and vertical).
 	\item\textbf{Visual Target Classification} - Capture an image of several targets within a search area and report to the judges the shape, color, alpha-numeric character, alpha-numeric character color, and geolocation of each target.
-	\item\textbf{Payload Delivery} - Drop on a specified location, an unmanned ground vehicle (UGV) that itself carries a small water bottle. Then, carrying its the water bottle, the UGV must drive to a second specified location.
+	\item\textbf{Payload Delivery} - Drop on a specified location, an unmanned ground vehicle (UGV) that itself carries a small water bottle. Then, carrying its water bottle, the UGV must drive to a second specified location.
 \end{itemize}
 
 In order, to accomplish these tasks our team has decided upon the following objective statement:
@@ -74,7 +74,7 @@ We have stipulated several key success measures which are enumerated in Table~\r
 
 \section{Description of Design}
 \subsection{Airframe}
-The My Fly Dream Nimbus Pro airframe was selected as this year's airframe. With a wingspan of 1.95~m and fuselage capacity of 8,000~cc, it is significantly larger than last year's airframe. The total airframe weight with components and a 1~kg UGV is 5.365~kg. It should sport aerodynamic characteristics similar to last year's plane, with improved stall speed. Electrical components like the flight controller board, RC antenna, and GPS have been spread out in the spacious fuselage to minimize signal interference and noise caused by coils of wire and antennae, while maintaining an optimal CG placement. See Fig. \ref{airframe} for a photo of the airframe, and Fig. \ref{components} for a photo of component placement.
+The My Fly Dream Nimbus Pro airframe was selected as this year's airframe. With a wingspan of 1.95~m and fuselage capacity of 8,000~cc, it is significantly larger than last year's airframe. The total airframe weight with components and a 1~kg UGV is 5.365~kg. It should sport aerodynamic characteristics similar to last year's plane, with improved stall speed. Electrical components like the flight controller board, RC antenna, and GPS have been spread out in the spacious fuselage to minimize signal interference and noise caused by coils of wire and antennae, while maintaining an optimal center-of-gravity (CG) placement. See Fig. \ref{airframe} for a photo of the airframe, and Fig. \ref{components} for a photo of component placement.
 %The larger fuselage capacity has a 12~cm x 12~cm x `23~cm space for the UGV: a huge improvement over last year's design, in which the water bottle was attached to the outside for lack of space inside the airframe.
 \begin{figure}[h!]
 	\includegraphics[scale=0.6]{figs/airframe.jpg}
@@ -95,7 +95,7 @@ onto someone's personal computer, the computer oboard the plane will send image 
 data to a server on the ground. This server will have a compiled database of all images captured
 and will attach classification data onto each image as it is manually processed. Our
 autonomous detection script will also be querying the server image database and classifying
-images. One team member will be monitoring the autonomous output ready to kill the
+images. One team members will be monitoring the autonomous output ready to kill the
 program if it is sending too many false positives (which cause the team to incur a
 penalty).
 \subsection{Payload Delivery}
@@ -107,20 +107,20 @@ The new airframe boasts a design speed of 13~m/s, as modeled in XFLR5. This is a
 The new server system architecture is expected to perform much better for target classification that preveious year's methods. We are
 confident in our ability to send images from the camera to our onboard computer and down to our groundstation.
 
-The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics we are
-required to identify could potentially be done using a different method. We expect to be able to reliable classify fifty percent of
+The autonomous classification system is the largest undertaking of this year's vision subteam. Each of the 6 characteristics
+required to identify could potentially be done using a different method. We expect to be able to reliably classify fifty percent of the
 targets autonomously.
 \subsection{Payload Delivery}
-As part of the design process, we have considered multiple points of failure and used those points to inform our design. This, along with the testing documented in the \textit{Unmanned Ground Vehicle Drop Mechanism Concept Test Procedures and Results} artifact, give us confidence that we can achieve an airdrop accuracy within 25 feet from the target drop location, as listed in our key success measures in our Project Contract. In our tests, we evaluated several different delivery mechanisms, and tested for their mass, volume, weight, drag, and drop precision in a controlled environment. These results were weighed against competition requirements for weight and volume, as well as our key success measure concerning drop precision. Our testing convinces us that our chosen payload delivery system, together with refinement and testing of the autopilot drop calculation algorithm, will adhere to the requirements of the competition and allow us to capture our key success measure criteria for excellent performance.
+As part of the design process, we have considered multiple points of failure and used those points to inform our design. This, along with the testing documented in the \textit{Unmanned Ground Vehicle Drop Mechanism Concept Test Procedures and Results} artifact, gives us confidence that we can achieve an airdrop accuracy within 25 feet from the target drop location, as listed in our key success measures in our Project Contract. In our tests, we evaluated several different delivery mechanisms, and tested for their mass, volume, weight, drag, and drop precision in a controlled environment. These results were weighed against competition requirements for weight and volume, as well as our key success measure concerning drop precision. Our testing convinces us that our chosen payload delivery system, together with refinement and testing of the autopilot drop calculation algorithm, will adhere to the requirements of the competition and allow us to capture our key success measure criteria for excellent performance.
 \section{Status and Future Plans}
 \subsection{Airframe}
 The airframe is currently ready for RC flight testing. Because of a lack of understanding of the complexities of the new airframe, we are behind schedule. Fortunately, it should still be ready for our mock-competition deadline before the end of the semester. Essential components for RC flight have been installed and balanced for the optimal CG placement (as determined using the XFLR5 model), and we have tentative plans for installing the remaining components. The mechanism for releasing the UGV has not yet been constructed, though concept development is already underway, including a dedicated space in the fuselage for it. CG will need to be rebalanced once the UGV is added. More has not yet been done in part because the UGV has not yet been designed. Further testing remains to be done to determine if wing extensions will be necessary. This will probably consist mostly of imaging tests. If image quality is unsatisfactory, then efforts to reduce the design speed by extending the wings will be worthwhile. Otherwise, our time may be better used elsewhere. Further plans for next semester include building and refining the payload mechanism.
 \subsection{Visual Target Classification}
 We have already built much of the server system architecture. There is a strong framework in place for saving and accessing pictures
-from the server. We have also constructed a draft of the user interface that contacts the server and requests images and sends back
+from the server. We have also constructed a draft of the user interface that connects to the server and requests images and sends back
 cropped and classified images back to the server. The system for manual target recognition is already mostly complete.
 
-We have been focusing on first achieving the ability for manual target recognition, but we have also been investing some effort into developing
+First we have been focusing on achieving the ability for manual target recognition, but we have also been investing some effort into developing
 the autonomous target detection and classification system. As was mentioned previously, the system must be capable of detecting a target
 within a frame, geolocating it, and classifying its shape, shape color, alphanumeric, and alphanumeric color. Thus far, we have developed a
 system capable of detecting targets with around 70\% accuracy. We have also modified a deep learning-based character recognition system
