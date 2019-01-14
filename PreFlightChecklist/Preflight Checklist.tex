@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Preflight Checklist v0.1},
+	AUVSITitle={Preflight Checklist v0.2},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -16,7 +16,8 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{PF-001, 0.1, 11-3-2018, Wrote checklist based on google sheet and research, Andrew Torgesen, Brandon McBride}
+\entry{PF-001, 0.1, 11-03-2018, Wrote checklist based on google sheet and research, Andrew Torgesen, Brandon McBride}
+\entry{PF-001, 0.2, 01-07-2019, Updated checklist based on team feedback, Andrew Torgesen, Tyler Miller}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -50,10 +51,10 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Fiber tape
 	\item Launch gloves
 	\item Wrench for props
-	\item Hex driver for wings
+	% \item Hex driver for wings
 	\item Battery monitor
 	\item Safety glasses
-	\item Screwdriger
+	\item Screwdriver
 	\item Table (optional)
 	\item Targets (optional)
 \end{itemize}
@@ -68,7 +69,7 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Extra ethernet cable
 	\item Car power adapter
 	\item 3-plug extension cable
-	\item UART cable
+	% \item UART cable
 \end{itemize}
 
 \hrulefill
@@ -93,13 +94,13 @@ Before Powering Motor:
 		\item IMU: rosservice call \textit{/calibrate\_imu}
 		\item Airspeed: rosservice call \textit{/calibrate\_airspeed}
 		\item Barometer: rosservice call \textit{/calibrate\_baro}
-		\item Check attitude estimation (if wrong, update ins offset)
+		\item Check attitude estimation (except for yaw--if wrong, update ins offset)
 		\item Check airspeed
 		\item Check GPS
 	\end{itemize}
 	\item Check RC
 	\begin{itemize}
-		\item Ensure RC transmitter is emitting enough power ($>10mW$)
+		\item Ensure RC transmitter is emitting enough power ($>10~mW$, 1 W in competition)
 		\item Wire wiggle test
 		\item Check control surface direction
 		\begin{itemize}
@@ -114,9 +115,10 @@ After Powering Motor:
 
 \begin{itemize}
 	\item Check arm/disarm
+	\item Throttle test
 	\item Check prop direction
 	\item Check RC override
-	\item RC Range Test (100ft)
+	\item RC Range Test (100ft, just do this once per setting config change)
 \end{itemize}
 
 \hrulefill
