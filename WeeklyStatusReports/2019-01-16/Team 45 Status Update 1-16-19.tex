@@ -1,0 +1,54 @@
+\documentclass[]{../auvsi_doc}
+\setkeys{../auvsi_doc.cls}{
+	AUVSITitle={Capstone Team 45 Status Update 01-16-19},
+	AUVSILogoPath={./../logo.pdf}
+}
+% ATOM BUILD: Ctrl+Alt+B
+\usepackage[toc,page]{appendix}
+
+\begin{document}
+
+\section{Goals for the Past Week}
+
+The following is a list of our goals for the past week, as well as descriptions of their completion and/or progress:
+
+\begin{enumerate}
+	\item \textbf{Integrate new camera with airframe} (\textit{Tyler M., Jake J., Connor}) \\
+	We built the camera mount for the airframe, and verified that it fits in well with the other components.
+	\item \textbf{Increase airframe stability} (\textit{Ryan, Tyler C., Kameron}) \\
+	We learned some tricks to apply to make the plane lighter, and will be testing those on the first of the three airframes that we have. We also developed a more optimized placement of components to help our center of gravity.
+	\end{itemize}
+	\item \textbf{Get the ball rolling with the UGV} (\textit{Jacob W., Derek, Brandon}) \\
+	We successfully ordered the needed parts, and have begun testing payload dropping \textbf{(see attached videos)}. The RC cars we ordered seem like they will work well, but require more electrical modifications than we were hoping for.
+	\item \textbf{Tune the autopilot and estimator} (\textit{Brady, John, Andrew}) \\
+	We have learned how to tune ROSPlane's gains, and corresponded with Thane about how to handle our new airframe. We plan on tuning the autopilot gains this Friday, and will invite Thane to accompany us. During last week's flight, we recorded a ROSbag of all estimator-relevant data, but were unable to obtain any airspeed data. James suspects this may be an issue with the new ROSFlight, and will request a patch to get it fixed quickly.
+	\item \textbf{Run a mock competition with the new airframe} (\textit{Entire Team}) \\
+	With the help of Alex Newell, we successfully flew the plane with all components except for the camera and UGV for around seven minutes of continuous flight. Alex judged the stability of the aircraft to be satisfactory. The next step is to tune our autopilot gains with the new airframe.
+\end{enumerate}
+
+\section{Goals for the Coming Week}
+
+The following is a list of our goals for the coming week, as well as details about how we plan to accomplish them:
+
+\begin{enumerate}
+\item \textbf{Tune the autopilot and estimator} (\textit{Brady, John, Andrew}) \\
+To do this, we first need to get to the bottom of the airspeed sensor issue. If we are unable to get this working by Friday, then we will use last year's workaround of commanding a set throttle value. Then, we will tune our autopilot gains on Friday with Thane's help and an experienced safety pilot as backup. \textit{We are cognizant of the fact that we may need two different sets of gains, pre-payload and post-payload drop}. We will record airspeed data if possible for tuning the estimator.
+
+\item \textbf{Get the path planner back to its previous glory} (\textit{Brady, John, Andrew}) \\
+According to Thane, it's possible that the version of the path planner that we're using is not quite the version that was being used at the competition last year, due to certain software development practices. We will make modifications to the interop server to allow for programmatic creation of missions and testing with the most current version of the path planner.
+\item \textbf{Parachute deployment testing and iteration} (\textit{Jacob W., Derek, Brandon}) \\
+This entails a full electrical test of the payload drop in the airframe, as well as improvement to the design of the parachute.
+\item \textbf{Finish the second airframe and have Kameron log more flight hours} (\textit{Ryan, Tyler C., Kameron}) \\
+Kameron will pilot the first airframe to obtian more experience, so that we will be able to rely less on Alex (and possibly Doug) in the future.
+\item \textbf{Make progress on updating last year's vision GUI system and perform network range test with camera} (\textit{Tyler M., Jake J., Connor}) \\
+\end{enumerate}
+\textbf{Please send us any feedback with regards to the progress we've made, as well as our plans for the coming week.}
+
+% \newpage
+% \begin{appendices}
+%
+%
+%
+% \end{appendices}
+
+\end{document}
