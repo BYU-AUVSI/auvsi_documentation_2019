@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Preflight Checklist v0.2},
+	AUVSITitle={Field Flight Checklist v1.0},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -18,6 +18,7 @@
 \begin{artifacttable}
 \entry{PF-001, 0.1, 11-03-2018, Wrote checklist based on google sheet and research, Andrew Torgesen, Brandon McBride}
 \entry{PF-001, 0.2, 01-07-2019, Updated checklist based on team feedback, Andrew Torgesen, Tyler Miller}
+\entry{PF-001, 1.0, 02-04-2019, Removed redundant checks and added RC override info, Andrew Torgesen, [CHECKED BY]}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -80,11 +81,12 @@ Before Powering Motor:
 
 \begin{itemize}
 	\item Start network
-	\item Attach wings and check bolt tightness
+	\item Attach wings% and check bolt tightness
 	\item Attach props and check tightness
 	\item Strap down battery
-	\item Connect battery monitor
+	\item Connect battery monitor (full battery: 16.8 V)
 	\item Check plane CG
+	\item Turn on transmitter
 	\item Connect battery
 	\item Ensure network connection
 	\item Launch ROS (through \textit{screen}, if possible)
@@ -117,7 +119,17 @@ After Powering Motor:
 	\item Check arm/disarm
 	\item Throttle test
 	\item Check prop direction
-	\item Check RC override
+	\item Check RC override \\
+				\textbf{Steps to hand off control to autopilot*:}
+	\begin{enumerate}
+		\item Begin with throttle 0\%**, Arm OFF, RC Override ON (both top switches toward the pilot)
+		\item Arm ON
+		\item RC Override OFF
+		\item Throttle to full (to begin takeoff)
+	\end{enumerate}
+	* Reverse the order of this list to take back RC override control \\
+	** If already in the air, throttle doesn't have to start at 0\% (in fact, it shouldn't!)
+	\item Check RC override control surface directions (just do this once per setting config change)
 	\item RC Range Test (100ft, just do this once per setting config change)
 \end{itemize}
 
