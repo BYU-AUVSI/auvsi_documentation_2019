@@ -18,7 +18,7 @@
 \begin{artifacttable}
 \entry{PF-001, 0.1, 11-03-2018, Wrote checklist based on google sheet and research, Andrew Torgesen, Brandon McBride}
 \entry{PF-001, 0.2, 01-07-2019, Updated checklist based on team feedback, Andrew Torgesen, Tyler Miller}
-\entry{PF-001, 1.0, 02-04-2019, Removed redundant checks and added RC override info, Andrew Torgesen, [CHECKED BY]}
+\entry{PF-001, 1.0, 02-04-2019, Removed redundant checks and added RC override info, Andrew Torgesen, Kameron Eves}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -44,7 +44,7 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 \textbf{Hardware Packing List}
 \begin{itemize}
 	\item Plane
-	\item Wings w/ bolt attached
+	\item Wings
 	\item Airplane batteries
 	\item RC transmitter
 	\item RC transmitter batteries
@@ -52,7 +52,7 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Fiber tape
 	\item Launch gloves
 	\item Wrench for props
-	% \item Hex driver for wings
+	\item Pliers
 	\item Battery monitor
 	\item Safety glasses
 	\item Screwdriver
@@ -70,6 +70,8 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 	\item Extra ethernet cable
 	\item Car power adapter
 	\item 3-plug extension cable
+	\item Walkie-talkies
+	\item Generator (optional)
 	% \item UART cable
 \end{itemize}
 
@@ -89,7 +91,7 @@ Before Powering Motor:
 	\item Turn on transmitter
 	\item Connect battery
 	\item Ensure network connection
-	\item Launch ROS (through \textit{screen}, if possible)
+	\item Launch ROS (through \textit{screen}, if possible) (ensure aircraft is level)
 	\item Ensure GPS Fix ($\geq 3$ satellites)
 	\item Calibrate Sensors
 	\begin{itemize}
@@ -108,34 +110,72 @@ Before Powering Motor:
 		\begin{itemize}
 			\item Ailerons
 			\item Elevators
-			\item Rudder
 		\end{itemize}
+		\item RC Range Test (100ft, just do this once per setting config change)
 	\end{itemize}
-\end{itemize}
-
-After Powering Motor:
-
-\begin{itemize}
-	\item Check arm/disarm
-	\item Throttle test
-	\item Check prop direction
-	\item Check RC override \\
-				\textbf{Steps to hand off control to autopilot*:}
+	\item Lock shut hatch covers
+	\item Check Autopilot
 	\begin{enumerate}
-		\item Begin with throttle 0\%**, Arm OFF, RC Override ON (both top switches toward the pilot)
+		\item Begin with throttle 0\%, Arm OFF, RC Override ON (both top switches toward the pilot)
+		\item ROStopic echo \textit{/status}
+		\item Secure aircraft (hold firmly)
 		\item Arm ON
+		\begin{itemize}
+			\item Confirm \textit{armed = true}
+		\end{itemize}
 		\item RC Override OFF
-		\item Throttle to full (to begin takeoff)
+		\item Perform the following in quick succession (no longer then 2 seconds)
+		\begin{enumerate}
+			\item Call "Clear Props"
+			\item Throttle to full
+			\begin{itemize}
+				\item Confirm \textit{RC Override = false}
+				\item Confirm air blowing towards tail
+			\end{itemize}
+			\item Throttle to idle 
+			\begin{itemize}
+				\item Confirm prop direction
+			\end{itemize}
+		\end{enumerate}
 	\end{enumerate}
-	* Reverse the order of this list to take back RC override control \\
-	** If already in the air, throttle doesn't have to start at 0\% (in fact, it shouldn't!)
-	\item Check RC override control surface directions (just do this once per setting config change)
-	\item RC Range Test (100ft, just do this once per setting config change)
 \end{itemize}
 
 \hrulefill
 
 \textit{\textbf{FLY}}
+\begin{itemize}
+	\item Takeoff
+	\begin{itemize}
+		\item Ensure area clear
+		\item Get into position
+		\item Go/No Go Call
+		\begin{itemize}
+			\item Vision
+			\item UGV
+			\item Autopilot
+			\item Antenna Pointer
+			\item RC Pilot
+			\item Launcher
+			\item Team lead
+		\end{itemize}
+		\item Arm ON
+		\item RC Override OFF
+		\item Throttle full
+		\item Toss the aircraft
+	\end{itemize}
+	\item RC Takeover
+	\begin{itemize}
+		\item RC Override ON
+		\item Throttle to desired
+	\end{itemize}
+	\item Handover to Autopilot
+	\begin{itemize}
+		\item RC Override OFF
+		\item Throttle to full
+	\end{itemize}
+\end{itemize}
+
+
 
 \hrulefill
 
