@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Imaging Server Description},
+	AUVSITitle={Imaging Subsystem Description},
 	AUVSILogoPath={./../../../../_resources_/logo.pdf}
 }
 
@@ -27,7 +27,7 @@
 
 \section{Introduction}
 
-Visions imaging server will be the central interface between the raw data received from the plane 
+Vision's imaging server will be the central interface between the raw data received from the plane 
 the various ODLC (Object Detection Localization Classification) clients. Below is a brief overview of how it is setup and where its various components reside.
 
 \section{Motivation}
@@ -61,7 +61,8 @@ Once we fully understood last years imaging system we were able to lay out its w
 and create the above objectives to best address them. One of our main concerns was how the 
 current codebase spread its information across multiple machines: one machine would hold 
 the raw images from the plane's camera, another would hold cropped images, and still another
-would hold classification information. With these objectives and shortcomings in mind, a 
+would hold classification information. This made it very difficult to identify bugs, replicate
+results and setup quickly. With these objectives and shortcomings in mind, a 
 basic server-client architecture was defined as shown in Figure \ref{fig:serverFlow}.
 
 \AUVSIFigure
@@ -126,6 +127,10 @@ to the judges (since we want to only submit a target once).
 \textbf{Step 5} The server gets any targets declared ready for submission and sends
 them to the interop subsystem. Interop is in charge of interactions between the 
 judge server and all subsystems and will handle submitting the final targets.
+
+The manual client GUI codebase is detailed in depth in IM-001 and IM-002. Details
+on the geolocation algorithm can be found in IM-008, while a description of the server's
+API can be found in IM-003.
 
 \section{Conclusion}
 
