@@ -19,3 +19,7 @@ AF-003		Airframe Concept Selection Matrix
 AF-004		Flight Log
 AF-005		Wiring Diagram
 IM-005      Imaging Server Description
+IM-001      Imaging GUI-Server Interface API
+IM-002      Imaging GUI API
+IM-003      Imaging Server API
+IM-004      Geolocation Algorithm Description
