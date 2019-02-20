@@ -15,17 +15,36 @@
 \includepdf[pages=-,link,offset=23mm -40mm,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
 }
 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
 \begin{document}
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{IM-004, 1.0, 12-12-2018, Initial release, Connor Olsen, Tyler Miller}
+\entry{IM-004, 1.0, 02-20-2019, Comment / code updates, Connor Olsen, Tyler Miller}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
-\pagenumbering{gobble}
+\section{Introduction}
 
-\pdflinkdoc{apidoc}{./geolocation.pdf}
+Geolocation of targets is one of our key success measures, whose accuracy is scored 
+by the judges for points. Accuracy is determined by distance of our location estimate 
+from ground truth, at a max of 150ft. Anything further than 150ft will score 0 points.
+This geolocation algorithm is fast enough to work in real time on the server as 
+targets are cropped. 
+
+\section{Introduction}
+
+Given how short the algorithm is (~150 lines), the best way to document it is 
+through the code itself.
+
+\lstinputlisting[language=Python]{./geolocation.py}
 
 \end{document}
