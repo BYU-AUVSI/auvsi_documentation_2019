@@ -28,6 +28,16 @@
 
 In order to verify that the imaging subsystem independently meets its key success
 measures a series of tests and procedures were developed. Requirements for the subsystem
-can be seen in IM-007.
+can be seen in IM-007. However, some of the subsystem's requirements cannot be fully
+measured until it is integrated with the full system and testing in flight.
+
+\section{Continuous Integration}
+
+A prerequisite to meeting our key success measures, is a reliable, bug-free codebase.
+Imaging undertook a large task this year with our server-client model requiring us
+to rewrite our entire codebase. This rewrite presented an opportunity to build a 
+proper test framework in parallel with our server-client code. A series of unit and
+integration tests were developed for each component of the server and client.
+
 
 \end{document}
