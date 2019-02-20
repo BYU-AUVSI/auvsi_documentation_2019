@@ -1,0 +1,66 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Unmanned Ground Vehicle Bay Door Description},
+	AUVSILogoPath={./figs/logo.pdf}
+}
+
+% include extra packages, if needed
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{GV-006, 1.0, 02-19-2019, Initial release, Derek Knowles, Brandon McBride}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section{Introduction}
+
+The ability to successfully drop the unmanned ground vehicle is integral to the success of both the unmanned ground vehicle score and the successful completion of the rest of the mission. If the unmanned ground vehicle got tangled inside the plane and was prevented from successfully dropping from our plane, we would receive zero points for our unmanned ground vehicle and it would jeopardize the stability of our airframe and possibly result in crashing our plane.
+
+\section{Purpose}
+
+The purpose of our bay door design is to eliminate the potential for the unamnned ground vehicle to snag on anything while exiting the plane. The bay door design must also open reliably, close quickly, and prevent unintended openings.
+
+\section{Design Selected}
+
+We designed a bay door with a front hinge and torsional spring to close the door quickly. The bay door also includes plastic sheeting along the sides and a dedicated hole for the parachute to prevent any snagging upon exit.
+
+\section{Definition}
+
+The bay door for dropping the unmanned ground vehicle was cut out from the bottom of the plane's fuselage as close to the front of the plane as possible to help the center of gravity.
+
+\AUVSIFigure
+{./figs/overall.pdf}
+{\textwidth}
+{Unmanned ground vehicle bay door cut out}
+{fig:overallfig}
+
+The release mechanism is a servo-less payload release that pulls a pin out of a latch attached to the bay door. The latch on the bay door is a thin acrylic piece attached to the middle of the bay door in order to increase its mechanical strength.
+
+\AUVSIFigure
+{./figs/spring.pdf}
+{\textwidth}
+{Torsional spring to assist closing the bay door}
+{fig:springfig}
+
+The front hinge includes a torsional spring so after deployment the bay door returns to the closed position.
+
+\AUVSIFigure
+{./figs/ugv.pdf}
+{\textwidth}
+{Unmanned ground vehicle and parachute placed inside the airframe}
+{fig:ugvfig}
+
+Thin plastic sheeting on all four sides contains the unmanned ground vehicle and prevents it from snagging on anything upon deployment. Thin plastic sheeting was used for its durability and light weight. This sheeting also prevents the unmanned ground vehicle from shifting during the launch sequence or during flight.
+
+\section{Justification}
+
+The bay door design eliminates the potential for the unamnned ground vehicle to snag on anything while exiting the plane. It also opens reliably, closes quickly, and prevents unintended openings.
+
+\section{Conclusion}
+
+The bay door design will allow us to successfully drop the unmanned ground vehicle and successfully complete of the remainder of the mission.
+
+\end{document}
