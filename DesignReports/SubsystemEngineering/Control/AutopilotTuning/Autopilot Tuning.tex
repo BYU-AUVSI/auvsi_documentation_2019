@@ -1,0 +1,46 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Autopilot Tuning},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+% include extra packages, if needed
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{CT-001, 0.1, 01-23-2019, Initial conception, Andrew Torgesen, [CHECKED BY]}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+
+Our chosen fixed-wing autopilot for the UAV is ROSPlane, an open source implementation of the control, estimation, and path planning algorithms set forth in \textit{Small Unmanned Aircraft: Theory and Practice} by Randal Beard and Timothy McLain. This artifact sets forth the general process for tuning the proportional, integral, and derivative (PID) gains for the autopilot, based on both theory from the text as well as personal experience.
+
+\section{Description of the Gains}
+
+While running ROSPlane on a ROS network, the \textit{rqt_reconfigure} plugin allows the user to view (and modify in real-time) all configurable gains for the autopilot. The following are all configurable gains:
+
+\textbf{Trim Gains:}
+\begin{itemize}
+  \item Elevator trim
+  \item Aileron trim
+  \item Rudder trim
+  \item Throttle trim
+\end{itemize}
+
+These gains must be set in a .yaml file before turning on the autopilot for the first time. To obtain the values, ...
+
+\section{Sequence of Gain Tuning}
+
+In general, PID gains are handled as follows:
+\begin{enumerate}
+  \item Increase P until the response time is satisfactory
+\end{enumerate}
+
+...
+
+\end{document}

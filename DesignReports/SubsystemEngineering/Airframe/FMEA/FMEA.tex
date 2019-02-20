@@ -1,0 +1,38 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Failure Modes and Effects Analysis},
+	AUVSIRevision=0.0,
+	AUVSIDescription={Created},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={[Checker]},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={AF-004}
+}
+
+% include extra packages, if needed
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{AF-007, 0.1, Initial creation, Kameron Eves, [CHECKED BY]}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+\vspace*{-2cm}
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+\vspace*{-0.5cm}
+To mitigate risk of failure within the competition a Failure Modes and Effects Analysis (FMEA) was performed. Many deficiencies were found that where then corrected to an acceptable level.
+\vspace*{-0.5cm}
+\section{Analysis}
+\vspace*{-0.5cm}
+\hspace*{-1.25cm}
+\includegraphics[width=1.2\textwidth]{./figs/FMEA.pdf}
+\label{fig:reqMat}
+
+\section{Discussion}
+As can be seen from this analysis, most of the concerning issues were addressed. We are now confident in our ability to fly a failure free mission with the exception of one issues: we continue to see communication drop out for a couple systems. We do not completely understand this issue. It seems to be location dependent and caused by interfering signals. It does not usually affect our missions, but it's risk priority number (RPN) is high enough that we would like to address it. We will perform tests in several locations to see if we can identify the root cause and solution to these communication issues. We would like to be confident that this issue will not arise at the competition.
+
+
+\end{document}

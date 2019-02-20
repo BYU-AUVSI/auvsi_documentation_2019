@@ -89,7 +89,7 @@ To prevent this in the future, we need to create a launch file that still launch
 The bullet connected to the network.
 We launched the plane overhead and it worked smoothly.
 
-## 1/18/19: SECOND SUCCESSFUL RC FLIGHT
+# 1/18/19: SECOND SUCCESSFUL RC FLIGHT
 
 ## Outcomes
 
@@ -107,3 +107,47 @@ We launched the plane overhead and it worked smoothly.
 - We need to make sure that all of the RC parameter switches work to give and take control away from the autopilot. This will entail working with the plane on the table more, as well as possibly communicating with the MAGICC Lab.
 - We need to make sure that we have a way to visualize the hardware on the groundstation quickly and easily. Is this done with `theseus groundstation.launch`? We need to look into this quickly.
 - We need to get the airspeed sensor running to be able to deal with wind.
+
+# 1/25/19: FOURTH SUCCESSFUL RC FLIGHT
+
+## Outcomes
+
+- Kameron seems relatively comfortable in RC flight
+- Barometer had one flight with weird height values, and one flight with good output values
+- Airspeed sensor appears to rail at 3 knots, more or less, which is *way too low*
+    - No especially noisy sensor output
+- We successfully stored trim parameters on ROSFlight, and verified that it transfers the trim through flights
+
+## Goals/Observations
+
+- Investigate airspeed sensor and check values; we want to tune gains with working airspeed!
+    - **ROSbag observations from the two flights**:
+        - **Flight 1 was actually giving airspeed data that makes sense (corresponding to about 11 m/s airspeed), but the data is FLIPPED**. ROSPlane was outputting 0 for airspeed because it would not accept negative values. It looks like switching the tubes that one time actually wasn't the right thing to do.
+        - Flight 2 was not really railing the airspeed data; the sensor was spitting out a single value for differential pressure the entire time. I hope that this can be amended easily, or that flipping the tubes again does the trick.
+    - Tomorrow we will take the ME truck out and run tests on the airspeed sensor.
+
+# 1/29/19: AIRSPEED TESTS
+
+## Outcomes
+
+- **The airspeed sensor works!** We validated the airspeed sensor outputs (coupled with ROSplane's estimator under `Official.launch`). There was not significant noise, as can be seen in the Google Drive video.
+- We are ready for autopilot tuning.
+
+# 2/02/19: AUTOPILOT TUNING 2
+
+## Observations
+
+- This time we were able to get the RC Override Toggle to work. We had to comment out the `failsafe.py` node to allow for the takeover, since the failsafe was complaining about no interop response (caused by the router's 10.0.0.\* IP routing)
+- Every time we handed control over to the autopilot, the exact same thing happened:
+    - The plane did a roll (positive $\phi$) to start to fly upside down.
+    - Alex is fairly certain that the plane tried to stabilize itself flying upside down, which is apparent if you see the last recorded autopilot handoff in the recorded ROSbag.
+
+## Goals
+
+- Make the following operational changes:
+    - rent the ME truck
+    - borrow the (supermileage?) team's generator--it needs to be filled with gas every $\approx 5$ trips, according to Thane, running it "for hours"
+- Make the following controller modifications:
+    - modify the controller to be able to send all of the fundamental controller commands
+    - Apparently Austin already wrote a node that does this; if we can't find the code, then we'll email him.
+- Create a comprehensive debugging tool for diagnosing autopilot errors with ROSbags.

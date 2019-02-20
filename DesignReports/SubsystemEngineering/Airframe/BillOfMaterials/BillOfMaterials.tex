@@ -1,0 +1,90 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Bill of Materials},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, CHECKED BY}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+The following table shows our Bill of Materials for the entire system. We've included the following information with each component:
+
+\begin{itemize}
+	\item Name
+	\item Other components it interfaces with
+	\item Part \#/URL
+	\item Quantity
+	\item Mass
+	\item Notes
+\end{itemize}
+
+%Begin table
+
+\begin{table}[h!]
+	\begin{center}
+		\caption{Table caption here.}
+		\label{table:BOM}
+		\begin{tabularx}{\textwidth}{l l l l l l}
+			\toprule
+			Name & Interfaces With & Quantity [\#] & Mass [g] & Part \#/URL & Notes \\
+			\midrule
+			Airframe & Everything & 1 & 2000 & urlhere & N/A \\
+			Pitot Tube &   uuuuuuuuuuuuuuuuuuuu &   &   &   &   \\
+			PX4 Airspeed Sensor  &   &   &   &   &   \\
+			Flip32 Breakout  &   &   &   &   &   \\
+			Flip32 Flight Controller  &   &   &   &   &   \\
+			Servos  &   &   &   &   &   \\ 
+			ESC  &   &   &   &   &   \\
+			Motors  &   &   &   &   &   \\ 
+			RC Receiver  &   &   &   &   &   \\
+			RC Antennas  &   &   &   &   &   \\
+			POE Adapter  &   &   &   &   &   \\
+			Ubiquiti Antenna  &   &   &   &   &   \\ 
+			5GHz antenna  &   &   &   &   &   \\
+			5GHz Litebeam Antenna  &   &   &   &   &   \\
+			Odroid  &   &   &   &   &   \\
+			Camera  &   &   &   &   &   \\
+			InertialSense  &   &   &   &   &   \\
+			GPS Antenna  &   &   &   &   &   \\ 
+			Power Harness  &   &   &   &   &   \\
+			Castle BEC 20 A  &   &   &   &   &   \\
+			Castle BEC 10 A  &   &   &   &   &   \\
+			Bottle Drop Arduino  &   &   &   &   &   \\
+			Servoless Payload Release  &   &   &   &   &   \\
+			Tail Wedge  &   &   &   &   &   \\ 
+			Battery Straps  &   &   &   &   &   \\
+			Velcro Strips  &   &   &   &   &   \\
+			Controller Board Housing  &   &   &   &   &   \\
+			Parachute  &   &   &   &   &   \\
+			Parachute housing  &   &   &   &   &   \\
+			Camera Housing  &   &   &   &   &   \\
+			Propellers  &   &   &   &   &   \\
+			Control Horns  &   &   &   &   &   \\ 
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\ 
+			  &   &   &   &   &   \\
+			  &   &   &   &   &   \\
+			\bottomrule
+		\end{tabularx}
+	\end{center}
+\end{table}
+
+
+
+\end{document}

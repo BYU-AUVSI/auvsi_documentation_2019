@@ -11,14 +11,17 @@
 
 % include extra packages, if needed
 \usepackage{makecell}
+\usepackage{longtable}
 
 % Remove Heading Numbers
 \setcounter{secnumdepth}{0}
 
 \begin{document}
 \begin{AUVSITitlePage}
-\begin{artifacttable}
+\begin{artifacttable} 
 	\entry{AF-004, 0.1, 11-07-2018, Created*, Kameron Eves, Andrew Torgesen}
+	\entry{AF-004, 0.1, 2-5-2019, Added tracking of autonomous and total flight time, Kameron Eves, Andrew Torgesen}
+	\entry{AF-004, 0.1, 2-5-2019, Added Takeoff/Landing Tracker, Kameron Eves, [Checker]}
 \end{artifacttable}
 *Note that additions to this log will not necessitate a revision update. Only formatting or other content additions will require that.
 \end{AUVSITitlePage}
@@ -30,32 +33,76 @@
 \begin{center}
 %\begin{table}[h!]
 
-\captionof{table}{A log of each flight test conducted by our team.}
+\captionof{table}{A log of each flight test conducted by our team. Autonomous flight time is listed in bold under the total time.}
 \bgroup
-\def\arraystretch{1.25}%
-\begin{tabular}{| c | c | c | p{9 cm} |}
-	\hline
-	\makecell{\textbf{Date} \\ \textbf{(m-d-y)}}&\textbf{Location} &	\makecell{\textbf{Length} \\ \textbf{(min)}} & 	\textbf{Notes} \\
+\begin{longtable}{| c | p{2 cm} | c | c | p{7.25 cm} |}
+	\hline 
+	\makecell{\textbf{Date} \\ \textbf{(m-d-y)}}&\textbf{Location} &	\makecell{\textbf{Length}\\ Total \\ \textbf{Auto} \\ \textbf{(min)}} & \makecell{Takeoffs/ \\ Landings \\ \textbf{Auto}} &	\textbf{Notes} \\
 	\hline\hline
-	10-16-18 				& Springville			&	0.08					& 	Networking issues, later determined to be because of location. Moving down the road works. Attempted RC flight and crashed on launch. Need to practice launch procedure. \\
+	10-16-18 				& Springville			&	\textless1	&	1/0				& 	Networking issues, later determined to be because of location. Moving down the road works. Attempted RC flight and crashed on launch. Need to practice launch procedure. \\
 	\hline
-	10-19-18 				& Springville			&	0.15 					& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced CG and so performed a loop and crash landed. \\
+	10-19-18 				& Springville			&	\textless1 	&	1/0			& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced CG and so performed a loop and crash landed. \\
 	\hline
-	10-23-18 				& Springville			&	1.28					& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the batter forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
+	10-23-18 				& Springville			&	1	&	1/0			& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the batter forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
 	\hline
-	11-01-18 				& Springville			&	2.83					& 	Attempted RC flight for imaging. Still had minor stability issues. We lost control and crash landed near end of flight. We later determined these issues were because the battery was not secured properly. It slid around inflight affecting our static margin. This caused instability and aggressive flight maneuvers that caused the battery to fall out in flight. As such we lost control and crashed. Battery must be strapped down.  \\
+	11-01-18 				& Springville			&	3	&	1/0			& 	Attempted RC flight for imaging. Still had minor stability issues. We lost control and crash landed near end of flight. We later determined these issues were because the battery was not secured properly. It slid around inflight affecting our static margin. This caused instability and aggressive flight maneuvers that caused the battery to fall out in flight. As such we lost control and crashed. Battery must be strapped down.  \\
 	\hline
-	11-06-18 				& Springville			&	4.77					& 	Attempted RC flight for imaging. Aircraft flew wonderfully. Images of ground targets successfully captured. Flight was terminated when RC was lost and aircraft crashed hard. More investigation into the cause is needed. Possibly because of RC interference over the trees or to low of transmission power.  \\
+	11-06-18 				& Springville			&	5	&	1/0			& 	Attempted RC flight for imaging. Aircraft flew wonderfully. Images of ground targets successfully captured. Flight was terminated when RC was lost and aircraft crashed hard. More investigation into the cause is needed. Possibly because of RC interference over the trees or to low of transmission power.  \\
 	\hline
-\end{tabular}
+	12-11-18 				& Rock Canyon			&	1	&	1/0		& 	First flight test of new aircraft. Performed a glide test and found the aircraft performed well. With slight longitudinal instability. We moved the cg forward by adding a 500 g weight. This proved too much as the aircraft was notably nose heavy the next flight attempt which was forced to landed immediately upon takeoff . With an inexperienced pilot, we found this preferable to instability and attempted a second flight. The aircraft still dropped on takeoff but stable flight was obtained. This lasted 45 seconds before the pilot lost control and crashed. While pilot error likely played a part in this crash, we later determined that wind from the canyon was a large factor. We will avoid rock canyon in the future.\\
+	\hline
+	1-11-19 				& Rock Canyon			&	6	&	1/1		& First fully successful flight. Set trims. We also decided to add colored tape to the wings to increase the visibility of the aircraft in flight.\\
+	\hline
+	1-18-19 				& Rock Canyon			&	4	&	1/1		& Very windy, probably shouldn't have attempted flight but we had not yet figured out the wind problem from the canyon. Adjusted trims.	\\
+	\hline
+	1-23-19 				& Rock Canyon			&	14 &	2/2		& Performed two flights both of which were successful. Several minor repairs (general maintenance) were necessary after this flight. This flight test proved the aircraft was flyable and stable with all of the weight that will be on the aircraft during the competition. We tested both the weight with and without the UGV.\\
+	\hline
+	1-25-19				& Rock Canyon			&	11 &	2/2			& Trimmed aircraft with and without UGV weight.  Transferred these trims to ROSflight. 2 flights. Additional tape on wing provided sufficient visibility.	\\
+	\hline
+	1-31-19				& Utah County Airfield	&	7	 &	1/1		& Intended to test autopilot and begin tuning gains. Could not successfully turn on autopilot. Later this was determined to be because we were incorrectly following the process to hand over control to the autopilot. We flew once manually to test the gains. Small adjustments were made and transferred to ROSflight.	\\
+	\hline
+	2-2-19				& Utah County Airfield	&	\makecell{24 \\ \textbf{1}} & 	2/2			& Two flights to tune gains on autopilot. The autopilot had a tendency to flip the aircraft upside down immediately after turning on the autopilot. This was determined to not be caused by the gains. Aircraft landed safely manually both flights. After a couple of days of testing we found the cause was that the number being used to convert rad to PWM for the ailerons was negative. This effectively reversed the aileron polarity. Last year the wires must have been swapped from how we have them now. 	\\
+	\hline
+	2-6-19				& Utah County Airfield	&	\makecell{17 \\ \textbf{4}} & 	2/2			& Two flights to tune gains on autopilot. Flipping issue was fixed. Aircraft dove towards the ground upon turning on autopilot. This was fixed between flights (rad to PWM conversion for the elevator was negative this time) and we achieved autonomous flight the second attempt. We then tuned the longitudinal PID gains. Aircraft landed safely manually both flights.	\\
+	\hline
+	2-6-19				& Utah County Airfield	&	\makecell{31 \\ \textbf{10}} & 	1/1			& Tuned longitudinal gains and made a small effort to tune lateral gains. We also attempted a loiter, but aircraft was not tuned well enough to do so. Used course following to perfect the gains. Finished the longitudinal gains and got lateral gains reasonable. Next step is attempting a loiter and waypoints to tune lateral gains.	\\
+	\hline
+	2-19-19				& Rock Canyon 	&	3 & 	1/1			& Short flight to test cargo drop. Payload dropped upon command and the parachute opened successfully.\\
+	\hline
+\end{longtable}
 \egroup
 \label{table:Results}
+
+\hrule
+\rule{\textwidth}{0.1pt}
+\textbf{Statistics}
+\rule{\textwidth}{0.1pt}
+\hrule
 
 %\end{table}
 \end{center}
 
+\textbf{Total Flight Time:} 2 Hour 7 Minutes 
 
+\textbf{Manual Flight Time:} 1 Hour 52 Minutes*
 
+\textbf{Autonomous Flight Time:} 15 Minutes
+
+\textbf{Percent of Autonomous Flight:} 11.8\%
+\hrule
+\textbf{Manual Takeoffs:} 19*
+
+\textbf{Manual Landings:} 13*
+
+\textbf{Autonomous Takeoffs:} 0
+
+\textbf{Autonomous Landings:} 0
+\hrule
+\textbf{Percent of Flights Ending in Crash:} 31.6\%
+
+\textbf{Flights Sense Last Crash:} 13
+\hrule
+*With the aircraft configuration and safety pilot to be used in the competition
 
 
 \end{document}
