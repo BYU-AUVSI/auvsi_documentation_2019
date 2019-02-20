@@ -11,14 +11,14 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=blue,      
+    filecolor=blue,
     urlcolor=blue,
 }
- 
+
 
 \begin{document}
 \begin{AUVSITitlePage}
-\begin{artifacttable} 
+\begin{artifacttable}
 	\entry{GV-008, 1.0, 2-20-2019, Created, Jacob Willis, Derek Knowles}
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -27,7 +27,7 @@
 
 \section*{Introduction}
 To better understand the dynamics of the payload drop with a parachute, a simulation was written based on the dynamics described in `Dropping an Object on a Target` supplement to \textit{Small Unmanned Aerial Vehicles} by Randal W. Beard.
-The supplement is found at \url{http://uavbook.byu.edu/lib/exe/fetch.php?media=shared:object_drop.pdf}. 
+The supplement is found at \url{http://uavbook.byu.edu/lib/exe/fetch.php?media=shared:object_drop.pdf}.
 To more closely simulate the changing dynamics of a parachute opening, the surface area and coefficient of drag were made functions of time, which change between a small value (pre parachute opening) and a larger value after the parachute opens. These values were determined from typical values and from t Cd reported by the parachute manufacturer. Surface area is estimated based on the UGV and folded/furled parachute surface areas. Other parameters, such as mass, were determined from estimated UGV system values.
 
 \section*{Results}
@@ -36,13 +36,15 @@ To more closely simulate the changing dynamics of a parachute opening, the surfa
 {Parachute deployment simulation plots}
 {fig:dropplot}
 
-The main product of this simulation is the plot in Fig~\ref{fig:dropplot}. Several important results can be seen in this figure. First, the dropped object essentially mantains it original forward velocity until the parachute opens. The parachute's drag occurs in the direction of the object's velocity, so the parachute very quickly reduces horizontal velocities to 0. 
+The main product of this simulation is the plot in Fig~\ref{fig:dropplot}. Several important results can be seen in this figure. First, the dropped object essentially mantains it original forward velocity until the parachute opens. The parachute's drag occurs in the direction of the object's velocity, so the parachute very quickly reduces horizontal velocities to 0.
 Another important result is that the parachute reduces the terminal velocity of the dropped object very quickly, slowing it to a speed low enough for a soft landing.
 
-This informs us of the importance of repeatedly timing the different portions of payload drop sequence in order to accurately predict where our UGV will land. It also helped us pick a parachute diameter of 36 inches.
+This informs us of the importance of repeatedly timing the different portions of payload drop sequence in order to accurately predict where our UGV will land.
 
 \section*{Simulation Code}
 \inputminted[fontsize=\footnotesize]{python}{drop.py}
 \section*{Conclusion}
+
+The parachute deployment drop simulation succesfully allowed us to simulate the drop of our unamnned ground vehicle. Simulation results led us to pick a parachute diameter of 36 inches in order to meet the system requirements for dropping velocity.
 
 \end{document}
