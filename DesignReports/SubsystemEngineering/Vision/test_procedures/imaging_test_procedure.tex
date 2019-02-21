@@ -20,6 +20,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{IM-006, 1.0, 12-11-2018, Initial release, Tyler Miller, Jake Johnson}
+\entry{IM-006, 1.1, 02-21-2019, Add geolocation test procedures, Connor Olsen, Tyler Miller}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -98,5 +99,53 @@ be successfully sent to the computer (presumably this time is used to compresses
 the image before it is transmitted). Given the camera's high resolution, wide
 field of view, and the plane's slow speed; this rate should be adequate to capture 
 the entire competition field.
+
+\section{Geolocation Test Procedure}
+
+Without the Camera being fully ready to take pictures in a flight test, there was 
+need to simulate an environment where the accuracy of the target geolocation algorithm
+could be verified. Using our own equipment, we were able to create a controlled 
+environment to verify the accuracy within 20 feet.
+
+\textbf{Equipment used:}
+
+- Sony A6000 Camera
+
+- Tripod
+
+- Target
+
+- iPhone (to calculate angles and take in GPS coordinates)
+
+\textbf{Procedure}
+
+We took the target to the alleyway between the Clyde and Engineering Buildings 
+and looked for a good spot to mount the camera. Without access to the roof, we 
+ended up using the next best option, which was the fourth floor skybridge that 
+connects the two buildings. We measured the tripod at a -30 degree angle, (corresponding 
+to the plane pitching 60 degrees, since the camera is always 90 degree downward 
+from the nose)  and facing directly east (corresponding to the plane rolling 90 
+degrees)
+
+We measured the height of the camera relative to the target to be approximately 
+16 meters, and took the GPS coordinates of both the camera and the target. The 
+resulting image is shown in figure \ref{fig:geolocate} below
+
+\AUVSIFigure
+{./figs/alleyway.pdf}
+{\textwidth}
+{AUVSI geolocation test result}
+{fig:geolocate}
+
+When plugged into the algorithm, the results were extremely and obviously incorrect. 
+This error helped us isolate and resolve a minor bug that was affecting the pitch. 
+With the code working correctly, the algorithm was able to determine the coordinates 
+of the target in the image with only it’s own coordinates, it’s states (roll, 
+pitch, yaw) and the pixel coordinates of the target (shown in the image).
+
+The result was accurate within 20 feet, which is already a major success. Once 
+we have more images taken from our plane to continue testing with, we believe 
+that the accuracy will improve, as we will be using more reliable GPS data, and 
+not google maps.
 
 \end{document}
