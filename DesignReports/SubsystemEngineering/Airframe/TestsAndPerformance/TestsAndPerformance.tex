@@ -1,31 +1,51 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Tests},
+	AUVSITitle={Airframe Testing Procedures},
 	AUVSILogoPath={./../logo.pdf}
 }
 
 % include extra packages, if needed
+\usepackage{amsmath}
+\usepackage{bm}
 
 \begin{document}
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{AF-012, 0.1, 2/21/19, Created, Kameron Eves, [CHECKED BY]}
+\entry{AF-013, 0.1, 2/21/19, Created, Kameron Eves, Tyler Critchfield}
 % additional \entry{} commands for extra rows in the revision table, if needed
+
 \end{artifacttable}
 \end{AUVSITitlePage}
 
 % document contents (see below for LaTex commands that make your life easier)
 \section{Introduction}
-Several tests were performed to ensure that our design when actually implemented meet the requirements and key success measures. A description of these tests can be found below. The results of these tests are included in the requirements matrix.
+Several tests were performed to ensure that our design, when actually implemented, meets the requirements and key success measures. A description of these tests can be found below. The results of these tests are included in the requirements matrix (See AF-001).
 
 \section{Tests}
 \begin{itemize}
-	\item 
-\end{itemize}
+	\item \textbf{Requirement:} Test Description
+	\item \textbf{Battery Life:} Battery voltage was measured before and after flight. Voltage was assumed to vary linearly from the charged voltage and discharged voltage.
+	\item \textbf{Lift-to-Drag Ratio:} While in flight we set the throttle to zero and let the aircraft glide. We noted the start and end time of the glide. Because the aircraft's glide ratio is mathematically equal to the Lift-to-Drag Ratio we then could use a global positioning system and altitude measurements from a barometer to determine the  Lift-to-Drag Ratio. Appendix 1 is the code for this calculation.
+	\item \textbf{Motor/Prop Efficiency:} Motor and prop parameters were input into code written by Dr. Andrew Ning, a professor of mechanical engineering at Brigham Young University's Mechanical Engineering department. This code takes the motor and prop parameters and returns, among other things, the efficiency of the motors. Contact Dr. Ning for a copy of this code. 
+	\item \textbf{Airframe Weight:} The aircraft was loaded with all of the components that will be used in the competition, including the payload. The aircraft was then placed on a digital scale and the weight read from the scale's reading.
+	\item \textbf{Average Flight Speed:} Average flight speed was found by averaging the velocity of the aircraft over a flight as read by a differential pressure sensor and a pitot tube.
+	\item \textbf{Stall Speed:} Stall speed was found by manually piloting the aircraft as close to stall speed as we could without stalling and then reading the velocity of the aircraft from a differential pressure sensor and a pitot tube.
+	\item \textbf{Spiral Stability Eigenvalue:} Numerical analysis. See AF-011.
+	\item \textbf{Static Margin (with Payload):} The location of the CG was measured by placing the aircraft on a balancing apparatus. The aerodynamic center was assumed to be at the quarter chord of the wing. The static margin is then the difference between these two values normalized by the wing's mean chord length.
+	\item $\textbf{C}_{\textbf{n,beta}}$ \textbf{(yaw):} Numerical analysis. See AF-011.
+	\item $\textbf{C}_{\textbf{l,beta}}$ \textbf{(roll):} Numerical analysis. See AF-011.
+	\item \textbf{Number of Components that Fall of the Plane:} The number of components that fell off of the aircraft over the previous 10 flights was averaged to obtain the average number of components that fall of the aircraft per flight. 
+	\item \textbf{Number of Damaged Components on Landing:} The number of components that damaged over the previous 10 flights was averaged to obtain the average number of components that damaged per flight. 
+	\item \textbf{Number of AMA Safety Code Violations:} The AMA safety codes were read with the our aircraft and design in mind. The number of potential violations was then summed.
+	\item \textbf{Lift Coeffcient:} Numerical analysis. See AF-011.
+	\item \textbf{Storage Volume:} The aircraft was loaded with all components to be used in the competition except the payload and payload drop mechanism. The dimensions available for these payload components were then measured with a ruler and the volume computed by multiplying the dimensions together. 
+	\item \textbf{Time to Rebuild:} We had one catastrophic crash with the Nimbus Pro. This is the approximate time it took to get the plane ready to fly again.
+	\item \textbf{Focus Group Ease of Repair:} Several team members were enlisted to help repair the aircraft after several flight tests. Their responses to the question, "On a scale of 1 to 10 with 10 being the easiest, how easy would you say is was to repair this aircraft?" Respondents were encouraged to use previous RC experience as a frame of reference.
+\end{itemize} 
 
 \section{Conclusion}
-As can be seen in the above discussion we thoroughly tested our aircraft to ensure it meet the market requirements. Because of these tests we are confident that our aircraft meets and even exceeds these requirements.
+As can be seen in the above discussion we thoroughly tested our aircraft to ensure it met the market requirements. Because of these tests we are confident that our aircraft meets and even exceeds these requirements.
 
 
 \end{document}
