@@ -1,0 +1,126 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Autopilot Testing Procedures and Results},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\usepackage{longtable}
+
+\urlstyle{same}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{CT-002, 0.1, 02-12-2019, Initial conception, Andrew Torgesen, [CHECKED BY]}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+
+\section{Introduction}
+
+The autopilot for the UAS is called \textbf{ROSPlane}. It is responsible for taking high-level flight path commands and translating them to low-level actuator commands (aileron and elevator servos and throttle) on the airframe. The autopilot we are using and its software architecture are documented in our \href{https://github.com/BYU-AUVSI/rosplane}{team Github repository}.
+
+An intermediate step for the UAS to achieve its key success measures is to ensure that the underlying autopilot is well-tuned. The phrase well-tuned refers to the fact that the autopilot consists of a series of PID loops to control the longitudinal and lateral autopilots. Each PID loop has associated gains which must be tuned in-flight to ensure optimal performance. The following are block diagrams of ROSPlane's inner and outer loops for the longitudinal and lateral autopilots, respectively:
+
+\AUVSIFigure
+{figs/lon_autopilot.pdf}
+{\textwidth}
+{Longitudinal successive loop closure autopilot for the UAS. Borrowed from \textit{Small Unmanned Aircraft - Theory and Practice} by Beard, McLain.}
+{fig:lon_auto}
+
+\AUVSIFigure
+{figs/lat_autopilot.pdf}
+{\textwidth}
+{Lateral successive loop closure autopilot for the UAS. Borrowed from \textit{Small Unmanned Aircraft - Theory and Practice} by Beard, McLain.}
+{fig:lon_auto}
+
+This artifact details our testing and evaluation procedures to ensure that autopilot performance and compatibility with the rest of the UAS.
+
+\section{Performance Testing}
+
+Performance testing of ROSPlane is divided into two parts: control algorithm testing and estimation algorithm testing. The control algorithms constitute the functionality of the autopilot, and thus must be well-tuned to ensure that the key success measures can be met. Moreover, the estimation algorithms (currently being run on the Inertial Sense hardware--see the \textit{UAS Subsystem Interface Definition} artifact (SS-001)) provide vital information about the current dynamic state of the UAS to the autopilot, and thus must also be validated to ensure stable unmanned flight.
+
+\subsection{Control Algorithms}
+
+Control algorithm testing consists of determining how well the autopilot is able to follow commanded flight path states, such as pitch angle, altitude, roll angle, and course angle. Good performance entails timely convergence to the commanded values without subsequent oscillation or instability. To ensure good performance according to these criteria, we followed the procedures outlined in the \textit{Autopilot Tuning} artifact (CT-001) over the course of three different flight tests. Below are plots from real flight test data demonstrating the ability of the autopilot to converge on the commanded flight path states of altitude ($h$) and course angle ($\chi$):
+
+\AUVSIFigure
+{figs/command_following.pdf}
+{0.8\textwidth}
+{Flight test data demonstrating the ability of the autopilot to converge on commanded values for altitude and course angle.}
+{fig:cfollow}
+
+As can be seen from Figure \ref{fig:cfollow}, the longitudinal controller converges smoothly, whereas the lateral controller appears to struggle a bit to converge. This is due to the fact that there was a bit of wind blowing from West to East the day of our flight testing. Nevertheless, the lateral controller has demonstrated the ability to overcome external wind disturbances and arrive at the commanded course angle value, which was due North in this case.
+
+One final thing to note from Figure \ref{fig:cfollow} is the chopiness of the measured course angle data. This choppiness is attributed to state estimator error from our onboard sensors, which is addressed in the following section.
+
+\subsection{Estimation Algorithms}
+
+Through flight testing and subsequent analysis of the estimated state data, we have determined that using the Inertial Sense sensor module for state estimation alone, while basically adequate for unmanned flight, is too subject to small failures which propagate into large problems for the UAS as a whole. The following are the two principal issues with the Inertial Sense Estimation that we have observed:
+
+\subsubsection{Heading Estimation}
+
+As can be seen from Figure \ref{fig:cfollow}, the course angle data from the Inertial Sense can be choppy. The Inertial Sense is known to have issues estimating yaw if it isn't moving, but still apparently sometimes suffers from large amount of noise  while moving. This failure to produce a smooth course angle measurement could conceivably cause issues for the control algorithms, and thus must be amended.
+
+\subsubsection{Altitude Estimation}
+
+Figure \ref{fig:alt_bad} demonstrates another weakness with the Inertial Sense that occasionally arises. After $t \approx 75s$, the altitude estimate begins to go negative, and fails to recover. This behavior is attributable to the fact that the sensor is relying on GPS and inertial data only to estimate altitude. This failure to estimate altitude accurately is catastrophic when it arises, as the autopilot has no accurate idea of where it really is, leading to undesirable and unpredictable behavior.
+
+\AUVSIFigure
+{figs/alt_bad.pdf}
+{0.8\textwidth}
+{Altitude estimation output from the Inertial Sense sensor during a test flight.}
+{fig:alt_bad}
+
+\subsubsection{Plans for Addressing Issues}
+
+To avoid the failure modes in course angle and altitude estimation discussed above, our plan is to leverage the sensor fusion capabilities of the ROSFlight board and ROSPlane to add sensor redundancy. ROSFlight and ROSPlane together constitute an estimation scheme that is specially designed for fixed-wing platforms, and they integrate sensors that the Inertial Sense does not, such as an airspeed sensor and barometer. It is anticipated that this added redundancy will greatly reduce the risk of state estimation failure due to experiences in previous years. That being said, extensive testing of the redundant system will still be carried out.
+
+\section{System Compatibility Testing}
+
+The \textit{UAS Subsystem Interface Definition} artifact (SS-001) details that there are four interfaces between ROSPlane and other components in the UAS:
+
+\begin{enumerate}
+	\item Flight Controller/Inertial Sense Interface (\textit{two-way})
+	\item Image Stamper Interface (\textit{two-way})
+	\item Ubiquiti Bullet Interface (\textit{two-way})
+	\item Payload Delivery Interface (\textit{one-way})
+\end{enumerate}
+
+Table \ref{tab:inttests} communicates our testing procedures and results for each of these interfaces.
+
+\begin{center}
+	\begin{longtable}[H]{|P{4cm}|P{5.25cm}|P{5.25cm}|}
+		\caption{Description of testing procedures and results for ROSPlane interfaces.}
+		\label{tab:inttests}\\
+		\hline
+		\rowcolor[HTML]{C0C0C0}
+		{\color[HTML]{000000} \textbf{Interface}} & {\color[HTML]{000000}\textbf{Testing Procedure}}	& {\color[HTML]{000000}\textbf{Testing Results}} \\
+		\hline
+		\textbf{Flight Controller/Inertial Sense Interface}	& This interface runs over a USB cable using the MAVLink protocol. The MAVLink protocol itself is a tried-and-true protocol for serial communication between devices. Our particular MAVLink connection has been repeatedly tested on each flight test, whose procedure is outlined in the \textit{Field Flight Checklist} artifact (PF-001). A working flight controller interface is required for both RC and unmanned flight. &	The \textit{Flight Test Log} artifact (AF-004) details that over the course of 13 flight tests, the flight controller interface has never posed a problem. That being said, the \textit{Estimation Algorithms} section of this artifact details the weaknesses of the data being passed to the autopilot from the Inertial Sense hardware.\\
+		\hline
+		\textbf{Image Stamper Interface}	& This interface runs over ROS, following the publisher-subscriber architecture. Testing this architecture has entailed running the ROSPlane and image stamper nodes, having each node publish messages to each other, and ensuring a constant message reception frequency in each node. &	ROS network testing has shown that publisher-subscriber connectivity has never posed an issue, particularly because both nodes are running on the Odroid computer and thus not dependent on a reliable WiFi connection. \\
+		\hline
+		\textbf{Ubiquiti Bullet Interface}	& Testing of this interface entails ensuring relatively constant connectivity over WiFi from the ground to the plane during flight testing. It is useful to use the \textit{ping} command to check connection speed throughout the flight. &	Over the course of several flight tests, only once has WiFi connectivity posed an issue. This was most likely attributable to failing to keep the Ubiquiti Rocket pointed at the plane constantly during flight. \\
+		\hline
+		\textbf{Payload Delivery Interface}	& The payload delivery mechanism is last year's design, and their Subsystem Engineering Artifacts may be consulted for details on this interface. &	A summary of the results is that the interface is reliable; the only problems with the payload delivery system are due to the behavior of the Odroid's operating system itself when ROS is not running. \\
+		\hline
+	\end{longtable}
+\end{center}
+
+\section{Conclusion}
+
+Extensive testing of the autopilot subsystem, primarily in the form of flight tests and autopilot tuning, has determined that the autopilot performs up to standards and is capable of interfacing with the needed components in the UAS. Further work is needed to improve the robustness of the onboard state estimation to greatly reduce the risk of in-flight failure, since ROSPlane relies on accurate state estimation to sustain unmanned flight.
+
+\end{document}
