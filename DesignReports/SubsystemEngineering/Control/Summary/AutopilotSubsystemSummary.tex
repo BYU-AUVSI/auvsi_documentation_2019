@@ -1,0 +1,42 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Autopilot Subsystem Summary},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\usepackage{longtable}
+
+\urlstyle{same}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{CT-006, 0.1, 02-27-2019, Initial conception, John Akagi, ---}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+
+\section{Introduction}
+This document summarizes the performance of the autopilot. Full test procedures and results are included later in the design review packet.
+
+\section{Autopilot Tuning}
+
+The underlying control algorithms being used involve a combination of PID, PI, and PD algorithms. Each of these require gains to be set so that the system is stable but also able to respond quickly to changes in the commanded attitude of the airplane. Additional gains are also needed to control the behavior of the airplane as it attempts to follow a defined path.
+
+
+
+
+
+
+\end{document}
