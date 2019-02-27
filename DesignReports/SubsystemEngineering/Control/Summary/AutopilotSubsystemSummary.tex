@@ -21,7 +21,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{CT-004, 0.1, 02-27-2019, Initial conception, John Akagi, ---}
-\entry{CT-004, 0.2, 02-27-2019, Section on path planning, Brady Moon, ---}
+\entry{CT-004, 0.2, 02-27-2019, Section on path planning, Brady Moon, John Akagi}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -46,14 +46,11 @@ Some problems were noted during testing with the altitude estimation. We are onl
 
 \section{Path Planning Testing}
 
-We tested the path planning algorithms for robustness and efficacy. This was done in simulation with 5 different random maps. Each map had 5 waypoints and 10 obstacles which were placed randomly. After running all the simulations, we evaluated the success of the mission based on our key success measures. There were some mistakes in the simulations, but overall the results fall in the excellent category as defined by the key success measures. We will be analyzing the reasons for the failures in the tests, and then fix them in the refinement process.
+We tested the path planning algorithms for robustness and efficacy. This was done in simulation with 5 different random maps. Each map had 5 waypoints and 10 obstacles which were placed randomly. A path was planned to hit all waypoints and then a simulated plane, based on our actual design, attempted to fly the path. The closest approach to each waypoint and obstacle were calculated. After running all the simulations, we evaluated the success of the mission based on our key success measures. There were some mistakes in the simulations, but overall the results fall in the excellent category as defined by the key success measures. We will be analyzing the reasons for the failures in the tests, and then fix them in the refinement process.
 
 \section{Conclusion}
 
 We have been able to test and verify the autopilot gains and the path planning algorithm. Additional work is still required in order to obtain a better altitude estimation and to make the path planning algorithm more consistent.
-
-
-
 
 
 
