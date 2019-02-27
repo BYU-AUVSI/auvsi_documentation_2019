@@ -21,6 +21,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{CT-006, 0.1, 02-27-2019, Initial conception, John Akagi, ---}
+\entry{CT-006, 0.2, 02-27-2019, Section on path planning, Brady Moon, ---}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -33,6 +34,10 @@ This document summarizes the performance of the autopilot. Full test procedures 
 \section{Autopilot Tuning}
 
 The underlying control algorithms being used involve a combination of PID, PI, and PD algorithms. Each of these require gains to be set so that the system is stable but also able to respond quickly to changes in the commanded attitude of the airplane. Additional gains are also needed to control the behavior of the airplane as it attempts to follow a defined path.
+
+\section{Path Planning Testing}
+
+We tested the path planning algorithms for robustness and efficacy. This was done in simulation with 5 different random maps. Each map had 5 waypoints and 10 obstacles which were placed randomly. After running all the simulations, we evaluated the success of the mission based on our key success measures. There were some mistakes in the simulations, but overall the results fall in the excellent category as defined by the key success measures. We will be analyzing the reasons for the failures in the tests, and then fix them in the refinement process. 
 
 
 
