@@ -34,6 +34,13 @@ This document summarizes the performance of the autopilot. Full test procedures 
 
 The underlying control algorithms being used involve a combination of PID, PI, and PD algorithms. Each of these require gains to be set so that the system is stable but also able to respond quickly to changes in the commanded attitude of the airplane. Additional gains are also needed to control the behavior of the airplane as it attempts to follow a defined path.
 
+The gains were initially based on the gains from last year's plane and then tuned through in-flight testing. For tuning the longitudinal autopilot, the plane was initially commanded to fly straight. Varying altitudes and airspeeds were then commanded and the longitudinal gains were adjusted so the transitions were smooth and controlled. The lateral gains were tuned by commanding the airplane to hold varying roll attitudes and making the transition smooth. Finally, the path follower gains were tuned by changing the desired course heading and adjusting the gains for smooth transitions.
+
+\section{Autopilot Testing}
+
+For testing the autopilot, sensor information was gathered using GPS and an inertial measurement unit. A heading and altitude were commanded and the airplane response was recorded. Overall, the airplane was able to stay within an acceptable bound of the commanded attitude. 
+
+Some problems were noted during testing with the altitude estimation. We are only using GPS data for that, so the values can jump around considerably since GPS is less accurate for altitude than it is for position. If the airplane receives an incorrect altitude estimation it could cause a catastrophic crash. In order to obtain better altitude estimates, we plan to integrate additional sensors such as a barometer. 
 
 
 
