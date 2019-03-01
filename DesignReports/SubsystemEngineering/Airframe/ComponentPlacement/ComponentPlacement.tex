@@ -1,0 +1,50 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Bill of Materials},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\begin{document}
+
+	\begin{AUVSITitlePage}
+		\begin{artifacttable}
+			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, Brandon McBride}
+			% additional \entry{} commands for extra rows in the revision table, if needed
+		\end{artifacttable}
+	\end{AUVSITitlePage}
+
+	% document contents (see below for LaTex commands that make your life easier)
+	\section{Introduction}
+	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, and vendor.
+
+	%Begin table
+
+	\begin{table}[h!]
+		\begin{center}
+			\caption{Exact location (measured from the nose of the plane) for each major component of the system. Other minor components are constrained based on how they connect to these listed components.}
+			\label{table:comps-placement}
+			\begin{tabular}{c c c} 
+				\toprule
+				Index & CG x Location [cm] & Description \\
+				\midrule
+				1 & 21.5 & Battery \\
+				2 & 17.5 & Ubiquity Bullet \\
+				3 & 43.5 & Flight Controller/Inertial Sense \\
+				4 & 63 & Bullet Antenna \\
+				5 & 52.5 & RC Antenna \\
+				6 & 68.5 & Parachute \\
+				7 & 60.5 & UGV \\
+				8 & 33.5 & Camera \\
+				9 & 7.5 & GPS \\
+				10 & 43.5 &ODroid \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+\end{document}
