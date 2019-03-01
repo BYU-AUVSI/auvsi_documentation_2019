@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Bill of Materials},
+	AUVSITitle={Airframe Component Placement},
 	AUVSILogoPath={./../logo.pdf}
 }
 
@@ -13,14 +13,14 @@
 	
 	\begin{AUVSITitlePage}
 		\begin{artifacttable}
-			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Ryan Anderson, CHECKED BY}
+			\entry{AF-014, 0.1, 03-01-19, SS Engineering Draft, Ryan Anderson, Tyler Critchfield}
 			% additional \entry{} commands for extra rows in the revision table, if needed
 		\end{artifacttable}
 	\end{AUVSITitlePage}
 	
 	% document contents (see below for LaTex commands that make your life easier)
 	\section{Introduction}
-	This artifact is meant to communicate the spatial layout of components in the plane. Note that only components with significant spacial requirements are included. This includes center of gravity, signal interference, and physical volume. A diagram of the current configuration is included in Fig. \ref{fig:components}.
+	To have a stable and aerodynamically efficient flight, it is vital that the airframe have a center of gravity (CG) at a specific location - specifically, one that is in front of the aerodynamic center (about 1/4 chord of the main wings). In our analysis of the airframe (see AF-011), we determined this location to be 6.2 cm in front of the leading edge of the wing. In this artifact, we present the locations of the major components of the system in order to achieve this desired CG of the entire aircraft. Figure \ref{fig:components} shows the placement of our main components in the airframe to achieve the desired CG. Table 1 lists the exact x-locations (measured from the nose of the aircraft) of each component. Only the x-location is listed because component placement primarily affects longitudinal stability (pitch). The y- and z-locations are not critical for our application. Note that only components with significant spacial requirements are included. This includes center of gravity, signal interference, and physical volume.
 	
 	%Begin table
 	
@@ -30,7 +30,7 @@
 			\label{table:components}
 			\begin{tabular}{p{1cm}p{2.5cm}p{4cm}p{7cm}}
 				\toprule
-				Item \# & X Location (cm) & Item Description & Reason for Location & \\
+				Item \# & X Location (cm) & Item Description & Reason for Location \\
 				\midrule
 				1 & 7.5 & GPS Antenna & Avoid interference with 5Ghz antenna \\
 				2 & 17.5 & Ubiquiti Bullet & CG placement \\
@@ -50,7 +50,7 @@
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=.9\columnwidth]{figs/ComponentsPlacement.png}
-		\caption{Diagram illustrating component placement.}
+		\caption{Diagram illustrating component placement. Numbers refer to those listed in Table 1.}
 		\label{fig:components}
 	\end{figure}
 	
