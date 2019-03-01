@@ -13,79 +13,46 @@
 	
 	\begin{AUVSITitlePage}
 		\begin{artifacttable}
-			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, CHECKED BY}
+			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Ryan Anderson, CHECKED BY}
 			% additional \entry{} commands for extra rows in the revision table, if needed
 		\end{artifacttable}
 	\end{AUVSITitlePage}
 	
 	% document contents (see below for LaTex commands that make your life easier)
 	\section{Introduction}
-	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, and vendor.
+	This artifact is meant to communicate the spatial layout of components in the plane. Note that only components with significant spacial requirements are included. This includes center of gravity, signal interference, and physical volume. A diagram of the current configuration is included in Fig. \ref{fig:components}.
 	
 	%Begin table
 	
 	\begin{table}[h!]
 		\begin{center}
-			\caption{A bill of materials for the current Nimbus Pro system. Information listed includes the item number, name, quantity, mass, vendor, and a list of other items each interfaces with. Masses are not included if they were already included in another item's mass or if it is irrelevent (if the item is not in the plane). Not included is each component of the aircraft that came with the kit (e.g., control horns, glue, connector pieces, coverings, etc.).}
-			\label{table:BOM}
-			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}}
+			\caption{Layout of components for ideal CG placement, avoiding signal interference, and practicality.}
+			\label{table:components}
+			\begin{tabular}{p{1cm}p{2.5cm}p{4cm}p{7cm}}
 				\toprule
-				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor \\
+				Item \# & X Location (cm) & Item Description & Reason for Location & \\
 				\midrule
-				1 & Nimbus Pro Airframe & Everything & 1 & 2000 & BangGood   \\
-				2 & Pitot Tube & Item 3 & 1 & 19 & Amazon \\
-				3 & PX4 Airspeed Sensor & Item 4 & 1 & N/A & N/A \\
-				4 & Flip32 Breakout I2C & Items 5, 6, 7, 19 & 1 & 60 & Custom \\
-				5 & OpenPilot Revo \newline Flight Controller & Item 4 & 1 & 35 & Hyperion \newline World  \\
-				6 & Servos & Item 4 & 4 & 44 & Hobby King \\
-				7 & ESC & Items 4, 8, 19 & 2 & 160 & Hobby King \\
-				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies \\ 
-				9 & RC Receiver & Items 10, 19 & 1 & 19 & Team \newline Blacksheep \\
-				10 & RC Antennas & Item 9 & 2 & 0 & N/A \\
-				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & N/A \\
-				12 & Ubiquiti Bullet & Items 11, 13 & 1 & 165 & Amazon \\
-				13 & 5GHz antenna & Item 12 & 1 & 32 & N/A \\
-				14 & 5GHz Litebeam \newline Antenna & Items 1, 30 & 1 & N/A & Newegg\\
-				15 & Odroid & Items 4, 11, 16, 17, 19 & 1 & 99 & Hard Kernel \\
-				16 & Camera & Items 15, 28 & 1 & 241 & Basler \\
-				17 & InertialSense & Item 15, 18 & 1 & N/A & N/A \\
-				18 & GPS Antenna & Item 17 & 1 & 94 & Drotek \\
-				19 & Power Harness & Items 4, 7, 9, 11, 15, 20-22, 31 & 1 & 130 & N/A \\
+				1 & 7.5 & GPS Antenna & Avoid interference with 5Ghz antenna \\
+				2 & 17.5 & Ubiquiti Bullet & CG placement \\
+				3 & 21.5 & Battery & CG placement \\
+				4 & 33.5 & Camera & Near CG to reduce oscillations during image capture \\
+				5 & 43.5 & Flight Controller and Inertial Sense & Inertial Sense should be near the CG  \\
+				6 & 43.5 & Odroid & Central location is convenient for \newline connecting components \\
+				7 & 52.5 & RC Antenna/Receiver & CG placement \\
+				8 & 60.5 & UGV & CG placement, bay door design \\
+				9 & 63 & 5GHz antenna & Avoid interference with GPS antenna \\
+				10 & 68.5 & Parachute & Effective deployment with UGV \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
 	\end{table}
 	
-	\begin{table}[h!]
-		\begin{center}
-			\caption{A continuation of the system bill of materials from the previous page.}
-			\label{table:BOM}
-			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}}
-				\toprule
-				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor \\
-				\midrule
-				20 & Castle BEC 20 A & Items 15, 19, 22 & 1 & N/A & Castle \newline Creations \\
-				21 & Castle BEC 10 A & Items 9, 19 & 1 & N/A & Castle \newline Creations \\
-				22 & Bottle Drop Arduino & Items 15, 19, 23 & 1 & N/A & Hobby King \\
-				23 & Payload Release & Item 22 & 1 & 18 & Hobby King \\
-				24 & Tail Foam Wedge & Item 1 & 1 & 10 & Custom \\
-				25 & Battery Straps & Item 31 & 2 & 5 & N/A \\
-				26 & Velcro Strips & Items 5, 12, 31 & 6 & N/A & EE Shop \\
-				27 & Controller Board \newline Housing &   & 1 & N/A & N/A \\
-				28 & Camera Housing & Item 16 & 1 & N/A & Custom \\
-				29 & Propellers & Item 8 & 2 & 14 & Hobby King \\
-				30 & WiFi Router & Item 14 & 1 & N/A & Amazon \\
-				31 & 4S Lipo Battery & Item 19, 25 & 1 & 944 & Hobby King \\
-				32 & UGV Chassis & Item 33, 37 & 1 & 88 & Amazon \\
-				33 & UGV Battery & Item 32 & 1 & N/A & Amazon \\
-				34 & UGV GPS & Item 32, 37 & 1 & N/A & N/A \\
-				35 & Parachute housing & Item 36 & 1 & 10 & Custom \\
-				36 & 30" Parachute & Items 32, 35 & 1 & 92 & FruityChutes \\
-				37 & UGV Controller & Items 32, 33, 34 & 1 & 35 & Hyperion \\
-				38 & Fiber Tape & Item 1 & N/A & N/A & Amazon \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-	\end{table}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=.9\columnwidth]{figs/ComponentsPlacement.png}
+		\caption{Diagram illustrating component placement.}
+		\label{fig:components}
+	\end{figure}
+	
 	
 \end{document}
