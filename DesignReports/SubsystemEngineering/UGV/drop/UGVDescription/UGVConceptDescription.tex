@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Unmanned Ground Vehicle Drop Subsystem Description},
+	AUVSITitle={Unmanned Ground Vehicle Drop Subsystem Summary},
 	AUVSILogoPath={./figs/logo.pdf},
 }
 
@@ -21,6 +21,7 @@
 \begin{artifacttable}
 \entry{GV-005, 1.0, 10-30-2018, Wrote concept description, Kameron Eves, Andrew Torgesen}
 \entry{GV-005, 1.1, 2-21-2019, Updated to reflect subsystem engineering, Jacob Willis, Brandon McBride}
+\entry{GV-005, 1.2, 3-01-2019, Added performance summary, Jacob Willis, Derek Knowles}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -51,6 +52,10 @@ This hole is known in the industry as a spill hole because it allows the air to 
  The algorithm for dropping objects from a UGV, as detailed in \textit{Small Unmanned Aircraft: Theory and Practice} by Randy Beard and Tim McLain, is used to estimate the proper location to drop the UGV from in order to hit the target. This algorithm uses the wind and velocity of the aircraft to predict the best location to release the payload. A simulation of the drop, based on this algorithm is in GV-008. 
  The parachute adds some complexity to the algorithm, since the surface area and coefficient of drag are not constant during the drop. In order to more accurately predict the landing location of the UGV, the drop will be repeatedly timed, and the time will be used by the algorithm. This will allow us better accuracy in our drop algorithm than using a model of how the parachute drops. It also necessitates a highly repeatable deployment. These were design goals, and were focused on in the development of GV-006 and GV-007.
 
+\section{Performance Summary}
+The UGV subsystem performs within our defined acceptable range for all performance measures.
+Due to its simple design, the mechanism weighs less and supports much more weight than expected. 
+The parachute we selected is compact, yet allows a maximum landing velocity of three meters per second. This is sufficient to ensure a gentle landing of the UGV, meeting the competition requirements for the UGV drop. Because the full system must be integrated before testing drop accuracy, drop accuracy will be measured during system refinement.
 
 \section{Conclusion}
 Using the system described above, we are confidant in our ability to achieve a landing accuracy of within 25 feet. This is considered excellent performance in our key success measures and will give us 75\% of the points possible in this portion of the competition. 
