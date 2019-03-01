@@ -11,17 +11,17 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{AF-008, 0.1, 02-19-19, Initial Draft for Subsystem Engineering, Tyler Critchfield, Ryan Anderson}
-\entry{AF-008, 0.2, 02-28-19, Revisions - change to summary, Tyler Critchfield, CHECKED BY}
+\entry{AF-008, 0.2, 02-28-19, Revisions - change to summary, Tyler Critchfield, Ryan Anderson}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
 
 % document contents (see below for LaTex commands that make your life easier)
 \section{Introduction}
-This artifact summarizes the final design of the Nimbus Pro airframe that was selected during the Concept Development stage. Models and testing procedures of the airframe are included, as well as a summary of what has been done and still needs to be accomplished. The advantages of the current concept in achieving our key success measures are described.
+This artifact summarizes the current state of the airframe design after subsystems engineering. Models and testing procedures of the airframe are included, as well as a summary of what has been done and still needs to be accomplished. The advantages of the current concept in achieving our key success measures are described.
 
 \section{Design Description}
-The Nimbus Pro airframe is a fixed-wing plane with a large storage capacity and large wing span made of polystyrene (Fig. \ref{fig:plane1}). It was selected during Concept Development for its long span and spacious fuselage. Since the last design review, we successfully constructed the new aircraft, carefully planned component placement to achieve a desirable center of gravity (CG), and successfully flew 15 flights with the Nimbus Pro. Our first flight ended in a crash (see AF-004), after which we quickly glued it back together and continued flying with it. Our flights have mostly been with a remote controlled (RC) pilot, but recent flights have also integrated with autopilot (for tuning gains). We've also integrated with the UGV drop mechanism and vision subsystems.
+The Nimbus Pro airframe was selected as a fixed-wing plane with a large storage capacity and large wing span made of polystyrene (Fig. \ref{fig:plane1}). It was selected during Concept Development for its long span and spacious fuselage. Since the last design review, we successfully constructed the new aircraft, carefully planned component placement to achieve a desirable center of gravity (CG), and successfully flew 15 flights with the Nimbus Pro. Our first flight ended in a severe crash (see AF-004), but we managed to glue it back together and are still using it. Test flights have mostly been under R/C control, but multiple recent flights have also integrated the autopilot. We have also successfully tested system integration with the UGV drop and vision subsystems during flight.
 
 \begin{figure}[h!]
 	\centering
@@ -42,18 +42,18 @@ A detailed procedure for constructing the plane is beyond the scope of this arti
 	\item Attach/connect wings
 \end{itemize}
 
-The CG was carefully placed to optimize performance using an aerodynamics model, as explained in AF-011. The following modifications were made to the airframe based on our application and integrated hardware:
+The CG was carefully placed to optimize performance using an aerodynamics model, as summarized in AF-011. The following modifications were made to the airframe based on our application and integrated hardware:
 
 \begin{itemize}
 	\item Holes were made in the main compartment hatch for the R/C and Ubiquiti antennas. There is dedicated space further back in the plane for these components, but placing components there moved the CG back too far for an acceptable static margin. Care was also taken to space the Ubiquiti antenna far from the GPS antenna to avoid signal interference.
-	\item The GPS slot on top was not used and taped over. The GPS was instead placed inside the nose of the plane to move the CG forward.
+	\item The GPS slot on top was not used. The GPS was instead placed inside the nose of the plane to move the CG forward. The GPS slot was taped over to improve aerodynamics.
 	\item The servos we selected were larger than the airframe was designed for. Because of this, some foam and plastic was removed from servo locations using razor blades, a hot metal tool, and wire cutters to allow them to fit.
-	\item A foam wedge was inserted underneath the tail to increase the tail incidence angle (see further details below).
+	\item A foam wedge was inserted underneath the tail to increase the tail incidence angle (see  details below).
 	\item Because the motor power wires are so thick, we bypassed the electrical connector that came with the airframe. Small holes were drilled into the wing connector pieces to allow for the large wires to extend from the ESCs in the wings to the fuselage.
 	\item In general, most components were placed as far forward as was reasonable to move our CG forward and increase our static margin. Artifact AF-014 visually depicts the placement of major components in the plane to ensure optimal CG placement. 
 \end{itemize}
 
-In Concept Development, we considered adding wing extensions to increase total span. This would help the plane fly slower by increasing lift. Flying at a lower velocity would then help us achieve higher performance in our key success measures (specifically obstacles hit, waypoint proximity, characteristics identified, and accuracy of payload drop). In order to decide if wing extensions would be worth it, the aerodynamic benefits of extensions were modeled and compared to the relative cost of manufacture (See AF-012). In summary, it was decided that any extra benefit to extensions would not be worth the time and effort required to design, implement and test these extensions.
+In Concept Development, we considered adding wing extensions to increase total span. This would help the plane fly slower by increasing lift. Flying at a lower velocity would then help us achieve higher performance in our key success measures (specifically obstacles hit, waypoint proximity, characteristics identified, and accuracy of payload drop). In order to decide if wing extensions would be worth it, the aerodynamic benefits of extensions were modeled and compared to the relative cost of manufacture (See AF-012). In summary, it was decided that any extra benefit to extensions would not be worth the time and effort required to design, implement and test these extensions. Significantly longer wings would be provided to produce any notable improvement, and the plane already flies at an acceptable speed.
 
 One unanticipated modification we've made to the aircraft is the placement of a foam wedge underneath the tail of the plane. Interestingly, the factory design has no tail incidence. Though we predicted problems, we decided to see if the plane would fly without this modification. (Slight instability could be accounted for with our autopilot.) It did fly, but it had a consistent tendency to want to pitch forward, making it difficult to take off and fly RC. The plane was modeled and an incidence angle of $7.5^\circ$ determined the optimal condition (see AF-009 and AF-011). After installing the tail wedge, this problem was averted. The plane is now stable and flies very near the design speed we had originally planned for.
 
