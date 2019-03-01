@@ -4,6 +4,8 @@
 \usepackage[space]{grffile}
 \usepackage{pdfpages}
 \usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+
 \newcounter{includepdfpage}
 
 \newcommand{\pdflink}[2]{
@@ -22,27 +24,51 @@
 
 \section*{Table of Contents}
 
+\hrule
+
+\textbf{\textit{PRIMARY ARTIFACTS}}
+
+\hrule
+
 \pdflink{proj_cont}{Capstone Project Contract}
+
+\pdflink{add}{Airframe Subsystem Description}
+
+\pdflink{arq}{Airframe Requirements Matrix}
+
+\pdflink{auto}{Autopilot Subsystem Summary}
+
+\pdflink{autorq}{Autopilot and Path Planner Requirements Matrix}
+
+\pdflink{ugvdsscd}{Unmanned Ground Vehicle Drop Subsystem Description}
+
+\pdflink{ugvrm}{Unmanned Ground Vehicle Requirements Matrix}
+
+\pdflink{isd}{Imaging Subsystem Description}
+
+\pdflink{irm}{Imaging Requirements Matrix}
+
+\pdflink{abm}{System Bill of Materials}
 
 \pdflink{sid}{Subsystem Interfaces Description}
 
 \pdflink{wd}{Wiring Diagram}
 
+\hrule
+
+\textbf{\textit{SUPPORTING ARTIFACTS}}
+
+\hrule
+
 \pdflink{fl}{Flight Test Log}
 
 \pdflink{ffcl}{Field Flight Checklist}
-
-\pdflink{abm}{System Bill of Materials}
-
-\pdflink{add}{Airframe Subsystem Description}
 
 \pdflink{afmea}{Airframe Failure Modes and Effects Analysis}
 
 \pdflink{amwe}{Airframe Model: Wing Extensions}
 
 \pdflink{amxflr}{Airframe Model: XFLR5}
-
-\pdflink{arq}{Airframe Requirements Matrix}
 
 \pdflink{atwt}{Airframe Tail Wedge Design, Construction, and Validation}
 
@@ -54,10 +80,6 @@
 
 \pdflink{ppt}{Path Planner Testing}
 
-% \pdflink{ppv}{Path Planner Validation}
-
-% \pdflink{udd}{Vision Subsystem Concept Selection Matrices}
-
 \pdflink{ugvbdd}{Unmanned Ground Vehicle Bay Door Description}
 
 \pdflink{pf}{Parachute Folding}
@@ -66,58 +88,48 @@
 
 \pdflink{udtd}{UGV Drop Test Description}
 
-\pdflink{ugvrm}{Unmanned Ground Vehicle Requirements Matrix}
-
-\pdflink{ugvdsscd}{Unmanned Ground Vehicle Delivery System Selected Concept Description}
-
 \pdflink{iga}{Imaging GUI API}
 
 \pdflink{igsia}{Imaging GUI-Server Interface API}
 
 \pdflink{gad}{Geolocation Algorithm Description}
 
-\pdflink{irm}{Imaging Requirements Matrix}
-
 \pdflink{isa}{Imaging Server API}
-
-\pdflink{isd}{Imaging Subsystem Description}
 
 \pdflink{itp}{Imaging Test Procedures}
 
 % ==============================================================================
 
 \pdflinkdoc{proj_cont}{./../ProjectContract/Capstone Team 45 Project Contract.pdf}
+\pdflinkdoc{add}{./Airframe/DesignDrawings/DesignDrawings.pdf}
+\pdflinkdoc{arq}{./Airframe/RequirementsMatrix/RequirementsMatrix.pdf}
+\pdflinkdoc{auto}{./Control/Summary/AutopilotSubsystemSummary.pdf}
+\pdflinkdoc{autorq}{./Control/ControlRequirmentsMatrix/main.pdf}
+\pdflinkdoc{ugvdsscd}{./UGV/drop/UGVDescription/UGVConceptDescription.pdf}
+\pdflinkdoc{ugvrm}{./UGV/drop/UGVRequirmentsMatrix/main.pdf}
+\pdflinkdoc{isd}{./Vision/server_description/server_description.pdf}
+\pdflinkdoc{irm}{./Vision/requirements_matrix/RequirementsMatrix.pdf}
+\pdflinkdoc{abm}{./Airframe/BillOfMaterials/BillOfMaterials.pdf}
 \pdflinkdoc{sid}{./SubsystemInterfacesDescription/SubsystemInterfaceDefinitions.pdf}
 \pdflinkdoc{wd}{./wiring/main.pdf}
 \pdflinkdoc{fl}{./FlightLog/main.pdf}
 \pdflinkdoc{ffcl}{./../../FieldFlightChecklist/Field Flight Checklist.pdf}
-
-\pdflinkdoc{abm}{./Airframe/BillOfMaterials/BillOfMaterials.pdf}
-\pdflinkdoc{add}{./Airframe/DesignDrawings/DesignDrawings.pdf}
 \pdflinkdoc{afmea}{./Airframe/FMEA/FMEA.pdf}
 \pdflinkdoc{amwe}{./Airframe/Models/wingExtensions.pdf}
 \pdflinkdoc{amxflr}{./Airframe/Models/XFLR5model.pdf}
-\pdflinkdoc{arq}{./Airframe/RequirementsMatrix/RequirementsMatrix.pdf}
 \pdflinkdoc{atwt}{./Airframe/TailWedge/main.pdf}
 \pdflinkdoc{atap}{./Airframe/TestsAndPerformance/TestsAndPerformance.pdf}
-
 \pdflinkdoc{atest}{./Control/AutopilotTesting/Autopilot Testing Procedures and Results.pdf}
 \pdflinkdoc{atune}{./Control/AutopilotTuning/Autopilot Tuning.pdf}
 \pdflinkdoc{ppt}{./Control/PathPlannerTesting/Path Planner Testing Procedures and Results.pdf}
-% \pdflinkdoc{ppv}{./SubsystemInterfacesDescription/SubsystemInterfaceDefinitions.pdf}
-% \pdflinkdoc{udd}{./UGV/drop/.pdf}
 \pdflinkdoc{ugvbdd}{./UGV/drop/BayDoorDescription/BayDoorDescription.pdf}
 \pdflinkdoc{pf}{./UGV/drop/ChuteFolding/main.pdf}
 \pdflinkdoc{pdds}{./UGV/drop/DropSimulation/main.pdf}
 \pdflinkdoc{udtd}{./UGV/drop/DropTestDescription/main.pdf}
-\pdflinkdoc{ugvrm}{./UGV/drop/UGVRequirmentsMatrix/main.pdf}
-\pdflinkdoc{ugvdsscd}{./UGV/drop/UGVDescription/UGVConceptDescription.pdf}
 \pdflinkdoc{iga}{./Vision/client_gui_docs/client_gui.pdf}
 \pdflinkdoc{igsia}{./Vision/client_rest_docs/client_interface_api.pdf}
 \pdflinkdoc{gad}{./Vision/geolocation_description/geolocation_description.pdf}
-\pdflinkdoc{irm}{./Vision/requirements_matrix/RequirementsMatrix.pdf}
 \pdflinkdoc{isa}{./Vision/server_dao_docs/server_dao_api.pdf}
-\pdflinkdoc{isd}{./Vision/server_description/server_description.pdf}
 \pdflinkdoc{itp}{./Vision/test_procedures/imaging_test_procedure.pdf}
 
 \end{document}
