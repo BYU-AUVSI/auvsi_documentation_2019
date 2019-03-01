@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Bill of Materials},
+	AUVSITitle={Airframe Componenet Placement},
 	AUVSILogoPath={./../logo.pdf}
 }
 
@@ -13,20 +13,27 @@
 
 	\begin{AUVSITitlePage}
 		\begin{artifacttable}
-			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, Brandon McBride}
+			\entry{AF-014, 0.1, 03-01-2019, SS Engineering, Tyler Critchfield, CHECKED BY}
 			% additional \entry{} commands for extra rows in the revision table, if needed
 		\end{artifacttable}
 	\end{AUVSITitlePage}
 
 	% document contents (see below for LaTex commands that make your life easier)
 	\section{Introduction}
-	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, and vendor.
+	To have a stable and aerodynamically efficient flight, it is vital that the airframe have a center of gravity (CG) at a specific location - specifically, one that is in front of the aerodynamic center (about 1/4 chord of the main wings). In our analysis of the airframe (see AF-011), we determined this location to be -----. In this artifact, we present the locations of the major components of the system in order to achieve this desired CG of the entire aircraft. Figure \ref{} shows the placement of our main components in the airframe to achieve the desired CG. Table \ref{table:comps-placement} lists the exact x-locations (measured from the nose of the aircraft) of each component. Only the x-location is listed because component placement primarily affects longitudinal stability (pitch). The y and z-locations are not critical for our application. Other minor components are not listed here for simplicity - they weigh less, so their exact locations are not as critical. In addition, their locations are primarily constrained by the placement of these major components (i.e. they need to be placed near the components they interface with), so it is not necessary to explicitly outline each location. 
+
+	\begin{figure}[h!]
+		\centering
+		\label{fig:comps}
+		\includegraphics[width=.9\columnwidth]{comps}
+		\caption{A top-down view of our airframe main compartment and location for each major component.}		
+	\end{figure}
 
 	%Begin table
 
 	\begin{table}[h!]
 		\begin{center}
-			\caption{Exact location (measured from the nose of the plane) for each major component of the system. Other minor components are constrained based on how they connect to these listed components.}
+			\caption{Exact location (measured from the nose of the plane) for each major component of the system.}
 			\label{table:comps-placement}
 			\begin{tabular}{c c c} 
 				\toprule
