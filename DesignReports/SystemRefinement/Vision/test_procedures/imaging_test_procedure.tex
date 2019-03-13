@@ -1,0 +1,151 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Imaging Test Procedures},
+	AUVSILogoPath={./../../../../_resources_/logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{parskip}
+\usepackage[space]{grffile}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\newcounter{includepdfpage}
+
+\newcommand{\pdflinkdoc}[2]{
+\includepdf[pages=-,link,offset=25mm -30mm,linkname=#1,pagecommand={\refstepcounter{includepdfpage}\label{#1.\theincludepdfpage}}]{#2}
+}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{IM-006, 1.0, 12-11-2018, Initial release, Tyler Miller, Jake Johnson}
+\entry{IM-006, 1.1, 02-21-2019, Add geolocation test procedures, Connor Olsen, Tyler Miller}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section{Introduction}
+
+In order to verify that the imaging subsystem independently meets its key success
+measures a series of tests and procedures were developed. Requirements for the subsystem
+can be seen in IM-007. However, some of the subsystem's requirements cannot be fully
+measured until it is integrated with the full system and testing in flight.
+
+\section{Continuous Integration}
+
+A prerequisite to meeting our key success measures, is a reliable, bug-free codebase.
+Imaging undertook a large task this year with our server-client model requiring us
+to rewrite our entire codebase. This rewrite presented an opportunity to build a 
+proper test framework in parallel with our server-client code. A series of unit and
+integration tests were developed for each component of the server and client. These 
+tests are extremely beneficial because they ensure proper functionality as changes
+are made to the code. Tests are run automatically by our github repository on every
+commit and test results are reported back to the team. This allows us to pinpoint 
+breaking changes and respond to them quickly.
+
+The CI tests start with a series of unit tests to examine server-database functionality.
+A unit test was created for every Database Access Object (DAO) method used by the
+server to interact with the database. These methods perform basic database operations,
+such as insert, select, update, and delete. The unit tests perform these operations
+through the DAO methods, and then confirm that the database reflects the expected
+results of such operation. These methods also inherently test constraints placed
+within the database itself (ie: primary key and unique constraints).
+
+Next, integration test are performed. The purpose of these tests are to verify the
+client rest library (described in IM-001) interacts with the server as expected.
+The client rest library presents top-level methods useful to the client gui to 
+interact with the imaging server. Thus integration tests confirm that the client
+rest library and the api endpoint handlers on the server function properly.
+
+Regression tests, which are added as bugs are found and patched, naturally fall
+within one of the existing unit or integration tests and are placed there. Between 
+these unit and integration tests, we can confidently say the server performs
+as expected. Having a verified codebase allows us to reliably perform tests on 
+the system in the future as we integrate with other subsystems.
+
+\section{Bandwidth Test Procedure}
+
+One of our most important success measures, as described in the imaging requirements
+matrix (IM-007) is streaming images at a high enough rate, so we're able to perform
+classifications in an actionable (near real time) manner. A high stream rate will 
+also guarantee that we dont miss any targets as the plane performs its search pattern
+since higher stream rates will allow more image overlap. 
+
+The bandwidth test itself is fairly simple to perform and can done on the ground.
+
+1. With the plane's onboard computer running, connect it to the network using
+the ubiquiti bullet and litebeam, as it would be connected during an actual flight.
+
+2. On a computer connected to the router over ethernet, confirm you are on the proper ros network.
+
+3. Start the ros handler code with: rosrun imaging\_ros\_handler ros\_handler.py
+
+4. On the plane, confirm the camera is connected to the onboard computer and start
+the camera driver with: rosrun a6000\_ros\_node a6000\_ros
+
+5. On the server machine (connected to the router), monitor the image stream rate
+using: rostopic hz, this will print out the average number of messages/second every 
+few seconds.
+
+6. Walk the plane away from the base station, tracking distance and stream rate
+every 10-20 feet.
+
+With this method we saw stream rates between 1.5 - 2.5Hz. It was also observed
+that the main rate limiter was the camera itself. Since the camera captures
+and compresses the image before sending it to the plane's onboard computer, it 
+seems to consistently take ~1s for capture and 1 additional second for it to 
+be successfully sent to the computer (presumably this time is used to compresses 
+the image before it is transmitted). Given the camera's high resolution, wide
+field of view, and the plane's slow speed; this rate should be adequate to capture 
+the entire competition field.
+
+\section{Geolocation Test Procedure}
+
+Without the Camera being fully ready to take pictures in a flight test, there was 
+need to simulate an environment where the accuracy of the target geolocation algorithm
+could be verified. Using our own equipment, we were able to create a controlled 
+environment to verify the accuracy within 20 feet.
+
+\textbf{Equipment used:}
+
+- Sony A6000 Camera
+
+- Tripod
+
+- Target
+
+- iPhone (to calculate angles and take in GPS coordinates)
+
+\textbf{Procedure}
+
+We took the target to the alleyway between the Clyde and Engineering Buildings 
+and looked for a good spot to mount the camera. Without access to the roof, we 
+ended up using the next best option, which was the fourth floor skybridge that 
+connects the two buildings. We measured the tripod at a -30 degree angle, (corresponding 
+to the plane pitching 60 degrees, since the camera is always 90 degree downward 
+from the nose)  and facing directly east (corresponding to the plane rolling 90 
+degrees)
+
+We measured the height of the camera relative to the target to be approximately 
+16 meters, and took the GPS coordinates of both the camera and the target. The 
+resulting image is shown in figure \ref{fig:geolocate} below
+
+\AUVSIFigure
+{./figs/alleyway.pdf}
+{\textwidth}
+{AUVSI geolocation test result}
+{fig:geolocate}
+
+When plugged into the algorithm, the results were extremely and obviously incorrect. 
+This error helped us isolate and resolve a minor bug that was affecting the pitch. 
+With the code working correctly, the algorithm was able to determine the coordinates 
+of the target in the image with only it’s own coordinates, it’s states (roll, 
+pitch, yaw) and the pixel coordinates of the target (shown in the image).
+
+The result was accurate within 20 feet, which is already a major success. Once 
+we have more images taken from our plane to continue testing with, we believe 
+that the accuracy will improve, as we will be using more reliable GPS data, and 
+not google maps.
+
+\end{document}

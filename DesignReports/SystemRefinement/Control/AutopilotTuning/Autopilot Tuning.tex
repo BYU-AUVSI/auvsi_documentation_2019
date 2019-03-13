@@ -1,0 +1,147 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Autopilot Tuning},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{CT-001, 0.1, 01-23-2019, Initial conception, Andrew Torgesen, Brandon McBride}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+
+Our chosen fixed-wing autopilot for the UAV is ROSPlane, an open source implementation of the control, estimation, and path planning algorithms set forth in \textit{Small Unmanned Aircraft: Theory and Practice} by Randal Beard and Timothy McLain. This artifact sets forth the general process for tuning the proportional, integral, and derivative (PID) gains for the autopilot, based on both theory from the text as well as personal experience.
+
+\section{Description of the Gains}
+
+\textbf{Trim Gains:}
+\begin{itemize}
+  \item Elevator trim
+  \item Aileron trim
+  \item Rudder trim
+  \item Throttle trim
+\end{itemize}
+
+These gains must be written to ROSFlight before turning on the autopilot for the first time. The directions for doing this are found at \url{http://docs.rosflight.org/en/latest/user-guide/performance/} under the heading \textbf{RC trim (Feed-Forward Torque Calculation)}.
+
+\textbf{Longitudinal Autopilot Gains:}
+\begin{itemize}
+	\item Pitch\_Kp
+	\item Pitch\_Kd
+	\item Pitch\_Ki
+	\item ALT\_KP
+	\item ALT\_KD
+	\item ALT\_KI
+	\item AS\_PITCH\_KP
+	\item AS\_PITCH\_KD
+	\item AS\_PITCH\_KI
+	\item AS\_THR\_KP
+	\item AS\_THR\_KD
+	\item AS\_THR\_KI
+\end{itemize}
+
+The suffixes Kp, Kd, and Ki refer to proportional, derivative, and integral gains, respectively. The Pitch gains control the inner loop of the longitudinal autopilot, and their tuning should correspond to a desirable convergence of current pitch to commanded pitch. The ALT gains are outer loop gains that determine the ability to hold an altitude without excessive deviation in the presence of disturbances.
+
+In general, the AS\_PITCH\_\* gains determine the aircraft's ability to hold an airspeed while landing, during which time pitch commands are used to control speed. Conversely, the AS\_THR\_\* gains determine the aircraft's ability to hold an airspeed while flying, during which time throttle commands are used to control speed. The aircraft should be able to hold an airspeed even in the presence of wind and other external disturbances.
+
+\textbf{Lateral Autopilot Gains:}
+\begin{itemize}
+	\item Roll\_Kp
+	\item Roll\_Kd
+	\item Roll\_Ki
+	\item Course\_Kp
+	\item Course\_Kd
+	\item Course\_Ki
+	\item BETA\_KP
+	\item BETA\_KD
+	\item BETA\_KI
+\end{itemize}
+
+The Roll gains control the inner loop of the lateral autopilot, and their tuning should correspond to a desirable convergence of current roll angle to commanded roll. The Course gains are outer loop gains that determine the ability to hold a commanded course angle without excessive deviation in the presence of disturbances. The BETA gains refer to slide-slip holding--in general, we don't worry too much about those, especially since we are not using rudder control.
+
+\textbf{Path Follower Gains:}
+\begin{itemize}
+	\item CHI\_INFTY
+	\item K\_PATH
+	\item K\_ORBIT
+\end{itemize}
+
+These are gains that are tuned in accordance with the aircraft's ability to make tight turns of different radii and speeds. K\_PATH determines how fast the plane approaches the straight line desired path. A high value causes the plane to fly perpendicular to the line until it reaches it while a low value causes the plane to asymptotically approach the desired line. CHI\_INFTY is the course angle at which the path follower will approach a path if at an infinite distance away. K\_ORBIT determines how fast a plane transitions from a straight line to an orbit. While the plane is far away from the center of the loiter locaiton, it will fly directly to the center but when the plane is close to the loiter location it flies the orbit path. A low K\_ORBIT value causes the plane to have a more gradual transition from straight line to orbit.
+
+\section{Sequence of Gain Tuning (Practical Guide)}
+
+\textbf{Note:} The language used in this guide assumes at least a working knowledge of the Robot Operating System (ROS). ROS tutorials may be found at \url{http://wiki.ros.org/ROS/Tutorials}.
+
+While running ROSPlane on a ROS network, the \textit{rqt\_reconfigure} plugin allows the user to view (and modify in real-time) all configurable gains for the autopilot. Figure \ref{fig:rqt} is a screenshot of the configuration user interface:
+
+\AUVSIFigure
+{{rqtreconfigure.png}}
+{\textwidth}
+{Dynamic gain reconfiguration user interface.}
+{fig:rqt}
+
+Before proceeding, keep the following heuristic for tuning PID gains in mind:
+\begin{enumerate}
+  \item Increase P until the response time is satisfactory, albeit with a little bit of overshoot/oscillation.
+	\item Increase D until overshoot/oscillation is removed.
+	\item Increase I \textit{only if} there is steady-state error.
+	\item \textbf{Iterate.}
+\end{enumerate}
+
+\subsection{Tune the Longitudinal Autopilot}
+
+Kill the path follower node with the command \textit{rosnode kill /pathfollower}. Use the command \textit{rqt\_graph} to ensure that the node is really terminated once you've attempted to kill it. With the path manager killed and the reconfigure window open, send a command to the path follower to hold a pitch and altitude. For example, we sent the following command to the autopilot, which had the autopilot flying at an airspeed of 15 m/s, an altitude of 70 m, and a northern heading:
+
+\textit{rostopic pub -r 50 /controller\_commands rosplane\_msgs/Controller\_Commands -- 15 70 0.0  0.0 '[0.0, 0.0, 0.0, 0.0]' False False}
+
+With this command running, tune the longitudinal gains in the following order:
+
+\begin{enumerate}
+	\item Pitch gains
+	\item Altitude hold gains
+	\item Airspeed hold gains
+\end{enumerate}
+
+Successful gain tuning should have the autopilot successfully flying at your commanded altitude at a relatively constant airspeed. Try outputing a new command with a different airspeed and altitude and see how your autopilot responds; it should transition smoothly to the new commanded values.
+
+\subsection{Tune the Lateral Autopilot}
+
+Relaunch the autopilot nodes in a subsequent flight to bring the path follower node back up. Then kill the path manager node with the command \textit{rosnode kill /pathmanager}. Use the command \textit{rqt\_graph} to ensure that the node is really terminated once you've attempted to kill it. Now, send a command to the path follower to hold a roll and course. For example, we sent the following command to the autopilot, which had the autopilot flying at an airspeed of 12 m/s in a clockwise orbit of radius 75 m, origin (-100 m North, -100 m East), and an altitude of 50 m:
+
+\textit{rostopic pub -r 50 /current\_path rosplane\_msgs/Current\_Path -- 0 12 '[-1, -1, -1]' '[-1, -1, -1]' '[-100, -100, -50]' 75.0 1 False False}
+
+With this command running, tune the lateral gains in the following order:
+
+\begin{enumerate}
+	\item Roll gains
+	\item Course hold gains
+	\item Path follower gains
+\end{enumerate}
+
+Successful gain tuning should have the autopilot successfully flying at your commanded orbit at a relatively constant airspeed. Try outputing a new command with a different orbit and see how your autopilot responds; it should transition smoothly to the new commanded values.
+
+\subsection{Save the Gains}
+
+\textbf{ROSPlane will not automatically save your new gain values from the reconfiguration interface window.} You need to record the values that you set, put them in a .yaml file, and load those new parameters into your controller node upon every ROS launch! Likewise, the path follower gains must be loaded into the path follower node  upon every ROS launch.
+
+\section{Conclusion}
+
+With satisfactorily tuned gains, the plane can now safely be used to fly waypoint paths. Try out some fun waypoint paths and see how well the autopilot handles them, even in the presence of wind and other disturbances!
+
+\end{document}
