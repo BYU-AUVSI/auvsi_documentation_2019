@@ -1,0 +1,70 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Path Planner Testing Procedures and Results},
+	AUVSILogoPath={./../logo.pdf}
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{CT-003, 0.1, 02-21-2019, Initial conception, John Akagi, Andrew Torgesen}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section*{Purpose}
+
+The purpose of this artifact is to explain the test procedures used to verify that the path planner is working correctly.
+
+\section*{Procedure}
+
+In order to test the path planner, 5 simulations were run. Each simulation had 10 obstacles and 5 waypoints, each of which were chosen randomly.
+The locations of the obstacles and waypoints were written to a file and then the path planner planned a path, starting from the origin, that attempted to fly through each waypoint and avoid each obstacle.
+Once the path was planned, the simulated drone would fly the path and the position data was continually written to a file. Once the simulation finished, the distances between the waypoints and vehicle and obstacle and vehicle are computed.
+These distances are used to determine if the vehicle was close enough to the waypoint and if the vehicle hit the obstacle.
+These values were then compared with the key success measures. For reference, an excellent rating is defined in the key success measures as no more than 1 obstacle hit and flying within 20 feet (6 m) of each waypoint.
+
+\section*{Results}
+
+The results of the 5 simulations can be seen in Table \ref{tab:results}. In the five simulations, the vehicle only hit a single obstacle and was able to get within 5 meters on all but one waypoint.
+These results place the vehicle in the excellent category as defined by the key success measures.
+
+
+\begin{table}[h!]
+
+\caption{Table of results showing the number of obstacles hit and the minimum distance between the UAV and each waypoint.}
+\label{tab:results}
+\begin{tabular} {|l|l|l|l|l|l|l|}
+\hline
+Test No. & Waypoint 1&Waypoint 2&Waypoint 3&Waypoint 4&Waypoint 5& Obstacles Hit\\
+\hline
+1 & .750 m& .128 m& .092 m& .430 m& .688 m & 0\\
+2 & 1.058 m &.127 m & .180 m & .376 m & .328m & 0\\
+3& .602 m& .625 m&.158 m& .204 m& .122 m& 0\\
+4& .427 m & .351 m & .042 m & .018 m& 69.7m& 1\\
+5& .152 m& .085 m& .011 m & 1.11 m & .90 m& 0\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section*{Conclusion}
+
+Overall, the path planning and path following algorithms work well. The vehicle was able to achieve an excellent rating, as defined by the key success measures.
+However, some work is still needed to determine why the plane had difficulty hitting the last waypoint on the 4th trial. However, since the simulations can be run repeatedly multiple times, this should be easy to determine.
+Although it is likely that performance will be degraded when the algorithms are running on the actual plane since more variables, unknowns, and disturbances will be present, the algorithms have been proven to work to the level desired.
+
+% document contents (see below for LaTex commands that make your life easier)
+
+\end{document}
