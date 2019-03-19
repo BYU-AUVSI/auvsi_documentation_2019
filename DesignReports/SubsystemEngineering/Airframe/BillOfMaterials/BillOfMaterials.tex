@@ -10,20 +10,20 @@
 \usepackage{longtable}
 
 \begin{document}
-	
+
 	\begin{AUVSITitlePage}
 		\begin{artifacttable}
-			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, CHECKED BY}
+			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, Brandon McBride}
 			% additional \entry{} commands for extra rows in the revision table, if needed
 		\end{artifacttable}
 	\end{AUVSITitlePage}
-	
+
 	% document contents (see below for LaTex commands that make your life easier)
 	\section{Introduction}
 	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, and vendor.
-	
+
 	%Begin table
-	
+
 	\begin{table}[h!]
 		\begin{center}
 			\caption{A bill of materials for the current Nimbus Pro system. Information listed includes the item number, name, quantity, mass, vendor, and a list of other items each interfaces with. Masses are not included if they were already included in another item's mass or if it is irrelevent (if the item is not in the plane). Not included is each component of the aircraft that came with the kit (e.g., control horns, glue, connector pieces, coverings, etc.).}
@@ -39,7 +39,7 @@
 				5 & OpenPilot Revo \newline Flight Controller & Item 4 & 1 & 35 & Hyperion \newline World  \\
 				6 & Servos & Item 4 & 4 & 44 & Hobby King \\
 				7 & ESC & Items 4, 8, 19 & 2 & 160 & Hobby King \\
-				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies \\ 
+				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies \\
 				9 & RC Receiver & Items 10, 19 & 1 & 19 & Team \newline Blacksheep \\
 				10 & RC Antennas & Item 9 & 2 & 0 & N/A \\
 				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & N/A \\
@@ -55,7 +55,7 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	
+
 	\begin{table}[h!]
 		\begin{center}
 			\caption{A continuation of the system bill of materials from the previous page.}
@@ -87,5 +87,5 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	
+
 \end{document}
