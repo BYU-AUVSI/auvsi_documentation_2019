@@ -41,9 +41,9 @@
 	\hline\hline
 	10-16-18 				& Springville			&	\textless1	&	1/0				& 	Networking issues, later determined to be because of location. Moving down the road works. Attempted RC flight and crashed on launch. Need to practice launch procedure. \\
 	\hline
-	10-19-18 				& Springville			&	\textless1 	&	1/0			& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced CG and so performed a loop and crash landed. \\
+	10-19-18 				& Springville			&	\textless1 	&	1/0			& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced center of gravity (CG) and so performed a loop and crash landed. \\
 	\hline
-	10-23-18 				& Springville			&	1	&	1/0			& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the batter forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
+	10-23-18 				& Springville			&	1	&	1/0			& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the battery forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
 	\hline
 	11-01-18 				& Springville			&	3	&	1/0			& 	Attempted RC flight for imaging. Still had minor stability issues. We lost control and crash landed near end of flight. We later determined these issues were because the battery was not secured properly. It slid around inflight affecting our static margin. This caused instability and aggressive flight maneuvers that caused the battery to fall out in flight. As such we lost control and crashed. Battery must be strapped down.  \\
 	\hline
@@ -69,6 +69,10 @@
 	\hline
 	2-19-19				& Rock Canyon 	&	3 & 	1/1			& Short flight to test cargo drop. Payload dropped upon command and the parachute opened successfully.\\
 	\hline
+	2-26-19				& Rock Canyon 	&	10 & 	3/3			& Three more flights to test payload drop. Payload successfully dropped two out of the three times. During the second test, the payload door got stuck on some tape we added between flights and the payload didn't fall out until a full minute after it was commanded. We removed this tape and the aircraft performed nominally on the third flight. We also used this flight to get realistic images to test the vision algorithm on. The camera was installed and images save on the odroid.\\
+	\hline
+	3-5-19				& Utah County Airfield 	&	10 & 	1/1			& Miss communication on what code was on the aircraft inhibited our ability to test the control algorithms. As such we will put in place protocol for changing code on the aircraft (see AF-014) Aquired imaging data.\\
+	\hline
 \end{longtable}
 \egroup
 \label{table:Results}
@@ -81,26 +85,25 @@
 
 %\end{table}
 \end{center}
+\textbf{Total Flight Time:} 2 Hour 27 Minutes
 
-\textbf{Total Flight Time:} 2 Hour 7 Minutes
-
-\textbf{Manual Flight Time:} 1 Hour 52 Minutes*
+\textbf{Manual Flight Time:} 2 Hour 12 Minutes*
 
 \textbf{Autonomous Flight Time:} 15 Minutes
 
-\textbf{Percent of Autonomous Flight:} 11.8\%
+\textbf{Percent of Autonomous Flight:} 10.2\%
 \hrule
-\textbf{Manual Takeoffs:} 19*
+\textbf{Manual Takeoffs:} 23*
 
-\textbf{Manual Landings:} 13*
+\textbf{Manual Landings:} 17*
 
 \textbf{Autonomous Takeoffs:} 0
 
 \textbf{Autonomous Landings:} 0
 \hrule
-\textbf{Percent of Flights Ending in Crash:} 31.6\%
+\textbf{Percent of Flights Ending in Crash:} 26.1\%
 
-\textbf{Flights Sense Last Crash:} 13
+\textbf{Flights Sense Last Crash:} 17
 \hrule
 *With the aircraft configuration and safety pilot to be used in the competition
 
