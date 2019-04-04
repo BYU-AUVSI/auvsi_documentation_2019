@@ -1,0 +1,54 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Summary of System Performance},
+	AUVSILogoPath={./../../logo.pdf}
+}
+
+% include extra packages, if needed
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{????, 0.1, 04-02-19, Initial Commit, Brady Moon, CHECKED BY}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+
+
+
+\section{Summary of System Performance}
+%Performance summary for the system, which refers to supporting artifacts as needed
+
+%Supporting Artifacts:
+%•Test results obtained using models and/or prototypes. Pay special attention to Figure 2.12 inthe textbook as you consider the test resultsneeded. Note that you will need validation testing(not just performance testing) for SystemRefinement approval
+%•Definitions of models and/or prototypes used intesting
+%•Test procedures that were used to obtain theresults listed above
+%•Computer files used in the testing work
+%•Other detailed artifacts that support assessing theperformance of the system
+%•Up-to-date approved project contract, revised asnecessary
+
+
+\subsection{Airframe}
+\subsection{Controls}
+\subsection{Vision}
+\subsection{UGV}
+
+Using our new simulation and payload drop planning algorithms we dropped our payload twice with an average
+prediction accuracy of 17.7m. These drops were within our predicted performance values even though it was
+a gusty day. In simulation, our payload drop planning algorithms have consistently been able to plot paths
+that can drop the UGV while avoiding obstacles and competition boundaries.
+
+\AUVSIFigure
+{./figs/simulation.pdf}
+{\textwidth}
+{Payload Drop Plan Plot}
+{fig:serverFlow}
+
+\section{Conclusion}
+
+
+\end{document}

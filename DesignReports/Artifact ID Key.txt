@@ -6,6 +6,7 @@ DJ-003		Benchmarking Artifact
 DJ-004		2019 Rules Breakdown
 DJ-005		Requirements Validation
 DJ-006		Last Year's Performance
+DD-001      Design Description
 SS-001		UAS Subsystem Interface Definition
 SS-002		UAS Sybsystem Testing
 GV-001      Unmanned Ground Vehicle Initial Concept Development

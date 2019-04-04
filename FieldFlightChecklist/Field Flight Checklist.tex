@@ -1,6 +1,6 @@
 \documentclass[]{auvsi_doc}
 \setkeys{auvsi_doc.cls}{
-	AUVSITitle={Field Flight Checklist v1.0},
+	AUVSITitle={Field Flight Checklist v2.0},
 	AUVSILogoPath={./figs/logo.pdf}
 }
 
@@ -16,9 +16,10 @@
 
 \begin{AUVSITitlePage}
 \begin{artifacttable}
-\entry{PF-001, 0.1, 11-03-2018, Wrote checklist based on google sheet and research, Andrew Torgesen, Brandon McBride}
-\entry{PF-001, 0.2, 01-07-2019, Updated checklist based on team feedback, Andrew Torgesen, Tyler Miller}
-\entry{PF-001, 1.0, 02-04-2019, Removed redundant checks and added RC override info, Andrew Torgesen, Kameron Eves}
+\entry{PF-001, 0.1, 11-03-2018, Initial creation, Andrew Torgesen, Brandon McBride}
+\entry{PF-001, 0.2, 01-07-2019, Updates from feedback, Andrew Torgesen, Tyler Miller}
+\entry{PF-001, 1.0, 02-04-2019, Updates from feedback, Andrew Torgesen, Kameron Eves}
+\entry{PF-001, 2.0, 03-06-2019, Updates from feedback, Andrew Torgesen, [CHECKER]}
 \end{artifacttable}
 \end{AUVSITitlePage}
 
@@ -89,7 +90,10 @@ Before Powering Motor:
 	\item Connect battery monitor (full battery: 16.8 V)
 	\item Check plane CG
 	\item Turn on transmitter
+	\item Ensure that the arm and RC override channels are set to OFF
+	\item (TEMPORARY) Hold UGV latch shut while connecting battery
 	\item Connect battery
+	\item (TEMPORARY) Release UGV latch when you hear it latch twice
 	\item Ensure network connection
 	\item Launch ROS (through \textit{screen}, if possible) (ensure aircraft is level)
 	\item Ensure GPS Fix ($\geq 3$ satellites)
@@ -132,7 +136,7 @@ Before Powering Motor:
 				\item Confirm \textit{RC Override = false}
 				\item Confirm air blowing towards tail
 			\end{itemize}
-			\item Throttle to idle 
+			\item Throttle to idle
 			\begin{itemize}
 				\item Confirm prop direction
 			\end{itemize}
