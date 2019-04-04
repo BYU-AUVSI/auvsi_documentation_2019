@@ -19,7 +19,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{CT-003, 0.1, 02-21-2019, Initial conception, John Akagi, Andrew Torgesen}
-\entry{CT-003, 0.1, 04-4-2019, Addition of Hardware Testing, John Akagi, Andrew Torgesen}
+\entry{CT-003, 0.2, 04-4-2019, Addition of Hardware Testing, John Akagi, Brady Moon}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -36,14 +36,14 @@ Once the path was planned, the simulated drone would fly the path and the positi
 These distances are used to determine if the vehicle was close enough to the waypoint and if the vehicle hit the obstacle.
 These values were then compared with the key success measures. For reference, an excellent rating is defined in the key success measures as no more than 1 obstacle hit (10\%) and flying within 20 feet (6 m) of each waypoint.
 
-For hardware testing, three waypoints are chosen that are safe to fly through. These waypoints should be picked to be at an altitude of at least 10 m and should not be over buildings or people. The waypoints are found using GPS coordinates and then changed to North East Down (NED) coordinates centered on the reference launch location. The path is planned while the aircraft is being flow via remote control until an acceptable path is found. Once a suitable path is found, the plane is transferred to autopilot and immediately attempts to fly the planned path.
+For hardware testing, three waypoints are chosen that are safe to fly through. These waypoints should be picked to be at an altitude of at least 10 m and should not be over buildings or people. The waypoints are found using GPS coordinates and then converted to North East Down (NED) coordinates centered on the reference launch location. The path is planned while the aircraft is being flow via remote control until an acceptable path is found. Once a suitable path is found, the plane is transferred to autopilot and immediately attempts to fly the planned path.
 
 \section*{Results}
 
 The results of the 5 simulations can be seen in Table \ref{tab:results}. In the five simulations, the vehicle only hit a single obstacle and was able to get within 5 meters on all but one waypoint.
 These results place the vehicle in the excellent category as defined by the key success measures.
 
-While testing hardware, there was a strong wind so the plane had difficulty staying directly on the planned path. However, it was able to follow the path and hit the waypoints despite this. As a result of the wind, the plane was not as accurate as when tested in simulation, but we were still able to get within 15 ft of each waypoint. The flight is shown in Figure \ref{fig:flight} where the waypoints are the yellow points, the planned path is in green, and the actual flown path is in white.
+While testing hardware, there was a strong wind so the plane had difficulty staying directly on the planned path. However, it was able to follow the path and pass through the waypoints despite this. As a result of the wind, the plane was not as accurate as when tested in simulation, but we were still able to get within 15 ft of each waypoint. The flight is shown in Figure \ref{fig:flight} where the waypoints are the yellow points, the planned path is in green, and the actual flown path is in white.
 
 \begin{table}[h!]
 
