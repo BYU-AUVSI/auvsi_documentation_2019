@@ -71,6 +71,14 @@
 	\hline
 	2-26-19				& Rock Canyon 	&	10 & 	3/3			& Three more flights to test payload drop. Payload successfully dropped two out of the three times. During the second test, the payload door got stuck on some tape we added between flights and the payload didn't fall out until a full minute after it was commanded. We removed this tape and the aircraft performed nominally on the third flight. We also used this flight to get realistic images to test the vision algorithm on. The camera was installed and images save on the odroid.\\
 	\hline
+	3-5-19				&  Utah County Airfield	&	14 & 	2/2			& Two flights to collect imaging data. Successful. Nothing to report.\\
+	\hline
+	3-26-19				& Utah County Airfield 	&		\makecell{28 \\ \textbf{9}} & 	\makecell{3/2 \\ \textbf{0/1}}			& Three flights. Dropped payload successfully twice. Flew 3 waypoints and landed autonomously.\\
+	\hline
+	3-31-19				& Utah County Airfield 	&		4 & 1/0			& Safety pilot accidentally disarmed the plane while trying to transition to the autopilot. This caused loss of power, and, after this was realized, it was too late to save the aircraft from crashing. Aircraft landed in a bush and was mostly saved. \\
+	\hline
+	4-3-19				& Rock Canyon	&		\makecell{10 \\ \textbf{2}}  & 1/0			& Experienced RC signal brown outs. We didn't notice this until after we had started flying. Small amounts of autonomous flight was achieved. Because the RC signal dropped out the aircraft entered a loiter successfully. The safety pilot then tried to recover the aircraft and, because RC signal was spotty, could not control the aircraft. This caused a crash in a tree. Again aircraft was still mostly flyable, but we could not find the bug in the RC signal. It seems to occur randomly. While we did get it to occur on the ground once, the problem in general is not intentionally repeatable. \\
+	\hline
 \end{longtable}
 \egroup
 \label{table:Results}
@@ -83,25 +91,23 @@
 
 %\end{table}
 \end{center}
-\textbf{Total Flight Time:} 2 Hour 17 Minutes 
+\textbf{Total Flight Time:} 3 Hour 13 Minutes 
 
-\textbf{Manual Flight Time:} 2 Hour 2 Minutes*
+\textbf{Manual Flight Time:} 2 Hour 47 Minutes*
 
-\textbf{Autonomous Flight Time:} 15 Minutes
+\textbf{Autonomous Flight Time:} 26 Minutes
 
-\textbf{Percent of Autonomous Flight:} 10.9\%
+\textbf{Percent of Autonomous Flight:} 15.6\%
 \hrule
-\textbf{Manual Takeoffs:} 22*
+\textbf{Manual Takeoffs:} 29*
 
-\textbf{Manual Landings:} 16*
+\textbf{Manual Landings:} 20*
 
 \textbf{Autonomous Takeoffs:} 0
 
-\textbf{Autonomous Landings:} 0
+\textbf{Autonomous Landings:} 1
 \hrule
-\textbf{Percent of Flights Ending in Crash:} 27.3\%
-
-\textbf{Flights Sense Last Crash:} 16
+\textbf{Percent of Flights Ending in Crash:} 27.6\%
 \hrule
 *With the aircraft configuration and safety pilot to be used in the competition
 
