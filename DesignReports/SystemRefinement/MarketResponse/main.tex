@@ -1,0 +1,108 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Projected Market Response},
+	AUVSILogoPath={figs/logo.pdf}
+}
+
+% include extra packages, if needed
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{SP-002, 0.1, 04-05-19, Creation, Ryan Anderson, Tyler Critchfield}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% this document is meant to show a prediction of how we will perform in a mock competition. This is essentially a report of our Market Response.
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+The market response of our project is determined primarily by the competition scoring metrics. In order to project the market response, system tests were synthesized and extrapolated to predict our performance in the actual competition based on the current capabilities of the UAS.
+
+\section{Competition Scoring Metrics}
+Scoring in the competition is meticulously defined in the Competition Rules, available at \url{http://www.auvsi-suas.org/static/competitions/2019/auvsi_suas-2019-rules.pdf}. A summary of the required tasks and their relative scoring weights are tabulated in Table \ref{table:scoring}. These metrics include timely completion of the mission (Timeline), precise autopilot execution (Autonomous Flight), successful avoidance of obstacles (Obstacle Avoidance), image capture and processing (Object Classification), precise payload delivery (Air Drop), and a team professionalism rating (Operational Excellence). The current projected performance of this year's UAS as well as last year's UAS are included.
+
+\begin{center}
+\begin{table}[H]
+\caption{The results from last year’s mission tabulated. \textbf{Weights} are scoring weights from last year’s competition rules, with each subsection’s weight given as a percentage of its section. Last year’s results are shown on the same scale as its corresponding section. E.g., a perfect performance means that the percentage listed under \textbf{Last Year} or \textbf{This Year} exactly matches the corresponding section percentage listed under \textbf{Weights}. All of last year’s results are rounded to the nearest integer.}
+\centering 
+\begin{tabular}{l c c c}
+	\large{\textbf{Category}}			& \large{\textbf{Weights}} 	&	\large{\textbf{This Year}} & \large{\textbf{Last Year}} \\
+	\hline\hline
+	\textbf{Timeline}					  	& \textbf{10\%}		& 	\textbf{8\%}		& 	\textbf{0\%} \\
+	\quad Mission Time 							& \qquad 80\%	&  \qquad	58\%			& \qquad 	2\% \\
+	\quad Timeout								& \qquad 20\%	&  \qquad	20\%			&  \qquad	0\% \\
+	\hline
+	\textbf{Autonomous Flight}				& \textbf{20\%}		& 	\textbf{18\%}		& 	\textbf{16\%}	\\
+	\quad Autonomous Flight 						& \qquad 40\%	&  \qquad	36\%			& \qquad 	36\%	\\
+	\quad Waypoint Capture	 					& \qquad 10\%	&  \qquad	10\%			& \qquad 	10\%	\\
+	\quad Waypoint Accuracy						& \qquad 50\%	&  \qquad	43\%			& \qquad 	42\% 	\\
+	\hline
+	\textbf{Obstacle Avoidance}				& \textbf{20\%}		& 	\textbf{19\%}		& 	\textbf{10\%}	\\
+	\hline
+	\textbf{Object Classification}				& \textbf{20\%}		& 	\textbf{13\%}		&	\textbf{4\%}	\\
+	\quad Characteristics						& \qquad 20\%	&  \qquad	14\%			& \qquad 	6\%	\\
+	\quad Geolocation							& \qquad 30\%	&  \qquad	21\%			& \qquad	0\%	\\
+	\quad Actionable							& \qquad 30\%	&  \qquad	21\%			& \qquad	15\%	\\
+	\quad Autonomy							& \qquad 20\%	&  \qquad	10\%			& \qquad	0\%	\\
+	\hline
+	\textbf{Air Drop}						& \textbf{20\%}		& 	\textbf{3\%}		&	\textbf{0\%}	\\
+	\quad Drop Accuracy						& \qquad 50\%	&  \qquad	13\%			& \qquad 	0\%	\\
+	\quad Drive to Location					& \qquad 50\%	&  \qquad	0\%			& \qquad	0\%	\\
+	\hline
+	\textbf{Operation Excellence}				& \textbf{10\%}		& 	\textbf{9\%}		& 	\textbf{8\%}		\\
+	\hline
+	\hline
+	\large{\textbf{Total}} & \large{\textbf{100\%}} & \large{\textbf{70\%}} & \large{\textbf{38\%}}\\
+	\hline
+\end{tabular}
+\label{table:scoring}
+\end{table}
+\end{center}
+
+\section{Projected Performance}
+The projected scores included in Table~\ref{table:scoring} are based on system performance tests and models. They were evaluated as follows.
+
+\subsection{Timeline}
+As outlined in the Competition Rules, 20 minutes are provided for setup. Extensive flight testing has demonstrating an average required setup time of 10-15 minutes, leaving us well within the allotted time.
+
+The next provision in the Competition Rules is 40 minutes for completion of the mission, limited to 30~minutes of flight time and 10~minutes of post-processing time on the ground. Flight time will include flying a waypoint path of up to 4~miles, performing the payload drop, and flying a lawnmower path for imaging. Assuming an average flight speed of 15~m/s and the longest possible flight path from a potential waypoint to the payload drop area, this will result in 7~minutes required to fly waypoints and another 1~minute for the payload delivery. This will leave 22~minutes for obtaining and streaming imaging data, and another 10~minutes of ground time. Because of the large size of image files to be streamed and processed, we expect to use at least 15~minutes of the remaining time for image capture and processing. Based on the competition rules, this will result in a score of $max\left(0, 60 − 5 * max(0, 23 − 20) − 10 \right) / 60 = 58.3\%$ of the Mission Time section.
+
+\subsection{Autonomous Flight}
+We have been able to fly the aircraft autonomously for the minimum 3 minutes that are required to obtain the 40\% for the autonomous flight subsection. We have been able to demonstrate autonomous landing but have yet to demonstrate autonomous takeoff although the code is written. This will result in a 10\% penalty in this subsection.
+
+The airplane is able to fly within 100 ft of all waypoints which is the minimum distance needed to qualify a waypoint. This will result in the full 10\% for this subsection being obtained.
+
+The airplane was shown in hardware to fly within about 15 ft of each waypoint. Based on the scoring, this would result in obtaining about 43\% out of the possible 50\% for this subsection.
+
+Overall, for the autonomous flight section, we predict that we would be able to obtain 18\% out of the possible 20\%.
+
+\subsection{Obstacle Avoidance}
+
+During simulation testing, we were able to avoid 49 out of 50 obstacles. Based on the scoring guidelines, this results in an estimated 18\% out of a possible 20\% for this section.
+
+\subsection{Object Classification}
+
+Last year the team was using a 5 MP camera, which does not provide the resolution necessary to detect and classify competition targets from altitudes above 100 feet. This lack of resolution is likely the reason they performed poorly in Object Classification. This year we are using a 24 MP camera, which should give a resolution of around 5 pixels/inch from an altitude of 150 feet. This will allow us to perform much better than last year. We predict that our manual classification system will allow us to classify 70\% or more of target characteristics. We also predict that our autonomous classification system will classify 50\% or more of characteristics.
+
+\subsection{Air Drop}
+At this point, the Air Drop Accuracy is predicted to be within 65 feet of the drop location, which will earn 25\% of the possible points. This will be improved with further refinement of the autopilot's estimation scheme, and the air drop prediction algorithm. The UGV drive subsystem is under development, but since we did not include it in our key success measures, we have not performed any validation of it.
+
+\subsection{Operational Excellence}
+This metric is perhaps the most subjective of all the performance metrics, as it depends on the behavior of the team. This makes it difficult to accurately project our performance. Nevertheless, since this year's team has logged significantly more time performing flight tests, experiencing problems in the field, and following and updating a pre-flight check list, we predict a better score than last year's. In order to provide a conservative estimate, 9\% is projected as a middle ground between a perfect score and the 8\% score from last year.
+
+\section{Conclusion}
+In conclusion, system tests were used to project a market response to the performance of this year's UAS. As reported in Table \ref{table:scoring}, we predict a final score of 70\% of points possible for the competition, which is a 32\% increase over last year's performance.
+
+\end{document}
