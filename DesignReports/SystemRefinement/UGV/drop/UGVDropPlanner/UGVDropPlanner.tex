@@ -36,7 +36,7 @@ The payload path planner is calculated using two distinct regions.
 \AUVSIFigure
 {./figs/dropgraph.png}
 {\textwidth}
-{Payload drop path planned, including obstacles (blue cylinders)}
+{Payload release planning with boundaries and obstacles in blue and payload movement in red}
 {fig:dropgraph}
 
 \subsection{Commanded Release to Parachute Open}
@@ -63,4 +63,3 @@ The final step of the payload planner is to create supporting waypoints (green t
 The planner first tries to fly directly into the wind. If that commanded chi angle would hit an obstacle or go out of bounds, it iterates on the command chi angle by adding 15 degrees until it finds a successful waypoint path.
 
 \end{document}
-
