@@ -1,0 +1,48 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Design Summary},
+	AUVSILogoPath={figs/logo.pdf}
+}
+
+% include extra packages, if needed
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{DS-001, 0.1, 04-2-19, Design Summary Init, John Akagi, Brady Moon}
+% additional \entry{} commands for extra rows in the revision table, if needed
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+% document contents (see below for LaTex commands that make your life easier)
+\section{Introduction}
+% Appropriate (brief) background of the project. Indicate why the project is important. Share your project objective statement. Indicate the key success measures for the project.
+
+The BYU AUVSI Capstone team is competing in the AUVSI-SUAS 2019 competition this summer. The mission portion of the competition requires a small unmanned aircraft system (UAS) to autonomously fly to given waypoints, avoid imaginary obstacles, identify visual and geospatial characteristics of objects on the ground, and accurately drop a payload consisting of an unmanned ground vehicle (UGV) that is capable of autonomously driving to another location. Our team consists of four primary subteams: Airframe, Controls, Vision, and UGV. This document summarizes the description and performance of our system.
+
+\section{Design Description}
+% Briefly describe the design in words and with appropriate top-level pictures. The description should not be a detailed definition. The detailed definition is found in the artifacts. The description should provide an overview of the design that will make it easy for the reader to understand the details found in the artifacts. Refer to appropriate design artifacts as needed.
+In order to complete the AUVSI-SUAS objectives, we base our design around the Nimbus Pro airframe. This airframe has the internal capacity to carry all necessary instruments, batteries, and payloads needed for the competition. It also has the necessary aerodynamic features to fly for an extended period of time while maintaining stability in wind and moderately aggressive maneuvers. The aircraft is controlled using an autopilot based on Dr. McLain and Dr. Beard's \textit{Small Unmanned Aircraft} book. The autopilot receives mission objectives from the judges and converts those to safe, flyable paths. While the aircraft is flying, pictures are taken and sent to a ground station where they are autonomously processed to identify shapes and letters on the ground. Finally, the autopilot creates a model of the current winds and uses that model to deliver a payload via parachute to a precise location.
+
+
+\section{Summary of Final Performance}
+% Summarize how well the design has been demonstrated to perform, compared with the key success measures and perhaps other important requirements. Summarize available market response data. Summarize the kind of tests that were performed with prototypes or engineering models to measure or predict the performance. Refer to appropriate testing and analysis artifacts as needed.
+
+We tested each of our designed components through flight tests. In total, we had almost three hours of manual flight and 0.33 hours of autonomous flight. We successfully planned and flew waypoints in both simulation and hardware. In simulation the airplane was able to fly waypoints within around a meter. In hardware, we were able to fly waypoints within 5 meters. The loss in accuracy is due to the addition of wind and other disturbances. We successfully planned and dropped our payload in simulation and hardware. In simulation we do not consider disturbances in wind or incorrect groundspeed values, so we simulate a payload drop with perfect accuracy. In hardware our accuracy was 17.7m, within the competition's 23m scoring boundary. The image classification system was also tested for its ability to detect and classify targets both manually and autonomously. The manual system has proved to be effective for easy classification and submission of targets. The autonomous system is able to detect targets with an accuracy of about 90\% and classify them with an accuracy of about 70\%.
+
+
+\section{Conclusion and Recommendations}
+% Holistically evaluate the desirability of the design based on the evidence present in the previous section and the artifacts. Make recommendations for resolving any issues that have shown up in your testing. Discuss the next steps that the sponsor should take to move the product forward to release.
+
+Results from both simulation and flight testing suggest that our integrated design is desirable (as outlined in artifact SP-002) and ready to perform in a mock-competition setting, pending a fix to a small piece of needed hardware. Through flight testing, the importance of thoroughly performing system testing and checks using the Field Flight Checklist (artifact PF-001) has been thoroughly learned. Our principle issues that have arisen in testing have been the occasional unreliability of our Ubiquiti WiFi and RC transmitter connections, as detailed in our Flight Log (artifact AF-004). To resolve the WiFi issue, we recommend obtaining and learning the available software debugging tools from Ubiquiti, called \textit{AirOS}. These tools allow for WiFi site surveying and connection speed testing for both the rocket (antenna) and bullet (receiver) hardware components. With regards to the RC transmitter connectivity issue, we are committing to performing an RC interference analysis as part of our Field Flight Checklist before flying.
+
+In the coming days, we will perform a mock competition in which all key success measures are tested during the same flight. Thus far, our flight tests have allowed us to obtain measured values for multiple key success measures at a time, though never all at once. The main barrier to a mock competition during the past week has been the aforementioned connectivity issues, which have only arisen recently and will be amended shortly.
+
+Before the competition, the goal is to repeatedly test all subsystems together in a mock competition setting, using actual hardware testing data to iterate on our design and prove reliability over many more autonomous flights. If this is done, we are extremely confident that we will perform very well in the AUVSI-SUAS competition.
+
+% Scrap everything we did, and start over.\\
+% Document, Document, Document\\
+% Get minions (I mean volunteers) to help so there is some carry over from year to year
+
+\end{document}
