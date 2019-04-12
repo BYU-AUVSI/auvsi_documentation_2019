@@ -19,6 +19,13 @@ window = [-3,14,0,1.3;
           0,90,0,1.3;
           -3,14,-0.15,0.2];
       
+position = [
+            0.1,0.55,0.35,0.35;
+            0.58,0.55,0.35,0.35
+            0.1,0.1,0.35,0.35;
+            0.58,0.1,0.35,0.35;
+            ];
+      
 y = [0,0];
 x = [-100,100];
 
@@ -69,10 +76,10 @@ x_labels = ["\alpha - Angle of Attack (°)";
             "\alpha - Angle of Attack (°)";
             "V_{a} - Velocity (m/s)";
             "\alpha - Angle of Attack (°)";];
-y_labels = ["C_{L} - Lift Coefficient";
+y_labels = ["C_{L} - Lift Coeff.";
             "L/D - Lift to Drag Ratio";
-            "C_{L} - Lift Coefficient";
-            "C_{m} - Pitching Moment Coefficient";];
+            "C_{L} - Lift Coeff.";
+            "C_{m} - Pitching Moment Coeff.";];
 
 data_CL_alpha = csvread('CL_alpha.csv',1,0);
 data_CL_CD = csvread('CL_CD.csv',1,0);
@@ -143,27 +150,32 @@ end
 fig = figure(1);clf
 ax = [];
 for i = 1:length(data)
-    ax(end+1) = subplot(plot_index(1),plot_index(2),i);
+    ax(end+1) = axes('Position',position(i,:));
     hold on
     plot(x,y,'--k','linewidth',1.5)
     plot(y,x,'--k','linewidth',1.5)
     lines = [];
     for j = 1:length(data{i})
         lines(end+1) = plot(data{i}{j}(:,1),data{i}{j}(:,2),'LineStyle',style(j),'Color',colors(j,:),'linewidth',line_width(j));
-        set(gca,'fontsize',12)
+        set(gca,'fontsize',10)
     end
     grid on
     xlabel(x_labels(i))
     ylabel(y_labels(i))
     axis(window(i,:))
 end
-points(1) = plot(7,0,'.','Color',colors(2,:),'markersize',25);
-points(2) = plot(-2.5,0,'.','Color',colors(1,:),'markersize',25);
+points(1) = plot(7,0,'.','Color','g','markersize',25);
+points(2) = plot(-2.5,0,'.','Color','r','markersize',25);
 plot(7,0,'ok','markersize',7);
 plot(-2.5,0,'ok','markersize',7);
-legend(fliplr(points),["Natural Trim Position";"New Trim Position"])
+legend(fliplr(points),["Original Trim";"Modified Trim"])
+
+dim = [.3 .67 .3 .3];
+str = '\bf{Tail Incidence Angle:}';
+annotation('textbox',dim,'String',str,'EdgeColor','none');
+
 hL = legend(ax(3),lines,names);
 % Programatically move the Legend
-newPosition = 'bestoutside';
+newPosition = [0.5,0.85,0.2,0.2];
 newUnits = 'normalized';
-set(hL,'location', newPosition,'Units', newUnits,'Orientation','horizontal');
+set(hL,'position', newPosition,'Units', newUnits,'Orientation','horizontal');
