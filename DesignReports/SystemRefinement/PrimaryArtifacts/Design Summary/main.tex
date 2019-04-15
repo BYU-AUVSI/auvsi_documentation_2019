@@ -11,6 +11,7 @@
 \begin{AUVSITitlePage}
 \begin{artifacttable}
 \entry{DS-001, 0.1, 04-2-19, Design Summary Init, John Akagi, Brady Moon}
+\entry{DS-001, 0.2, 04-15-19, Added key measures comparison, John Akagi, ---}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -29,7 +30,28 @@ In order to complete the AUVSI-SUAS objectives, we base our design around the Ni
 \section{Summary of Final Performance}
 % Summarize how well the design has been demonstrated to perform, compared with the key success measures and perhaps other important requirements. Summarize available market response data. Summarize the kind of tests that were performed with prototypes or engineering models to measure or predict the performance. Refer to appropriate testing and analysis artifacts as needed.
 
-We tested each of our designed components through flight tests. In total, we had almost three hours of manual flight and 0.33 hours of autonomous flight. We successfully planned and flew waypoints in both simulation and hardware. In simulation the airplane was able to fly waypoints within around a meter. In hardware, we were able to fly waypoints within 5 meters. The loss in accuracy is due to the addition of wind and other disturbances. We successfully planned and dropped our payload in simulation and hardware. In simulation we do not consider disturbances in wind or incorrect groundspeed values, so we simulate a payload drop with perfect accuracy. In hardware our accuracy was 17.7m, within the competition's 23m scoring boundary. The image classification system was also tested for its ability to detect and classify targets both manually and autonomously. The manual system has proved to be effective for easy classification and submission of targets. The autonomous system is able to detect targets with an accuracy of about 90\% and classify them with an accuracy of about 70\%.
+We tested each of our designed components through flight tests. A comparison of the key measures and the measured values are shown in Table \ref{tab:key_measures}. In total, we had almost three hours of manual flight and 0.33 hours of autonomous flight. We successfully planned and flew waypoints in both simulation and hardware. In simulation the airplane was able to fly waypoints within around a meter. In hardware, we were able to fly waypoints within 5~m (17~ft). The loss in accuracy is due to the addition of wind and other disturbances. We successfully planned and dropped our payload in simulation and hardware. In simulation we do not consider disturbances in wind or incorrect groundspeed values, so we simulate a payload drop with perfect accuracy. In hardware our accuracy was 17.7m, within the competition's 23m scoring boundary. The image classification system was also tested for its ability to detect and classify targets both manually and autonomously. The manual system has proved to be effective for easy classification and submission of targets. The autonomous system is able to detect targets with an accuracy of about 90\% and classify them with an accuracy of about 70\%.
+
+\begin{table}[H]
+	\centering
+	\caption{Key success measures for the UAS with measured results also reported}\label{tab:key_measures}
+\begin{tabular}{|P{3cm}|P{1.5cm}|P{1.5cm}|P{1.2cm}|P{1cm}|P{1.5cm}|P{1.2cm}|P{1.5cm}|P{1.5cm}}
+	\hline
+\rowcolor[HTML]{C0C0C0}
+	{\color[HTML]{000000} \textbf{Measures (units)}} & {\color[HTML]{000000}\textbf{Stretch Goal}} & {\color[HTML]{000000}\textbf{Excellent (A)}} & {\color[HTML]{000000}\textbf{Good (B)}} & {\color[HTML]{000000}\textbf{Fair (C)}} & {\color[HTML]{000000}\textbf{Lower Acceptable}} & {\color[HTML]{000000}\textbf{Ideal}} & {\color[HTML]{000000}\textbf{Upper Acceptable}} & {\color[HTML]{000000}\textbf{Measured}} \\
+	\hline
+	\textbf{Obstacles Hit (\#)} & 0 & 1 & 3 & 5 & 0 & 0 & 5 & 1 \\
+	\hline
+	\textbf{Average Waypoint Proximity (ft)*} & 5 & 20 & 25 & 30 & 0 & 0 & 100 & 17 \\
+	\hline
+	\textbf{Characteristics Identified (\%)**} & 80 & 40 & 30 & 20 & 20 & 100 & 100 & 70 \\
+	\hline
+	\textbf{Airdrop Accuracy (ft)} & 5 & 25 & 50 & 75 & 0 & 0 & 75 & 58 \\
+	\hline
+	\textbf{Number of Manual Takeovers} & 0 & 1 & 2 & 3 & 0 & 0 & 3 & 0\\
+	\hline
+\end{tabular}
+\end{table}
 
 
 \section{Conclusion and Recommendations}
