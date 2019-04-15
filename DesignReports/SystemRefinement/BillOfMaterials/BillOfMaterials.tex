@@ -15,6 +15,7 @@
 		\begin{artifacttable}
 			\entry{BM-001, 0.1, 02-19-2019, SS Engineering Draft, Tyler Critchfield, Brandon McBride}
 			\entry{BM-001, 1.0, 04-02-2019, Complete System Bill of Materials, Jacob Willis, Jake Johnson}
+			\entry{BM-001, 1.1, 04-15-2019, Added cost, Tyler Critchfield, Ryan Anderson}
 			% additional \entry{} commands for extra rows in the revision table, if needed
 		\end{artifacttable}
 	\end{AUVSITitlePage}
@@ -29,29 +30,29 @@
 		\begin{center}
 			\caption{A bill of materials for the final flight system. Information listed includes the item number, name, quantity, mass, vendor, and a list of other items each interfaces with. Masses are not included if they were already included in another item's mass or if it is irrelevent (if the item is not in the plane). Not included is each component of the aircraft that came with the kit (e.g., control horns, glue, connector pieces, coverings, etc.).}
 			\label{table:BOM}
-			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}}
+			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}p{1cm}}
 				\toprule
-				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor \\
+				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor & Cost \\
 				\midrule
-				1 & My Fly Dream Nimbus Pro Airframe & Everything & 1 & 2000 & BangGood   \\
-				2 & Pitot Tube & Item 3 & 1 & 19 & Amazon \\
-				3 & PX4 Airspeed Sensor & Item 4 & 1 & N/A & N/A \\
-				4 & Flip32 Breakout I2C & Items 5, 6, 7, 19 & 1 & 60 & Custom \\
-				5 & OpenPilot Revo \newline Flight Controller & Item 4 & 1 & 35 & Hyperion \newline World  \\
-				6 & Servos & Item 4 & 4 & 44 & Hobby King \\
-				7 & ESC & Items 4, 8, 19 & 2 & 160 & Hobby King \\
-				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies \\
-				9 & RC Receiver & Items 10, 19 & 1 & 19 & Team \newline Blacksheep \\
-				10 & RC Antennas & Item 9 & 2 & 0 & N/A \\
-				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & N/A \\
-				12 & Ubiquiti Bullet & Items 11, 13 & 1 & 165 & Amazon \\
-				13 & 5GHz antenna & Item 12 & 1 & 32 & N/A \\
-				14 & 5GHz Litebeam \newline Antenna & Items 1, 30 & 1 & N/A & Newegg\\
-				15 & Odroid XU4 & Items 4, 11, 16, 17, 19 & 1 & 99 & Hard Kernel \\
-				16 & Sony A6000 Camera & Items 15, 28 & 1 & 241 & Sony \\
-				17 & InertialSense & Item 15, 18 & 1 & N/A & N/A \\
-				18 & GPS Antenna & Item 17 & 1 & 94 & Drotek \\
-				19 & Power Harness & Items 4, 7, 9, 11, 15, 20-22, 31 & 1 & 130 & N/A \\
+				1 & My Fly Dream Nimbus Pro Airframe & Everything & 1 & 2000 & BangGood & \$250  \\
+				2 & Pitot Tube & Item 3 & 1 & 19 & Amazon & \$52.80\\
+				3 & PX4 Airspeed Sensor & Item 4 & 1 & N/A & N/A & N/A \\
+				4 & Flip32 Breakout I2C & Items 5, 6, 7, 19 & 1 & 60 & Custom & N/A \\
+				5 & OpenPilot Revo \newline Flight Controller & Item 4 & 1 & 35 & Hyperion \newline World & \$40.74  \\
+				6 & Servos & Item 4 & 4 & 44 & Hobby King & \$5.02 \\
+				7 & ESC & Items 4, 8, 19 & 2 & 160 & Hobby King & \$106.60 \\
+				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies & \$114.58 \\
+				9 & RC Receiver & Items 10, 19 & 1 & 19 & Team \newline Blacksheep & \$123.95 \\
+				10 & RC Antennas & Item 9 & 2 & 0 & N/A & N/A \\
+				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & N/A & N/A \\
+				12 & Ubiquiti Bullet & Items 11, 13 & 1 & 165 & Amazon & \$73.78 \\
+				13 & 5GHz antenna & Item 12 & 1 & 32 & N/A & N/A \\
+				14 & 5GHz Litebeam \newline Antenna & Items 1, 30 & 1 & N/A & Newegg & \$105.95 \\
+				15 & Odroid XU4 & Items 4, 11, 16, 17, 19 & 1 & 99 & Hard Kernel & \$57.95 \\
+				16 & Sony A6000 Camera & Items 15, 28 & 1 & 241 & Sony & \$448 \\
+				17 & InertialSense & Item 15, 18 & 1 & N/A & N/A & N/A \\
+				18 & GPS Antenna & Item 17 & 1 & 94 & Drotek & \$35  \\
+				19 & Power Harness & Items 4, 7, 9, 11, 15, 20-22, 31 & 1 & 130 & N/A & \$10 \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
@@ -61,31 +62,32 @@
 		\begin{center}
 			\caption{A continuation of the system bill of materials from the previous page.}
 			\label{table:BOM}
-			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}}
+			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}p{1cm}}
 				\toprule
-				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor \\
+				Item \# & Item Name & Interfaces With & Quantity [\#] & Mass [g] & Vendor & Cost \\
 				\midrule
-				20 & Castle BEC 20 A & Items 15, 19, 22, 39 & 1 & N/A & Castle \newline Creations \\
-				21 & Castle BEC 10 A & Items 9, 19 & 1 & N/A & Castle \newline Creations \\
-				22 & Bottle Drop Arduino & Items 15, 19, 23 & 1 & N/A & Hobby King \\
-				23 & Payload Release & Item 22 & 1 & 18 & Hobby King \\
-				24 & Tail Foam Wedge & Item 1 & 1 & 10 & Custom \\
-				25 & Battery Straps & Item 31 & 2 & 5 & N/A \\
-				26 & Velcro Strips & Items 5, 12, 31 & 6 & N/A & EE Shop \\
-				27 & Controller Board \newline Housing &   & 1 & N/A & N/A \\
-				28 & Camera Housing & Item 16 & 1 & N/A & Custom \\
-				29 & Propellers & Item 8 & 2 & 14 & Hobby King \\
-				30 & WiFi Router & Item 14 & 1 & N/A & Amazon \\
-				31 & 4S Lipo Battery & Item 19, 25 & 1 & 944 & Hobby King \\
-				32 & UGV Chassis & Item 33, 37 & 1 & 88 & Amazon \\
-				33 & UGV Battery & Item 32 & 1 & 31 & Amazon \\
-				34 & UGV GPS & Item 32, 37 & 1 & 24 & Amazon \\
-				35 & Parachute housing & Item 36 & 1 & 10 & Custom \\
-				36 & 36" Parachute & Items 32, 35 & 1 & 92 & FruityChutes \\
-				37 & UGV Controller & Items 32, 33, 34 & 1 & 35 & Hyperion \\
-				38 & Fiber Tape & Item 1 & N/A & N/A & Amazon \\
-				39 & Camera Power Supply & Items 16, 20 & 1 & 40 & Amazon/Custom \\
-				40 & UGV Payload Bay & Items 1, 23, 32, 36 & 1 & N/A & Custom \\
+				20 & Castle BEC 20 A & Items 15, 19, 22, 39 & 1 & N/A & Castle \newline Creations & \$39.95 \\
+				21 & Castle BEC 10 A & Items 9, 19 & 1 & N/A & Castle \newline Creations & \$21.95 \\
+				22 & Bottle Drop Arduino & Items 15, 19, 23 & 1 & N/A & Hobby King & \$9.89 \\
+				23 & Payload Release & Item 22 & 1 & 18 & Hobby King & N/A \\
+				24 & Tail Foam Wedge & Item 1 & 1 & 10 & Custom & N/A \\
+				25 & Battery Straps & Item 31 & 2 & 5 & N/A & \$3.94 \\
+				26 & Velcro Strips & Items 5, 12, 31 & 6 & N/A & EE Shop & \$1  \\
+				27 & Controller Board \newline Housing &   & 1 & N/A & N/A & \$2 \\
+				28 & Camera Housing & Item 16 & 1 & N/A & Custom & N/A \\
+				29 & Propellers & Item 8 & 2 & 14 & Hobby King & \$1.04 \\
+				30 & WiFi Router & Item 14 & 1 & N/A & Amazon & \$161
+				 \\
+				31 & 4S Lipo Battery & Item 19, 25 & 1 & 944 & Hobby King & \$85 \\
+				32 & UGV Chassis & Item 33, 37 & 1 & 88 & Amazon & \$27 \\
+				33 & UGV Battery & Item 32 & 1 & 31 & Amazon & \$5  \\
+				34 & UGV GPS & Item 32, 37 & 1 & 24 & Amazon & \$23 \\
+				35 & Parachute housing & Item 36 & 1 & 10 & Custom & N/A \\
+				36 & 36" Parachute & Items 32, 35 & 1 & 92 & FruityChutes & \$99 \\
+				37 & UGV Controller & Items 32, 33, 34 & 1 & 35 & Hyperion & \$50 \\
+				38 & Fiber Tape & Item 1 & N/A & N/A & Amazon & \$10 \\
+				39 & Camera Power Supply & Items 16, 20 & 1 & 40 & Amazon/ \newline Custom & \$10 \\
+				40 & UGV Payload Bay & Items 1, 23, 32, 36 & 1 & N/A & Custom & N/A \\
 
 				\bottomrule
 			\end{tabular}
