@@ -20,6 +20,7 @@
 \begin{artifacttable}
 \entry{CT-003, 0.1, 02-21-2019, Initial conception, John Akagi, Andrew Torgesen}
 \entry{CT-003, 0.2, 04-4-2019, Addition of Hardware Testing, John Akagi, Brady Moon}
+\entry{CT-003, 0.3, 04-15-2019, Update hardware testing results, John Akagi, ---}
 % additional \entry{} commands for extra rows in the revision table, if needed
 \end{artifacttable}
 \end{AUVSITitlePage}
@@ -43,7 +44,7 @@ For hardware testing, three waypoints are chosen that are safe to fly through. T
 The results of the 5 simulations can be seen in Table \ref{tab:results}. In the five simulations, the vehicle only hit a single obstacle and was able to get within 5 meters on all but one waypoint.
 These results place the vehicle in the excellent category as defined by the key success measures.
 
-While testing hardware, there was a strong wind so the plane had difficulty staying directly on the planned path. However, it was able to follow the path and pass through the waypoints despite this. As a result of the wind, the plane was not as accurate as when tested in simulation, but we were still able to get within 15 ft of each waypoint. The flight is shown in Figure \ref{fig:flight} where the waypoints are the yellow points, the planned path is in green, and the actual flown path is in white.
+When testing hardware, four waypoints were picked in places that were safe to fly over. A path was planned and then flown by the plane. The minimum distance to each waypoint was recorded. This process was repeated three times and the average minimum distance for each way point was calculated and reported in Table \ref{tab:hardware}. Overall, the average distance to the waypoints was 5.16~m. This is larger than the average distance when done in simulation due to the effect of imperfect control surfaces and wind disturbances. However, this is still an acceptable value for waypoint accuracy. Since this hardware test was only to determine waypoint accuracy, no obstacles were generated to test the obstacle avoidance capabilities of the UAV. However, the waypoint accuracy implies that obstacles should be able to be avoided without issue.
 
 \begin{table}[h!]
 
@@ -62,12 +63,28 @@ Test No. & Waypoint 1&Waypoint 2&Waypoint 3&Waypoint 4&Waypoint 5& Obstacles Hit
 \end{tabular}
 \end{table}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=.75\textwidth]{WaypointTest.png}
-    \caption{The flight path is shown for the hardware test. The yellow points mark the desired waypoints, the green line shows the desired path, and the white line shows the actual flown path. The golden circle shows the final loiter location for the plane to fly once the planned path is flown. As a result of strong winds, the plane had difficulty staying perfectly on the planned path but was still able to follow the path and hit the waypoints.}
-    \label{fig:flight}
-\end{figure}
+\begin{table}[h!]
+
+\caption{Table of results showing the average minimum distance to each waypoint over a total of three trials.}
+\label{tab:hardware}
+\begin{tabular} {|l|l|}
+\hline
+Waypoint & Average Minimum Distance\\
+\hline
+1 & 5.95~m\\
+2 & 6.47~m\\
+3& 5.53~m\\
+4& 2.68~m\\
+\hline
+\end{tabular}
+\end{table}
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=.75\textwidth]{WaypointTest.png}
+%    \caption{The flight path is shown for the hardware test. The yellow points mark the desired waypoints, the green line shows the desired path, and the white line shows the actual flown path. The golden circle shows the final loiter location for the plane to fly once the planned path is flown. As a result of strong winds, the plane had difficulty staying perfectly on the planned path but was still able to follow the path and hit the waypoints.}
+%    \label{fig:flight}
+%\end{figure}
 
 
 \section*{Conclusion}
