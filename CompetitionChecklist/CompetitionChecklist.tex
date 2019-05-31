@@ -1,0 +1,100 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Field Flight Checklist v2.0},
+	AUVSILogoPath={./figs/logo.pdf}
+}
+
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\renewcommand{\labelitemi}{$\square$}
+\renewcommand{\labelitemii}{$\square$}
+\renewcommand{\labelitemiii}{$\square$}
+\renewcommand{\labelitemiv}{$\square$}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{PF-002, 0.1, 5-30-2019, Initial creation, Ryan Anderson, [Checked by]}
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section{Purpose}
+
+The purpose of this artifact is to keep an up-to-date, standard protocol for safe, efficient, professional competition performance. It is important that all test flights are run systematically, and according to the procedures and timelines outlined in this document.
+
+\section{Checklist}
+
+\textbf{Day Before}
+\begin{itemize}
+	\item Follow the `Day Before' items on the Preflight Checklist
+	\item Obtain the generator
+\end{itemize}
+
+\hrulefill
+
+\textbf{Pre-preparation Time: \textit{20 minutes}}
+\begin{itemize}
+	\item Place targets at gps locations and orientations specified according to a Target Planning document (specific to flight location)
+	\item Train human image classifiers
+	\item Account for magnetic deviation at location
+	\item Set up inter-op server
+	\item Set up judges server 
+\end{itemize}
+
+\hrulefill
+
+\textbf{Official Preparation Time: \textit{15 minutes}}
+\begin{itemize}
+	\item Follow Preflight Checklist
+	\item Set up Groundstation
+	\item Set up Support Groundstation (to run rosservice calls as needed)
+	\item Set up Imaging Groundstations (including human image classifiers)
+\end{itemize}
+
+\hrulefill
+
+\textbf{Pre-Mission Brief: \textit{5 minutes}}
+\begin{itemize}
+	\item Provide a summary of planned tasks
+	\item Provide a summary of assigned roles
+	\item Provide other relevant information to the judges
+\end{itemize}
+
+\hrulefill
+
+\textbf{Execute Mission: \textit{\textless40 minutes}}\\
+\tiny{NOTE: full points are obtained by completing the mission entirely in the air in 20 minutes. All time afterwards results in penalties.}\\
+FLIGHT: \textit{\textless30 minutes}
+\begin{itemize}
+	\item Takeoff
+	\item Fly Waypoints
+	\item Drop UGV
+	\item Fly Lawnmower Path
+	\item Capture, Stream, Classify, and Submit Images
+	\item Land
+\end{itemize}
+
+GROUND: \textit{\textless10 minutes}
+\begin{itemize}
+	\item Stream, Classify, and Submit Images
+\end{itemize}
+
+\hrulefill
+
+\textbf{Post-Mission Clean Up: \textit{10 minutes}}
+\begin{itemize}
+	\item Shutdown Groundstations
+	\item Gather targets
+	\item Follow the post-flight items of the Preflight Checklist
+	\item Clean up UAS equipment
+\end{itemize}
+
+\textbf{Post-Competition Procedure}
+\begin{itemize}
+	\item Scorers report subscores to Scoring Manager
+	\item Scoring Manager extrapolates full-mission score and reports to the team
+\end{itemize}
+
+\end{document}
