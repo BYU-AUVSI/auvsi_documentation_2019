@@ -1,0 +1,121 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Flight Test Log},
+	AUVSIRevision=0.0,
+	AUVSIDescription={Created},
+	AUVSIAuthor={Kameron Eves},
+	AUVSIChecker={[Checker]},
+	AUVSILogoPath={./figs/logo.pdf},
+	AUVSIDocID={AF-004}
+}
+
+% include extra packages, if needed
+\usepackage{makecell}
+\usepackage{longtable}
+
+% Remove Heading Numbers
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+	\entry{AF-004, 0.1, 11-07-2018, Created*, Kameron Eves, Andrew Torgesen}
+	\entry{AF-004, 0.2, 2-5-2019, Tracking of autonomous and total flight time, Kameron Eves, Andrew Torgesen}
+	\entry{AF-004, 1.0, 2-5-2019, Takeoff/Landing Tracker, Kameron Eves, Brandon McBride}
+	\entry{AF-004, 2.0, 4-5-2019, Adjusted format of totals, Kameron Eves, Tyler Critchfield}
+\end{artifacttable}
+*Note that additions to this log will not necessitate a revision update. Only formatting or other content changes will require that.
+\end{AUVSITitlePage}
+% document contents
+
+
+\section{Log}
+
+\begin{center}
+%\begin{table}[h!]
+
+\captionof{table}{A log of each flight test conducted by our team. Autonomous flight time is listed in bold under the total time.}
+\bgroup
+\begin{longtable}{| c | p{1.85 cm} | c | c | p{7.4 cm} |}
+	\hline
+	\makecell{\textbf{Date} \\ \textbf{(m-d-y)}}&\textbf{Location} &	\makecell{\textbf{Length}\\ Total \\ \textbf{Auto} \\ \textbf{(min)}} & \makecell{Takeoffs/ \\ Landings \\ \textbf{Auto}} &	\textbf{Notes} \\
+	\hline\hline
+	10-16-18 				& Springville			&	\textless1	&	1/0				& 	Networking issues, later determined to be because of location. Moving down the road works. Attempted RC flight and crashed on launch. Need to practice launch procedure. \\
+	\hline
+	10-19-18 				& Springville			&	\textless1 	&	1/0			& 	Attempted RC flight for imaging. RC lost upon launch. Later determined to be because of the RC antenna not being installed. Aircraft did not have a balanced center of gravity (CG) and so performed a loop and crash landed. \\
+	\hline
+	10-23-18 				& Springville			&	1	&	1/0			& 	Attempted RC flight for imaging. Aircraft had major longitudinal stability issues. Later determined to be because of a negative static margin. Moving the battery forward fixes issue. Lost control and crashed. Transmitter also dying very very quickly. Later determined to be transmission power set to high (1 A changed to 10 mA). \\
+	\hline
+	11-01-18 				& Springville			&	3	&	1/0			& 	Attempted RC flight for imaging. Still had minor stability issues. We lost control and crash landed near end of flight. We later determined these issues were because the battery was not secured properly. It slid around inflight affecting our static margin. This caused instability and aggressive flight maneuvers that caused the battery to fall out in flight. As such we lost control and crashed. Battery must be strapped down.  \\
+	\hline
+	11-06-18 				& Springville			&	5	&	1/0			& 	Attempted RC flight for imaging. Aircraft flew wonderfully. Images of ground targets successfully captured. Flight was terminated when RC was lost and aircraft crashed hard. More investigation into the cause is needed. Possibly because of RC interference over the trees or to low of transmission power.  \\
+	\hline
+	12-11-18 				& Rock Canyon			&	1	&	1/0		& 	First flight test of new aircraft. Performed a glide test and found the aircraft performed well. With slight longitudinal instability. We moved the cg forward by adding a 500 g weight. This proved too much as the aircraft was notably nose heavy the next flight attempt which was forced to landed immediately upon takeoff . With an inexperienced pilot, we found this preferable to instability and attempted a second flight. The aircraft still dropped on takeoff but stable flight was obtained. This lasted 45 seconds before the pilot lost control and crashed. While pilot error likely played a part in this crash, we later determined that wind from the canyon was a large factor.\\
+	\hline
+	1-11-19 				& Rock Canyon			&	6	&	1/1		& First fully successful flight. Set trims. We also decided to add colored tape to the wings to increase the visibility of the aircraft in flight.\\
+	\hline
+	1-18-19 				& Rock Canyon			&	4	&	1/1		& Very windy, probably shouldn't have attempted flight but we had not yet figured out the wind problem from the canyon. Adjusted trims.	\\
+	\hline
+	1-23-19 				& Rock Canyon			&	14 &	2/2		& Performed two flights both of which were successful. Several minor repairs (general maintenance) were necessary after this flight. This flight test proved the aircraft was flyable and stable with all of the weight that will be on the aircraft during the competition. We tested both the weight with and without the UGV.\\
+	\hline
+	1-25-19				& Rock Canyon			&	11 &	2/2			& Trimmed aircraft with and without UGV weight.  Transferred these trims to ROSflight. 2 flights. Additional tape on wing provided sufficient visibility.	\\
+	\hline
+	1-31-19				& Utah County Airfield	&	7	 &	1/1		& Intended to test autopilot and begin tuning gains. Could not successfully turn on autopilot. Later this was determined to be because we were incorrectly following the process to hand over control to the autopilot. We flew once manually to test the gains. Small adjustments were made and transferred to ROSflight.	\\
+	\hline
+	2-2-19				& Utah County Airfield	&	\makecell{24 \\ \textbf{1}} & 	2/2			& Two flights to tune gains on autopilot. The autopilot had a tendency to flip the aircraft upside down immediately after turning on the autopilot. This was determined to not be caused by the gains. Aircraft landed safely manually both flights. After a couple of days of testing we found the cause was that the number being used to convert rad to PWM for the ailerons was negative. This effectively reversed the aileron polarity. Last year the wires must have been swapped from how we have them now. 	\\
+	\hline
+	2-6-19				& Utah County Airfield	&	\makecell{17 \\ \textbf{4}} & 	2/2			& Two flights to tune gains on autopilot. Flipping issue was fixed. Aircraft dove towards the ground upon turning on autopilot. This was fixed between flights (rad to PWM conversion for the elevator was negative this time) and we achieved autonomous flight the second attempt. We then tuned the longitudinal PID gains. Aircraft landed safely manually both flights.	\\
+	\hline
+	2-6-19				& Utah County Airfield	&	\makecell{31 \\ \textbf{10}} & 	1/1			& Tuned longitudinal gains and made a small effort to tune lateral gains. We also attempted a loiter, but aircraft was not tuned well enough to do so. Used course following to perfect the gains. Finished the longitudinal gains and got lateral gains reasonable. Next step is attempting a loiter and waypoints to tune lateral gains.	\\
+	\hline
+	2-19-19				& Rock Canyon 	&	3 & 	1/1			& Short flight to test cargo drop. Payload dropped upon command and the parachute opened successfully.\\
+	\hline
+	2-26-19				& Rock Canyon 	&	10 & 	3/3			& Three more flights to test payload drop. Payload successfully dropped two out of the three times. During the second test, the payload door got stuck on some tape we added between flights and the payload didn't fall out until a full minute after it was commanded. We removed this tape and the aircraft performed nominally on the third flight. We also used this flight to get realistic images to test the vision algorithm on. The camera was installed and images save on the odroid.\\
+	\hline
+	3-5-19				& Utah County Airfield 	&	10 & 	1/1			& Miss communication on what code was on the aircraft inhibited our ability to test the control algorithms. As such we will put in place protocol for changing code on the aircraft (see AF-014) Aquired imaging data.\\
+	\hline
+	3-25-19				& Utah County Airfield 	&		0 & 	0/0			& During preflight check we experienced RC brown outs. Other RC pilots at the airfield experienced a similar problem, which caused us to think interference might be the cause. We did not risk a flight. In the lab, we were able to replicate the problem. It seemed to be caused by a poor wire connection between the RC transmitter and the amplification packet attached to it. Further discussion with the other RC pilots indicated that they thought their issue had to do with a loss of propulsion. These two facts seem to indicate that it was not actually an interference issue, but instead a hardware issue. We fixed the loose connection and it seemed to solve the problem. \\
+	\hline
+	3-27-19				& Utah County Airfield 	&		\makecell{28 \\ \textbf{9}} & 	\makecell{3/2 \\ \textbf{0/1}}			& Three flights. Dropped payload successfully twice. Flew 3 waypoints and landed autonomously.\\
+	\hline
+	4-1-19				& Utah County Airfield 	&		4 & 1/0			& Safety pilot accidentally disarmed the plane while trying to transition to the autopilot. This caused loss of power, and, after this was realized, it was too late to save the aircraft from crashing. Aircraft landed in a bush and was mostly saved. \\
+	\hline
+	4-2-19				& Utah County Airfield \& Rock Canyon 	&		0 & 	0/0			& During preflight checks we could not achieve wireless communication between the flight computer and ground station. We found that the Ubiquity bullet never connected to the light beam antenna. We spent over an hour attempting to solve the problem. We tried moving the aircraft several feet away (which had worked in the past), replacing wires that might have been bad, and scanning for interference. We rebooted the system after each attempt to fix the problem: nothing worked. Eventually we gave up and left. On the drive back we decided to try again at Rock Canyon park. Of course, at Rock Canyon, the wireless signal connected on the first try. Issues such as this were observed earlier in the year, but are not repeatable and occur so infrequently that we can not get to the root of the problem. We still have no clue what the issue is or how to solve it. It seems to be both location and time dependent.    \\
+	\hline
+	4-3-19				& Rock Canyon	&		\makecell{10 \\ \textbf{2}}  & 1/0			& Experienced RC signal brown outs. We didn't notice this until after we had started flying. Small amounts of autonomous flight were achieved. Because the RC signal dropped out, the aircraft entered a loiter successfully (it's failure mode). The safety pilot then tried to recover the aircraft and, because RC signal was spotty, could not control the aircraft. This caused a crash in a tree. The aircraft was still mostly flyable, but we could not find the bug in the RC signal; it seems to occur randomly. While we did get it to occur on the ground once, the problem in general is not intentionally repeatable and does not occur frequently enough for easy debugging. We have some guesses to what the issue is (again, poor connection between the transmitter and amplification packet), so are currently using the guess and check method to try to solve this issue. \\
+	\hline
+\end{longtable}
+\egroup
+\label{table:Results}
+
+\hrule
+\rule{\textwidth}{0.1pt}
+\textbf{Statistics}
+\rule{\textwidth}{0.1pt}
+\hrule
+
+%\end{table}
+\end{center}
+
+\textbf{Total Flight Time:} 3 Hour 9 Minutes
+
+\textbf{Manual Flight Time:} 2 Hour 43 Minutes*
+
+\textbf{Autonomous Flight Time:} 26 Minutes
+
+\textbf{Percent of Autonomous Flight:} 13.8\%
+
+\hrule
+\textbf{Manual Takeoffs:} 29*
+
+\textbf{Manual Landings:} 20*
+
+\textbf{Autonomous Takeoffs:} 0
+
+\textbf{Autonomous Landings:} 1
+
+\hrule
+*With the aircraft configuration and safety pilot to be used in the competition
+
+
+\end{document}
