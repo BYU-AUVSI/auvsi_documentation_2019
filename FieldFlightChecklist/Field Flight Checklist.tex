@@ -86,17 +86,37 @@ Before Powering Motor:
 
 \begin{itemize}
 	\item Start network
+	\item Safety pilot reads the Safety Pilot Checklist
 	\item Attach wings% and check bolt tightness
 	\item Attach props and check tightness
 	\item Strap down battery
 	\item Connect battery monitor (full battery: 16.8 V)
 	\item Check plane CG
+        \item Check camera settings
+        \begin{itemize}
+          \item Ensure camera is on Shutter Priority Mode
+          \item Ensure shutter speed is set to 1/4000th (the fastest setting)?
+        \end{itemize}
 	\item Turn on transmitter
 	\item Ensure that the arm and RC override channels are set to OFF
 	\item (TEMPORARY) Hold UGV latch shut while connecting battery
 	\item Connect battery
 	\item (TEMPORARY) Release UGV latch when you hear it latch twice
 	\item Ensure network connection
+	\item Ensure origin latitude and longitude are correct in 3 files:
+	\begin{itemize}
+		\item ``~lat_ref'', ``~long_ref'', and ``~h_ref'' in ~/new_ws/src/rosplane/rosplane/launch/Official.launch on the Odroid
+		\item ``ref_lat'' and ``ref_lon'' in metis/launch/interop_full.launch
+		\item ``init_lat'' and ``init_lon'' in interop_pkg/param/client_params.yaml \textit{(if using the interop server)}
+	\end{itemize}
+	\item Ensure the following variables are correct in interop_pkg/param/client_params.yaml \textit{(if using the interop server)}:
+	\begin{itemize}
+		\item ``SERVER_IP''
+		\item ``SERVER_PORT''
+		\item ``username''
+		\item ``password'' 
+		\item NOTE: log-in information should be provided at the competition
+	\end{itemize}
 	\item Launch ROS (through \textit{screen}, if possible) (ensure aircraft is level)
 	\item Ensure GPS Fix ($\geq 3$ satellites)
 	\item Calibrate Sensors
