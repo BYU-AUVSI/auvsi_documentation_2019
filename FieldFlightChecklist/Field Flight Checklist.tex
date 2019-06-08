@@ -6,6 +6,7 @@
 
 \usepackage{enumitem}
 \usepackage{amssymb}
+\usepackage{textcomp}
 
 \renewcommand{\labelitemi}{$\square$}
 \renewcommand{\labelitemii}{$\square$}
@@ -80,13 +81,36 @@ The purpose of this artifact is to keep an up-to-date, standard protocol for ens
 
 \hrulefill
 
+\textbf{Safety Pilot Reminders: \textit{PILOT READS BEFORE LAUNCHING}}
+
+R/C Flight:
+
+\begin{itemize}
+	\item Arm motors before flying
+	\item If you need to adjust trim, make sure trim values are saved to the ROSFlight board after landing
+	\begin{enumerate}
+		\item Set trim using the R/C transmitter controls
+		\item After landing, leave all sticks in their centered positions with the throttle off
+		\item Before killing ros, run the rosservice call ``rosservice call /calibrate_rc_trim''
+		\item Reset all trims on the R/C transmitter to 0
+	\end{enumerate}
+	\item Be careful doing flight maneuvers; excessive g's may cause the UGV parachute to deploy prematurely
+\end{itemize}
+
+Autonomous Takeoff:
+
+\begin{itemize}
+	\item Arm motors before takeoff
+	\item Increase throttle to full and switch the R/C Override switch off
+	\item NOTE: if the throttle drops below 70\% the motors will cut
+
 \textbf{Flight Checklist: \textit{Before Launching}}
 
 Before Powering Motor:
 
 \begin{itemize}
 	\item Start network
-	\item Safety pilot reads the Safety Pilot Checklist
+	\item Safety pilot reads the ``Safety Pilot Reminders'' section of this checklist
 	\item Attach wings% and check bolt tightness
 	\item Attach props and check tightness
 	\item Strap down battery
@@ -103,16 +127,16 @@ Before Powering Motor:
 	\item Connect battery
 	\item (TEMPORARY) Release UGV latch when you hear it latch twice
 	\item Ensure network connection
-	\item Ensure origin latitude and longitude are correct in 3 files:
+	\item Ensure origin (where the plane is launched from) latitude and longitude are correct in 3 files:
 	\begin{itemize}
-		\item ``~lat_ref'', ``~long_ref'', and ``~h_ref'' in ~/new_ws/src/rosplane/rosplane/launch/Official.launch on the Odroid
-		\item ``ref_lat'' and ``ref_lon'' in metis/launch/interop_full.launch
-		\item ``init_lat'' and ``init_lon'' in interop_pkg/param/client_params.yaml \textit{(if using the interop server)}
+		\item ``$\sim$lat\_ref'', ``$\sim$ long\_ref'', and ``$\sim$h\_ref'' in \\ $\sim$/new\_ws/src/rosplane/rosplane/launch/Official.launch on the Odroid
+		\item ``ref\_lat'' and ``ref\_lon'' in metis/launch/interop\_full.launch
+		\item ``init\_lat'' and ``init\_lon'' in interop\_pkg/param/client\_params.yaml \textit{(if using the interop server)}
 	\end{itemize}
-	\item Ensure the following variables are correct in interop_pkg/param/client_params.yaml \textit{(if using the interop server)}:
+	\item Ensure the following variables are correct in interop\_pkg/param/client\_params.yaml \textit{(if using the interop server)}:
 	\begin{itemize}
-		\item ``SERVER_IP''
-		\item ``SERVER_PORT''
+		\item ``SERVER\_IP''
+		\item ``SERVER\_PORT''
 		\item ``username''
 		\item ``password'' 
 		\item NOTE: log-in information should be provided at the competition
