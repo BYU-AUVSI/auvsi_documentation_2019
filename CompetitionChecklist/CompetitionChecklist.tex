@@ -1,0 +1,124 @@
+\documentclass[]{auvsi_doc}
+\setkeys{auvsi_doc.cls}{
+	AUVSITitle={Competition Checklist},
+	AUVSILogoPath={./figs/logo.pdf}
+}
+
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\renewcommand{\labelitemi}{$\square$}
+\renewcommand{\labelitemii}{$\square$}
+\renewcommand{\labelitemiii}{$\square$}
+\renewcommand{\labelitemiv}{$\square$}
+
+\begin{document}
+
+\begin{AUVSITitlePage}
+\begin{artifacttable}
+\entry{PF-002, 0.1, 5-30-2019, Initial creation, Ryan Anderson, [Checked by]}
+\end{artifacttable}
+\end{AUVSITitlePage}
+
+\section{Purpose}
+
+The purpose of this artifact is to keep an up-to-date, standard protocol for safe, efficient, professional competition performance. It is important that all test flights are run systematically, and according to the procedures and timelines outlined in this document.
+
+\section{Assignments}
+
+The following roles should be assigned before the competition:
+\begin{itemize}
+  \item \textbf{Saftey Pilot:} required by the competition rules
+  \item \textbf{Groundstation Operator:} gets missions from the Interoperability Server and approves paths
+  \item \textbf{Interoperability Server Operator:} sets up and manages the Interoperability Server
+  \item \textbf{Judges Server:} sets up and manages the Judges Server and receives submissions, which are reported to the Scoring Manager
+  \item \textbf{Image Classification Server Operator:} sets up and manages the Image Classification Server and submits image objects
+  \item \textbf{Manual Image Classification Specialists:} manually classify images
+  \item \textbf{Scorers:}
+    \begin{enumerate}
+      \item \textit{\textbf{Scoring Manager:} collects subscores and calculates the final competition score}
+      \item \textit{\textbf{Waypoint/Obstacle Proximity Scorer:} post-processes rosbag data to determine the proximity to each waypoint and number of obstacles hit and submits to the Scoring Manager}
+      \item \textit{\textbf{UGV Proximity Scorer:} records the latitude and longitude of the UGV landing and final locations and reports to the Scoring Manager}
+      \item \textit{\textbf{Timeline Scorer:} clocks and records the time and outcome (e.g., forgot the Pre-mission Brief, payload did not deploy, 10~minutes timeout was used, etc.) of each segment of the competition. This includes 20~minutes of preparation and briefing, up to 30~minutes of flight, up to 10~minutes of grounded post-processing, and 10~minutes of clean up. The Timeline Scorer reports a high-level mission summary and timeline to the Scoring Manager.}
+      \item \textit{\textbf{Image Classification Scorer:} compares the submitted image objects received from the Judges Server Operator to actual image characteristics and reports to the Scoring Manager}
+    \end{enumerate}
+  \item \textbf{Team Lead:} reviews and follows the Competition and Field Flight Checklists, and gives the Pre-Mission Brief to the judges.
+  \item \textbf{Plane Takeoff Specialist:} tosses the plane during takeoff
+  \item \textbf{UAS Setup Crew:} sets up the BYU-AUVSI network and troubleshoots problems
+  \item \textbf{Airframe Crew:} assembles and prepares the airframe for flight and troubleshoots problems
+\end{itemize}
+
+\section{Checklist}
+
+\textbf{Day Before}
+\begin{itemize}
+	\item Follow the `Day Before' items on the Field Flight Checklist
+	\item Obtain the generator
+\end{itemize}
+
+\hrulefill
+
+\textbf{Pre-preparation Time: \textit{20 minutes}}
+\begin{itemize}
+	\item Place targets at gps locations and orientations specified according to a Target Planning document (specific to flight location)
+	\item Train Manual Image Classification Specialists
+	\item Account for magnetic deviation at location
+	\item Set up interoperability server
+	\item Set up judges server 
+\end{itemize}
+
+\hrulefill
+
+\textbf{Official Preparation Time: \textit{15 minutes}}
+\begin{itemize}
+	\item Follow Field Flight Checklist
+	\item Set up Groundstation
+	\item (Temporary) Set up Support Groundstation (to run rosservice calls as needed)
+	\item Set up Imaging Groundstations (including Manual Image Classification Specialists)
+\end{itemize}
+
+\hrulefill
+
+\textbf{Pre-Mission Brief: \textit{5 minutes}}
+\begin{itemize}
+	\item Provide a summary of planned tasks
+	\item Provide a summary of assigned roles
+	\item Provide other relevant information to the judges
+\end{itemize}
+
+\hrulefill
+
+\textbf{Execute Mission: \textit{\textless40 minutes}}\\
+\indent \textit{NOTE: full points are obtained by completing the mission entirely in the air in 20 minutes. Any time after that results in penalties.}\\
+FLIGHT: \textit{\textless30 minutes}
+\begin{itemize}
+	\item Takeoff
+	\item Fly Waypoints
+	\item Drop UGV
+	\item Fly Lawnmower Path
+	\item Capture, Stream, Classify, and Submit Images
+	\item Land
+\end{itemize}
+
+GROUND: \textit{\textless10 minutes}
+\begin{itemize}
+	\item Stream, Classify, and Submit Images
+\end{itemize}
+
+\hrulefill
+
+\textbf{Post-Mission Clean Up: \textit{10 minutes}}
+\begin{itemize}
+	\item Shutdown Groundstations
+	\item Gather targets
+	\item Follow the post-flight items of the Preflight Checklist
+	\item Clean up UAS equipment
+\end{itemize}
+
+\textbf{Post-Competition Procedure}
+\begin{itemize}
+	\item Scorers report subscores to Scoring Manager
+	\item Scoring Manager extrapolates full-mission score and reports to the team
+\end{itemize}
+
+\end{document}

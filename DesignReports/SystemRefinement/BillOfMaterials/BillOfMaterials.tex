@@ -22,13 +22,12 @@
 
 	% document contents (see below for LaTex commands that make your life easier)
 	\section{Introduction}
-	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, and vendor.
+	The following tables show our Bill of Materials for the entire system. We've included the following information with each component: item number, item name, items interfaced with, quantity, mass, vendor, and cost.
 
 	%Begin table
-
 	\begin{table}[h!]
 		\begin{center}
-			\caption{A bill of materials for the final flight system. Information listed includes the item number, name, quantity, mass, vendor, and a list of other items each interfaces with. Masses are not included if they were already included in another item's mass or if it is irrelevent (if the item is not in the plane). Not included is each component of the aircraft that came with the kit (e.g., control horns, glue, connector pieces, coverings, etc.).}
+			\caption{A finalized bill of materials for the aircraft. Information listed includes the item number, item name, items interfaced with, quantity, mass, vendor, and cost. Masses are not included if they were already included in another item's mass or if they are irrelevent (e.g., if the item is not on the airframe). Items that were part of the airframe kit (control horns, glue, connector pieces, coverings, etc.) are also excluded.}
 			\label{table:BOM}
 			\begin{tabular}{p{1cm}p{4cm}p{3cm}p{1.5cm}p{1cm}p{2.5cm}p{1cm}}
 				\toprule
@@ -44,13 +43,13 @@
 				8 & Motors & Item 7 & 2 & 280 & Tower \newline Hobbies & \$114.58 \\
 				9 & RC Receiver & Items 10, 19 & 1 & 19 & Team \newline Blacksheep & \$123.95 \\
 				10 & RC Antennas & Item 9 & 2 & 0 & N/A & N/A \\
-				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & N/A & N/A \\
+				11 & POE Adapter & Items 12, 15, 19 & 1 & 30 & Amazon & \$6.79 \\
 				12 & Ubiquiti Bullet & Items 11, 13 & 1 & 165 & Amazon & \$73.78 \\
-				13 & 5GHz antenna & Item 12 & 1 & 32 & N/A & N/A \\
+				13 & 5GHz antenna & Item 12 & 1 & 32 & getfpv.com & \$14.99 \\
 				14 & 5GHz Litebeam \newline Antenna & Items 1, 30 & 1 & N/A & Newegg & \$105.95 \\
 				15 & Odroid XU4 & Items 4, 11, 16, 17, 19 & 1 & 99 & Hard Kernel & \$57.95 \\
 				16 & Sony A6000 Camera & Items 15, 28 & 1 & 241 & Sony & \$448 \\
-				17 & InertialSense & Item 15, 18 & 1 & N/A & N/A & N/A \\
+				17 & InertialSense & Item 15, 18 & 1 & N/A & \textit{(borrowed)} & N/A \\
 				18 & GPS Antenna & Item 17 & 1 & 94 & Drotek & \$35  \\
 				19 & Power Harness & Items 4, 7, 9, 11, 15, 20-22, 31 & 1 & 130 & N/A & \$10 \\
 				\bottomrule
